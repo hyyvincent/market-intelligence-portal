@@ -1,0 +1,62 @@
+header {
+  background: linear-gradient(118deg, #001f38 0%, #00375f 48%, #215191 100%);
+  border-bottom: 4px solid #0067a8;
+}
+header p, .eyebrow { color: #fff; }
+.eyebrow { text-transform: uppercase; }
+
+.market-status { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 10px; white-space: nowrap; }
+.market-status span { width: 7px; height: 7px; border-radius: 50%; background: #9aaab5; box-shadow: 0 0 0 3px #9aaab51c; }
+.market-status.live span { background: var(--down); box-shadow: 0 0 0 3px #23845a1c; }
+.market-status.partial span { background: #b27623; box-shadow: 0 0 0 3px #b276231c; }
+.market-actions { display: flex !important; grid-template-columns: none !important; align-items: center !important; gap: 12px !important; }
+.market-refresh { min-height: 30px; padding: 5px 9px; display: inline-flex; align-items: center; gap: 5px; border: 1px solid #cbd9e3; background: #fff; color: var(--blue); font: inherit; font-size: 10px; cursor: pointer; }
+.market-refresh:hover:not(:disabled), .market-refresh:focus-visible { border-color: var(--blue); background: #f3f8fc; outline: none; }
+.market-refresh:disabled { color: #8b9ba6; cursor: wait; }
+.market-refresh svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.market-refresh.loading svg { animation: market-refresh-spin .9s linear infinite; }
+@keyframes market-refresh-spin { to { transform: rotate(360deg); } }
+
+.stock-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); background: #f8fafb; }
+.stock-summary > div { padding: 11px 18px; border-right: 1px solid var(--line); display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.stock-summary > div:last-child { border-right: 0; }
+.stock-summary span { color: var(--muted); font-size: 10px; }
+.stock-summary strong { font-size: 16px; }
+.stock-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stock-row { min-width: 0; display: grid; grid-template-columns: minmax(130px, 1.15fr) 90px 88px 88px 92px; gap: 13px; align-items: center; min-height: 78px; padding: 13px 18px; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; transition: background .15s ease; }
+.stock-row:nth-child(odd) { border-right: 1px solid var(--line); }
+.stock-row:hover, .stock-row:focus-visible { background: #f5f9fc; outline: none; }
+.stock-identity { min-width: 0; display: grid; gap: 5px; }
+.stock-identity strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.stock-identity span { color: var(--muted); font-size: 9px; }
+.stock-identity em { color: #8795a2; font-size: 8px; font-style: normal; }
+.stock-sparkline { width: 90px; height: 36px; color: #7d96a8; }
+.spark-line { fill: none; stroke: currentColor; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.spark-area { fill: currentColor; opacity: .08; }
+.stock-sparkline.up { color: var(--up); }
+.stock-sparkline.down { color: var(--down); }
+.stock-quote { text-align: right; display: grid; gap: 4px; }
+.stock-quote.up, .stock-quote.down { color: var(--ink); font-weight: 400; }
+.stock-quote strong { font-size: 17px; letter-spacing: -.02em; }
+.stock-quote span { justify-self: end; min-width: 48px; padding: 3px 5px; color: #fff; background: #8b9ba6; font-size: 10px; font-weight: 400; text-align: center; border-radius: 3px; }
+.stock-quote.up span { background: var(--up); }
+.stock-quote.down span { background: var(--down); }
+.stock-cap { text-align: right; display: grid; gap: 5px; }
+.stock-cap span { color: var(--muted); font-size: 9px; }
+.stock-cap strong { font-size: 11px; white-space: nowrap; }
+.stock-source { text-align: right; color: var(--blue); font-size: 9px; line-height: 1.35; }
+
+@media (max-width: 980px) {
+  .stock-row { grid-template-columns: minmax(130px, 1fr) 90px 88px 88px; }
+  .stock-source { display: none; }
+}
+@media (max-width: 680px) {
+  .stock-summary { grid-template-columns: 1fr; }
+  .stock-summary > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .stock-summary > div:last-child { border-bottom: 0; }
+  .stock-list { grid-template-columns: 1fr; }
+  .stock-row, .stock-row:nth-child(odd) { border-right: 0; grid-template-columns: minmax(112px, 1fr) 78px 72px; gap: 9px; padding: 12px 14px; }
+  .stock-sparkline { width: 78px; }
+  .stock-cap, .stock-source { display: none; }
+  .market-status { display: none; }
+}
