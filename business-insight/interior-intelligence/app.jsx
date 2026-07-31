@@ -1,320 +1,180 @@
-const companies = [
-  { id:"yanfeng", track:"综合内饰", name:"延锋", en:"Yanfeng", listed:false, region:"中国", products:["副仪表板","门板","内饰总成","金属扬声器罩","新材料","座椅扶手"], note:"全球汽车内饰供应商，首版重点追踪副仪表板、门板、座舱系统及关联公司。", url:"https://www.yanfeng.com/cn/floor-consoles-cn" },
-  { id:"xinquan", track:"综合内饰", name:"新泉", en:"Xinquan", listed:true, ticker:"603179.SH", region:"中国", products:["仪表板","门板","内饰总成"], note:"上市主体与各生产基地分层监控。", url:"https://www.sse.com.cn/" },
-  { id:"forvia", track:"综合内饰", name:"佛吉亚", en:"FORVIA / Faurecia", listed:true, ticker:"FRVIA.PA", region:"法国", products:["副仪表板","门板","新材料"], note:"佛吉亚作为 FORVIA 集团别名与业务标签，新闻和财务不重复累计。", url:"https://www.forvia.com/en/press/2025-annual-results" },
-  { id:"antolin", track:"综合内饰", name:"安通林", en:"Antolin", listed:false, region:"西班牙", products:["门板","内饰总成","新材料"], note:"追踪集团、中国业务主体、照明电子化内饰与新材料。", url:"https://www.antolin.com/en/financial-info-home" },
-  { id:"lear", track:"综合内饰", name:"李尔", en:"Lear", listed:true, ticker:"LEA.N", region:"美国", products:["座椅扶手","内饰总成"], note:"只保留与座椅、扶手及相关内饰业务有关的集团动态。", url:"https://www.lear.com/" },
-  { id:"huaxiang", track:"综合内饰", name:"宁波华翔", en:"Ningbo Huaxiang", listed:true, ticker:"002048.SZ", region:"中国", products:["门板","内饰总成","新材料"], note:"集团与关联子公司、国内外客户项目分别记录。", url:"https://www.cninfo.com.cn/" },
-  { id:"magna", track:"综合内饰", name:"麦格纳", en:"Magna", listed:true, ticker:"MGA.N / MG.TO", region:"加拿大", products:["座椅扶手","内饰总成"], note:"过滤集团噪声，仅纳入座椅与内饰相关信息。", url:"https://www.magna.com/" },
-  { id:"faway", track:"综合内饰", name:"一汽富维", en:"FAWAY", listed:true, ticker:"600742.SH", region:"中国", products:["仪表板","门板","座椅扶手"], note:"优先建立集团、上市主体及关联公司关系。", url:"https://www.sse.com.cn/" },
-  { id:"nobo", track:"综合内饰", name:"诺博", en:"Nobo Automotive", listed:false, region:"中国", products:["门板","座椅扶手","内饰总成"], note:"追踪集团业务、生产基地和客户定点。", url:"https://www.noboauto.com/" },
-  { id:"caht", track:"综合内饰", name:"成航模塑", en:"Chengdu Aerospace Mould & Plastic", listed:false, region:"中国", products:["仪表板","门板","内饰总成"], note:"主档使用成都航天模塑有限责任公司全称。", url:"https://www.casic.com.cn/" },
-  { id:"fucheng", track:"综合内饰", name:"富诚", en:"Fucheng Group", listed:false, region:"中国", products:["内饰总成","表面工艺"], note:"重点补齐关联制造主体、产品和客户证据。", url:"https://www.fcheng.com/mobilec/index.php/about/index.html" },
-  { id:"pingwei", track:"综合内饰", name:"重庆平伟", en:"Perfectway Automotive", listed:false, region:"中国", products:["模具","表面工艺","内饰件"], note:"与重庆平伟半导体严格区分，监控汽车科技业务。", url:"https://www.pwjt.com/" },
-  { id:"sps", track:"金属扬声器罩", name:"重庆赛帕斯", en:"Chongqing SPS", listed:false, region:"中国", products:["金属扬声器罩","细孔格栅"], note:"汽车音响金属网罩、细孔格栅及金属内饰专业制造商。", url:"https://www.spsjs.com/article/type/18-1.html" },
-  { id:"tuoxin", track:"金属扬声器罩", name:"宣城托新精密", en:"Xuancheng Tuoxin Precision", listed:false, region:"中国", products:["金属扬声器罩","表面工艺"], note:"主档为宣城托新精密科技有限公司，追踪喇叭网装饰面板及金属饰件。", url:"https://www.xuancheng.gov.cn/OpennessContent/show/2328615.html" },
-  { id:"oakwood", track:"金属扬声器罩", name:"奥克伍德", en:"Oakwood Group", listed:false, region:"美国", products:["金属扬声器罩","音频罩盖"], note:"全球汽车金属扬声器格栅专业制造商。", url:"https://www.oakwoodgroup.com/product" }
+const FINANCIALS = [
+  {company:"大众汽车集团",region:"海外母公司",period:"2026 H1",revenue:"€158.1bn",growth:"-0.2%",profit:"经营利润 €5.93bn",margin:"3.8%",profitGrowth:"-11.6%",cash:"汽车业务净现金流 €3.2bn",view:"中国权益法合资销量承压；集团成本与产品组合改善是下半年重点。",url:"https://www.volkswagen-group.com/en/half-yearly-financial-report-and-results-2026-20506",fresh:"2026-07-24"},
+  {company:"特斯拉",region:"海外母公司",period:"2026 Q1",revenue:"$22.39bn",growth:"+16.0%",profit:"归母净利 $0.48bn",margin:"经营利润率 4.2%",profitGrowth:"+17.0%",cash:"经营现金流 $3.94bn",view:"汽车、储能与服务收入共同增长；采用已提交SEC的最新完整季度报表。",url:"https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/tsla-20260331.htm",fresh:"2026-04-23"},
+  {company:"比亚迪",region:"中国集团",period:"2026 Q1",revenue:"¥150.23bn",growth:"-11.82%",profit:"归母净利 ¥4.08bn",margin:"2.72%*",profitGrowth:"-55.38%",cash:"经营现金流 ¥2.79bn",view:"收入与利润同比回落，研发、融资需求与海外扩张仍是重点观察项。",url:"https://www.bydglobal.com/en/InvestorAnnals.html?scroll=true",fresh:"2026-04-29"},
+  {company:"上汽集团",region:"中国集团",period:"2026 Q1",revenue:"¥140.42bn",growth:"—",profit:"归母净利 ¥3.03bn",margin:"2.15%*",profitGrowth:"—",cash:"经营现金流 ¥31.99bn",view:"自主乘用车销量增长，合资业务转型与盈利修复仍是核心变量。",url:"https://www.saicmotor.com/e/investor_relations/financial_data/index.shtml",fresh:"2026-04-30"},
+  {company:"蔚来",region:"中国新势力",period:"2026 Q1",revenue:"¥25.53bn",growth:"+112.2%",profit:"净亏损 ¥0.33bn",margin:"毛利率 19.0%",profitGrowth:"大幅收窄",cash:"现金储备 ¥48.2bn",view:"三品牌交付推动收入扩张，经营亏损接近盈亏平衡，现金储备仍充足。",url:"https://ir.nio.com/zh-hans/news-releases/news-release-details/nio-inc-reports-unaudited-first-quarter-2026-financial-results?mobile=1",fresh:"2026-05-21"},
+  {company:"理想汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥23.0bn",growth:"-11.4%",profit:"净亏损 ¥2.3bn",margin:"毛利率 7.9%",profitGrowth:"由盈转亏",cash:"经营现金流 -¥6.1bn",view:"交付同比增长但收入下降，车辆毛利率与纯电产品爬坡是关键观察项。",url:"https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-announces-unaudited-first-quarter-2026-financial/",fresh:"2026-05-28"},
+  {company:"小鹏汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥13.03bn",growth:"-17.6%",profit:"净亏损 ¥1.78bn",margin:"毛利率 20.6%",profitGrowth:"亏损扩大",cash:"现金储备 ¥42.09bn",view:"收入受交付回落影响，但毛利率继续改善；新车型节奏决定后续恢复速度。",url:"https://ir.xiaopeng.com/zh-hans/news-releases/news-release-details/xpeng-reports-first-quarter-2026-unaudited-financial-results",fresh:"2026-05-28"},
+  {company:"宝马集团",region:"海外母公司",period:"2026 Q1",revenue:"€30.9bn",growth:"约-9.0%",profit:"税前利润 €2.35bn",margin:"税前利润率 7.6%",profitGrowth:"-24.6%",cash:"汽车业务自由现金流 €0.78bn",view:"中国市场竞争与电动化产品周期是集团全年表现的重要影响因素。",url:"https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/ir/downloads/en/2026/q1/BMW_Q1-2026-EN.pdf",fresh:"2026-05-06"},
+  {company:"梅赛德斯-奔驰集团",region:"海外母公司",period:"2026 Q1",revenue:"€31.60bn",growth:"-4.9%",profit:"EBIT €1.90bn",margin:"EBIT率 6.0%*",profitGrowth:"-16.8%",cash:"工业业务自由现金流 €1.86bn",view:"中国高端车需求、价格体系和本土智能化合作是经营质量的核心变量。",url:"https://group.mercedes-benz.com/documents/investors/reports/interim-reports/q1/mercedes-benz-interim-report-q1-2026.pdf",fresh:"2026-04-30"},
+  {company:"小米集团",region:"中国新势力",period:"2026 Q1",revenue:"¥99.14bn",growth:"约-11.0%",profit:"调整后净利 ¥6.1bn",margin:"集团毛利率 22.0%",profitGrowth:"—",cash:"汽车分部未单列",view:"智能电动汽车收入约190亿元；集团指标不直接等同于汽车业务指标。",url:"https://ir.mi.com/financial-information/quarterly-results",fresh:"2026-05-26"}
 ];
 
-const news = [
-  { id:1, company:"延锋", track:"综合内饰", type:"产品与技术", date:"2026-07-08", title:"XiM27 全场景智能座舱平台发布", summary:"可量产的多功能 MPV 座舱整合集中式电子架构、生成式 AI、可重构座椅与多场景空间，是整舱集成与中控交互的重要竞争信号。", source:"延锋官网", url:"https://www.yanfeng.com/cn/yanfengzhengshifabu-xim27keliangchandequanchangjingzhinengzuocangpingtai" },
-  { id:2, company:"行业", track:"综合内饰", type:"新材料", date:"2026-07-01", title:"Bcomp 为 BMW M Neue Klasse 概念车提供生物复合材料", summary:"天然纤维高性能复合材料进入内外饰概念验证，反映轻量化、低碳材料和可见纹理表面的结合趋势。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials/bcomp-supplies-biocomposites-for-bmw-m-concept-neue-klasse.html" },
-  { id:3, company:"行业", track:"综合内饰", type:"行业展会", date:"2026-06-26", title:"Sekisui 展示下一代汽车内饰材料与表面技术", summary:"Automotive Interiors Expo 2026 重点关注材料触感、表面装饰、循环利用与面向量产的内饰工艺。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials" },
-  { id:4, company:"行业", track:"综合内饰", type:"声学与座舱", date:"2026-06-25", title:"Toray 展示汽车内饰吸声无纺材料 Airlite", summary:"面向座舱 NVH 和轻量化的吸声材料成为展会重点，与扬声器罩、门板声学和内饰包覆协同相关。", source:"MobileTex", url:"https://www.textilemedia.com/mobiletex/latest-news/" },
-  { id:5, company:"行业", track:"综合内饰", type:"产品与技术", date:"2026-06-25", title:"KEPO 展示量产级氛围灯与座椅振动技术", summary:"仪表板及门板灯带、触觉反馈和座椅振动方案已进入量产应用，体现内饰件从装饰件向交互载体演进。", source:"KEPO Technologies", url:"https://www.kepotech.com/automotive-interiors-expo-europe/" },
-  { id:6, company:"行业", track:"综合内饰", type:"新材料", date:"2026-06-24", title:"FORVIA Interiors 与 Materi’Act 展示循环材料应用", summary:"材料、注塑与高品质可见件能力结合，聚焦再生与循环材料在概念车内饰中的工程化应用。", source:"MobileTex", url:"https://www.textilemedia.com/mobiletex/latest-news/" },
-  { id:7, company:"行业", track:"综合内饰", type:"行业展会", date:"2026-06-23", title:"Automotive Interiors Expo Europe 聚焦数字座舱与可持续内饰", summary:"展品覆盖 HMI、数字座舱、再生材料、3D 打印、触觉反馈、氛围灯、声学与座椅材料，可作为新兴供应商扩展池。", source:"展会官网", url:"https://automotive-interiors-expo.com/en/show-news.php" },
-  { id:8, company:"行业", track:"综合内饰", type:"产品与技术", date:"2026-06-18", title:"MacDermid Alpha 与 Lynctek 合作推进智能表面制造", summary:"面向无缝、触控和发光内饰表面的制造协作，直接关联门板、中控面板与功能化装饰件。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials" },
-  { id:9, company:"行业", track:"综合内饰", type:"新材料", date:"2026-05-19", title:"Teknor Apex 推出最高含 70% PCR 的 PP 复合材料", summary:"高比例消费后再生材料向汽车内饰应用推进，需持续关注表面质量、气味、耐久与批次稳定性。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials" },
-  { id:10, company:"行业", track:"综合内饰", type:"客户与车型", date:"2026-05-13", title:"Audi Q9 强化内饰舒适性、材料与用户体验", summary:"整车端对舒适、材料质感和座舱体验的要求提升，为门板、中控、出风口和软包覆供应商提供需求信号。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials" },
-  { id:11, company:"安通林", track:"综合内饰", type:"年度报告", date:"2026-05-13", title:"Antolin 发布 2025 年综合报告", summary:"披露全年经营、转型计划、产品创新与可持续发展；2025 年 EBITDA 为 2.96 亿欧元。", source:"Antolin", url:"https://annualreport.antolin.com/2025/en/" },
-  { id:12, company:"安通林", track:"综合内饰", type:"业绩财报", date:"2026-05-07", title:"Antolin 披露 2026 年第一季度经营表现", summary:"净销售额 8.516 亿欧元，同比下降 13.5%；净利润 7,250 万欧元主要受益于出售印度三家子公司，run-rate EBITDA 率为 9.2%。", source:"Antolin", url:"https://www.antolin.com/en/antolin-reports-eu725-million-profit-first-quarter-following-sale-three-subsidiaries-india" },
-  { id:13, company:"李尔", track:"综合内饰", type:"业绩财报", date:"2026-05-01", title:"Lear 发布 2026 年第一季度业绩", summary:"收入 58.23 亿美元，同比增长 5%；核心经营利润 2.97 亿美元，同比增长 10%，核心经营利润率 5.1%。", source:"Lear", url:"https://www.lear.com/de/newsroom/lear-reports-first-quarter-2026-results" },
-  { id:14, company:"麦格纳", track:"综合内饰", type:"业绩财报", date:"2026-05-01", title:"Magna 发布 2026 年第一季度业绩", summary:"销售额同比增长 3%，调整后 EBIT 同比增长 58%，调整后 EBIT 利润率提升至 5.4%。", source:"Magna", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-first-quarter-results--maintains-positive-outlook-for-2026" },
-  { id:15, company:"新泉", track:"综合内饰", type:"业绩财报", date:"2026-04-30", title:"新泉股份披露 2026 年第一季度报告", summary:"营业收入 36.39 亿元，同比增长 3.42%；归母净利润 2.03 亿元，同比下降 4.57%。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12274734&stockid=603179" },
-  { id:16, company:"宁波华翔", track:"综合内饰", type:"业绩财报", date:"2026-04-28", title:"宁波华翔披露 2026 年第一季度报告", summary:"营业收入 51.69 亿元，同比下降 17.43%；归母净利润 2.73 亿元，同比增长 6.63%。", source:"巨潮资讯", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225202599.PDF" },
-  { id:17, company:"佛吉亚", track:"综合内饰", type:"业绩财报", date:"2026-04-24", title:"FORVIA 披露 2026 年第一季度销售", summary:"季度销售额 51.4 亿欧元，有机口径同比下降 2.2%；公司同时推进 Interiors 业务出售进程。", source:"FORVIA", url:"https://www.globenewswire.com/news-release/2026/04/24/3280513/0/en/solid-q1-sales-ignite-priorities-in-motion.html" },
-  { id:18, company:"一汽富维", track:"综合内饰", type:"业绩财报", date:"2026-04-23", title:"富维股份披露 2026 年第一季度报告", summary:"营业收入 39.08 亿元，同比下降 17.88%；归母净利润 0.82 亿元，同比下降 17.18%，经营现金流同比增长 144.22%。", source:"法定披露", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149032&stockid=600742" },
-  { id:19, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-24", title:"家居审美重新重视天然木纹与个性化表面", summary:"消费者偏好有识别度但不过度张扬的天然纹理，并希望获得接近定制的质感。对汽车内饰的潜在影响是木纹、金属组合和个性化饰板需求上升。", source:"Livingetc", url:"https://www.livingetc.com/shopping/westwing-ako-collection" },
-  { id:20, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-23", title:"触感和手工纹理正在替代单纯色彩表达", summary:"家居设计中雕刻、凹凸和不完全规则的表面获得关注。对门板、中控和扬声器罩的启示是通过微纹理、光影和触感建立品质感，而非只依赖颜色。", source:"Livingetc", url:"https://www.livingetc.com/ideas/dimpled-wood-trend" },
-  { id:21, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-06-17", title:"AI智能设备普及，但消费者对隐私仍高度敏感", summary:"Pew 调查显示约35%的美国成年人拥有智能音箱，71%认为AI会降低个人信息安全。座舱AI需要清晰的录音状态、可见隐私提示和可立即操作的物理关闭方式。", source:"Pew Research Center", url:"https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/" },
-  { id:22, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-05-27", title:"消费者希望AI提供建议，但不愿完全交出最终决定", summary:"Gartner 调查指出，消费者更接受AI帮助筛选和研究，而非替其做最终选择。对智能座舱的启示是保留确认步骤、可撤销操作和明确的人工控制权。", source:"Gartner", url:"https://www.gartner.com/en/newsroom/press-releases/2026-05-27-gartner-survey-finds-consumers-want-ai-shopping-help-but-not-ai-purchase-decisions" },
-  { id:23, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-05-05", title:"42%的消费者已经使用AI工具辅助选购", summary:"NIQ 数据显示AI正参与产品发现、比较和选择，但消费者仍倾向保留控制权。汽车内饰卖点需要更结构化、可比较，并能被AI推荐系统准确理解。", source:"NIQ", url:"https://nielseniq.com/global/en/news-center/2026/42-of-consumers-now-use-ai-tools-to-shop-niq-data-shows/" }
+const MORE_FINANCIALS = [
+  {company:"吉利汽车",region:"中国集团",period:"2026 Q1",revenue:"¥83.78bn",growth:"+15.0%",profit:"归母净利 ¥4.17bn",margin:"4.97%*",profitGrowth:"-27.0%",cash:"未单列",view:"销量保持增长，核心利润同比增长31%；归母利润受可比基数影响回落。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042900391.pdf",fresh:"2026-04-29"},
+  {company:"广汽集团",region:"中国集团",period:"2026 Q1",revenue:"¥20.23bn",growth:"+1.76%",profit:"归母亏损 ¥0.66bn",margin:"-3.24%*",profitGrowth:"减亏10.29%",cash:"经营现金流 -¥3.25bn",view:"自主品牌销量同比增长，经营现金流明显改善；合资品牌转型仍是重点。",url:"https://www.gacgroup.com/cn/news/detail?baseid=19150",fresh:"2026-04-29"},
+  {company:"长安汽车",region:"中国集团",period:"2026 Q1",revenue:"¥32.71bn",growth:"-4.26%",profit:"归母净利 ¥0.35bn",margin:"1.07%*",profitGrowth:"-74.09%",cash:"经营现金流 -¥11.65bn",view:"收入小幅回落，汇兑收益基数与回款减少显著影响利润和现金流。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12216780&stockid=000625",fresh:"2026-04-28"},
+  {company:"长城汽车",region:"中国集团",period:"2026 Q1",revenue:"¥45.11bn",growth:"+12.72%",profit:"归母净利 ¥0.95bn",margin:"2.10%*",profitGrowth:"-46.01%",cash:"经营现金流 ¥3.27bn",view:"销量与收入增长，汇兑收益可比基数导致归母利润下降。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042401572.pdf",fresh:"2026-04-24"},
+  {company:"东风集团股份",region:"中国集团",period:"2026 Q1",revenue:"季度未披露",growth:"—",profit:"季度未披露",margin:"—",profitGrowth:"—",cash:"季度未披露",view:"港股上市主体未发布完整一季度利润表；保持最近法定报告期口径。",url:"https://www1.hkexnews.hk/search/titlesearch.xhtml?lang=en",fresh:"截至2026-07-29"},
+  {company:"北汽蓝谷",region:"中国集团",period:"2026 Q1",revenue:"¥4.10bn",growth:"+8.65%",profit:"归母亏损 ¥0.87bn",margin:"-21.23%*",profitGrowth:"减亏8.70%",cash:"经营现金流 -¥1.96bn",view:"收入增长且亏损收窄，但经营现金流出扩大。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12163388&stockid=600733",fresh:"2026-04-24"},
+  {company:"赛力斯",region:"中国集团",period:"2026 Q1",revenue:"¥25.75bn",growth:"+34.46%",profit:"归母净利 ¥0.75bn",margin:"2.93%*",profitGrowth:"+0.89%",cash:"经营现金流 -¥20.95bn",view:"新能源汽车销量带动收入增长，但销售回款与供应商付款错配压低现金流。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12284229&stockid=601127",fresh:"2026-04-30"},
+  {company:"零跑汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥10.82bn",growth:"+8.0%",profit:"归母亏损 ¥0.39bn",margin:"毛利率 9.4%",profitGrowth:"亏损扩大",cash:"经营现金流 -¥6.61bn",view:"交付增长带动收入，但车型结构与季节性使毛利和现金流承压。",url:"https://www1.hkexnews.hk/search/titlesearch.xhtml?lang=en",fresh:"2026-05-15"},
+  {company:"江淮汽车",region:"中国集团",period:"2026 Q1",revenue:"¥11.46bn",growth:"+16.91%",profit:"归母亏损 ¥0.61bn",margin:"-5.29%*",profitGrowth:"亏损扩大",cash:"经营现金流 -¥3.90bn",view:"收入增长，但亏损和经营现金流出同比扩大。",url:"https://www.jac.com.cn/u/cms/www/202604/29103922otgu.pdf",fresh:"2026-04-29"},
+  {company:"中国一汽",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团未上市且不独立发布季度财务报表；不以一汽解放等子公司数据替代。",url:"https://www.faw.com/fawcn/373694/373706/index.html",fresh:"持续监控"},
+  {company:"奇瑞集团",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团暂无独立上市季度财报；保留经营信息监控，不使用媒体估算值。",url:"https://www.cheryholding.com/news.html",fresh:"持续监控"},
+  {company:"通用汽车",region:"海外母公司",period:"2026 Q1",revenue:"$43.6bn",growth:"—",profit:"净利润 $2.6bn",margin:"6.0%*",profitGrowth:"—",cash:"汽车业务经营现金流 $0.53bn",view:"集团维持盈利，中国业务重组与新能源产品节奏继续影响区域表现。",url:"https://www.sec.gov/Archives/edgar/data/1467858/000146785826000033/gmq12026pressreleaseandfin.htm",fresh:"2026-04-28"},
+  {company:"福特汽车",region:"海外母公司",period:"2026 Q1",revenue:"$43.25bn",growth:"+6.4%",profit:"归母净利 $2.55bn",margin:"5.9%*",profitGrowth:"—",cash:"调整后自由现金流 -$1.9bn",view:"北美业务支撑利润；中国合资业务不单独作为集团财务替代项。",url:"https://www.sec.gov/Archives/edgar/data/37996/000003799626000086/f-20260331.htm",fresh:"2026-04-29"},
+  {company:"丰田汽车",region:"海外母公司",period:"FY2026",revenue:"¥50.68tn",growth:"+5.5%",profit:"归母净利 ¥3.85tn",margin:"经营利润率 7.4%",profitGrowth:"-19.2%",cash:"经营现金流 ¥5.47tn",view:"财年截至2026年3月；中国合资公司主要按权益法反映。",url:"https://global.toyota/pages/global_toyota/ir/financial-results/2026_4q_summary_en.pdf",fresh:"2026-05-08"},
+  {company:"本田汽车",region:"海外母公司",period:"FY2026",revenue:"¥21.80tn",growth:"+0.5%",profit:"归母亏损 ¥0.42tn",margin:"经营利润率 -1.9%",profitGrowth:"由盈转亏",cash:"自由现金流 ¥1.06tn",view:"电动化战略重估产生重大损失；摩托车和金融服务继续提供现金支撑。",url:"https://global.honda/en/investors/library/financialresult.html",fresh:"2026-05-14"},
+  {company:"日产汽车",region:"海外母公司",period:"FY2026",revenue:"¥12.0tn",growth:"约-5.0%",profit:"归母亏损 ¥0.53tn",margin:"经营利润率 0.5%",profitGrowth:"亏损收窄",cash:"未披露统一FCF",view:"财年截至2026年3月；重组与产能调整仍是核心议题。",url:"https://www.nissan-global.com/EN/IR/FINANCIAL/",fresh:"2026-05-13"},
+  {company:"Stellantis",region:"海外母公司",period:"2026 Q1",revenue:"€38.13bn",growth:"+6.0%",profit:"净利润 €0.38bn",margin:"调整后经营利润率 2.5%",profitGrowth:"扭亏",cash:"工业自由现金流 -€1.92bn",view:"收入恢复并转盈，季节性营运资金仍造成现金流出。",url:"https://www.stellantis.com/content/dam/stellantis-corporate/news/press-releases/2026/april/30-04-2026/en/EN-20260430-Stellantis-Q1-2026-Financial-Results.pdf",fresh:"2026-04-30"},
+  {company:"现代汽车集团",region:"海外母公司",period:"2026 Q2",revenue:"₩49.22tn",growth:"+1.9%",profit:"净利润 ₩2.89tn",margin:"经营利润率 5.8%",profitGrowth:"-11.2%",cash:"季度未披露",view:"混动车和北美市场支撑收入，原材料及生产约束压低利润。",url:"https://www.hyundai.com/worldwide/en/newsroom/detail/0000001234",fresh:"2026-07-23"},
+  {company:"雷诺集团",region:"海外母公司",period:"2026 Q1",revenue:"€12.53bn",growth:"+7.3%",profit:"季度未披露",margin:"季度未披露",profitGrowth:"—",cash:"季度未披露",view:"一季度按惯例仅披露收入；汽车业务收入108.07亿欧元，同比增长6.5%。",url:"https://assets.renaultgroup.com/uploads/2026/04/20260423_Renault-Group_Press-Release_2026-Q1-revenue-EN.pdf",fresh:"2026-04-23"}
 ];
 
-const financialResults = [
-  {company:"新泉股份", period:"2026 Q1", revenue:"36.39亿元", growth:"+3.42%", profit:"归母净利 2.03亿元", profitMargin:"归母净利率 5.58%", profitGrowth:"-4.57%", cashFlow:"经营现金流 1.00亿元", overview:"收入保持增长，但研发投入、海外产能爬坡压低短期利润增速。", strategy:"深化全球化产能，发展座椅与机器人新增长极。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12274734&stockid=603179"},
-  {company:"宁波华翔", period:"2026 Q1", revenue:"51.69亿元", growth:"-17.43%", profit:"归母净利 2.73亿元", profitMargin:"归母净利率 5.28%", profitGrowth:"+6.63%", cashFlow:"经营现金流 1.89亿元", overview:"剥离海外低效业务导致收入下降，但资产结构优化后盈利韧性改善。", strategy:"聚焦车身、底盘、电池轻量化，并拓展机器人硬件。", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225202599.PDF"},
-  {company:"富维股份", period:"2026 Q1", revenue:"39.08亿元", growth:"-17.88%", profit:"归母净利 0.82亿元", profitMargin:"归母净利率 2.10%", profitGrowth:"-17.18%", cashFlow:"经营现金流 5.40亿元", overview:"主要客户产销波动拖累收入，降本与业务结构调整维持利润韧性。", strategy:"拓展一汽体系外客户，推进机器人和低空相关业务。", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149032&stockid=600742"},
-  {company:"华域汽车", period:"2026 Q1", revenue:"401.83亿元", growth:"-0.97%", profit:"归母净利 12.44亿元", profitMargin:"归母净利率 3.10%", profitGrowth:"-2.63%", cashFlow:"经营现金流 51.98亿元", overview:"整车市场竞争和产品结构变化使收入、利润小幅承压。", strategy:"创新与成本双驱动，巩固智能座舱并做大智能底盘及海外市场。", url:"https://static.cninfo.com.cn/finalpage/2026-04-29/1225225765.PDF"},
-  {company:"继峰股份", period:"2026 Q1", revenue:"62.42亿元", growth:"+23.92%", profit:"归母净利 1.32亿元", profitMargin:"归母净利率 2.11%", profitGrowth:"+26.04%", cashFlow:"经营现金流 -4.62亿元", overview:"座椅项目放量形成规模效应，格拉默整合与降本推动利润增长。", strategy:"做强乘用车座椅业务，持续提升格拉默全球盈利水平。", url:"https://paper.cnstock.com/html/2026-04/30/content_2211103.htm"},
-  {company:"常熟汽饰", period:"2026 Q1", revenue:"16.72亿元", growth:"+24.99%", profit:"归母净利 0.72亿元", profitMargin:"归母净利率 4.28%", profitGrowth:"-18.34%", cashFlow:"经营现金流 1.36亿元", overview:"订单放量拉动收入，但研发增加、新工厂爬坡及投资收益下降压制利润。", strategy:"扩大新能源客户与海外布局，推动新产能尽快达产。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12209000&stockid=603035"},
-  {company:"岱美股份", period:"2026 Q1", revenue:"15.39亿元", growth:"-3.36%", profit:"归母净利 1.86亿元", profitMargin:"归母净利率 12.11%", profitGrowth:"-10.79%", cashFlow:"经营现金流 0.97亿元", overview:"需求与汇率扰动造成收入和利润回落，遮阳板业务仍保持较高盈利。", strategy:"推动汽车顶棚放量，并探索机器人等第二增长曲线。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12275504&stockid=603730"},
-  {company:"福赛科技", period:"2026 Q1", revenue:"3.82亿元", growth:"-8.74%", profit:"归母净利 0.31亿元", profitMargin:"归母净利率 8.05%", profitGrowth:"+9.90%", cashFlow:"经营现金流 0.07亿元", overview:"收入短期回落，但墨西哥业务改善和运营效率提升带动利润逆势增长。", strategy:"扩建墨西哥产能，拓展智能表面、功能件和三电嵌件。", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225198228.PDF"},
-  {company:"FORVIA", period:"2026 Q1", revenue:"€5.14bn", growth:"-2.2%", profit:"季度仅披露销售额", profitMargin:"Q1利润率未披露", profitGrowth:"—", cashFlow:"Q1未量化披露", overview:"市场产量偏弱使销售承压；年度亏损主要来自组合重塑的非现金费用。", strategy:"出售内饰业务、简化组合并继续降本降杠杆。", url:"https://www.forvia.com/en/investors"},
-  {company:"Antolin", period:"2026 Q1", revenue:"€851.6m", growth:"-13.5%", profit:"净利润 €72.5m", profitMargin:"EBITDA率 7.8%", profitGrowth:"+1,194.6%*", cashFlow:"Q1未量化披露", overview:"可比营收下降5.9%；净利润跃升主要来自出售印度三家子公司的资本收益，run-rate EBITDA率为9.2%。", strategy:"聚焦高价值内饰技术方案，继续重组与区域效率提升。", url:"https://www.antolin.com/en/antolin-reports-eu725-million-profit-first-quarter-following-sale-three-subsidiaries-india"},
-  {company:"Lear", period:"2026 Q1", revenue:"$5.82bn", growth:"+5.0%", profit:"核心经营利润 $297m", profitMargin:"核心利润率 5.1%", profitGrowth:"+10.0%", cashFlow:"经营现金流 $98m / FCF -$27m", overview:"重点平台增产、新业务及重组节省推动收入与利润率共同提升。", strategy:"以自动化和数字工具提效，扩大座椅及电子系统定点。", url:"https://ir.lear.com/news-releases/news-release-details/lear-reports-first-quarter-2026-results-highest-eps-2021-and/"},
-  {company:"Magna", period:"2026 Q1", revenue:"同比口径", growth:"+3.0%", profit:"调整后 EBIT", profitMargin:"调整后 EBIT率 5.4%", profitGrowth:"+58.0%", cashFlow:"自由现金流 $372m", overview:"重组、生产率、组合和汇率改善抵消部分有机销售压力。", strategy:"优化业务组合，扩大利润率与自由现金流并持续股东回报。", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-first-quarter-results--maintains-positive-outlook-for-2026"},
-  {company:"GRAMMER AG", period:"2026 Q1", revenue:"€0.46bn", growth:"-5.2%", profit:"EBIT €23.3m", profitMargin:"EBIT率 5.0%", profitGrowth:"+21.4%", cashFlow:"自由现金流 -€36.1m", overview:"市场需求偏弱导致收入下降，但区域整合和成本措施显著改善EBIT。", strategy:"推进全球协同、成本优化及汽车与商用车座椅产品升级。", url:"https://www.grammer.com/en/investor-relations/financial-publications-presentations/quarterly-reports/"}
+const ALL_FINANCIALS = [...FINANCIALS, ...MORE_FINANCIALS];
+const FRONT_ORDER = ["理想汽车","蔚来","小米集团"];
+const SORTED_FINANCIALS = [...ALL_FINANCIALS].sort((a,b)=>{
+  const ap=FRONT_ORDER.indexOf(a.company), bp=FRONT_ORDER.indexOf(b.company);
+  if(ap>=0 || bp>=0) return (ap>=0?ap:999)-(bp>=0?bp:999);
+  const ac=a.region.startsWith("中国"), bc=b.region.startsWith("中国");
+  return ac===bc?0:ac?-1:1;
+});
+const CASH_RESERVES = {
+  "理想汽车":"现金及现金等价物、受限现金、定期存款和短期投资 ¥94.3bn",
+  "蔚来":"现金及现金等价物、受限现金、短期投资和长期定期存款 ¥48.2bn",
+  "小米集团":"现金资源 ¥127.3bn",
+  "小鹏汽车":"现金及现金等价物、受限现金、短期投资和定期存款 ¥42.09bn",
+  "比亚迪":"货币资金 ¥75.79bn",
+  "上汽集团":"货币资金 ¥144.69bn",
+  "长安汽车":"货币资金 ¥39.83bn",
+  "广汽集团":"货币资金 ¥45.69bn",
+  "长城汽车":"货币资金 ¥29.02bn",
+  "零跑汽车":"现金及现金等价物、受限现金、以公允价值计量的金融资产和定期存款 ¥30.63bn",
+  "江淮汽车":"货币资金 ¥15.89bn",
+  "北汽蓝谷":"货币资金 ¥6.96bn",
+  "赛力斯":"货币资金 ¥63.85bn",
+  "大众汽车集团":"汽车业务净流动性 €34.24bn",
+  "特斯拉":"现金、现金等价物及短期投资 $44.74bn",
+  "宝马集团":"汽车业务净金融资产 €44.86bn",
+  "梅赛德斯-奔驰集团":"工业业务净流动性 €33.81bn",
+  "丰田汽车":"现金及现金等价物 ¥12.66tn",
+  "本田汽车":"现金及现金等价物 ¥4.56tn",
+  "Stellantis":"工业业务可用流动性 €44.1bn"
+};
+function cashFlowValue(item){ return /^现金储备/.test(item.cash)?"季度未披露":item.cash }
+function cashReserveValue(item){ return CASH_RESERVES[item.company]||"未披露" }
+
+const STOCKS = [
+ {name:"上汽集团",ticker:"600104.SH",symbol:"sh600104",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh600104/gp"},
+ {name:"比亚迪",ticker:"002594.SZ / 1211.HK",symbol:"sz002594",market:"A股 / 港股",currency:"CNY",url:"https://gu.qq.com/sz002594/gp"},
+ {name:"长安汽车",ticker:"000625.SZ",symbol:"sz000625",market:"A股",currency:"CNY",url:"https://gu.qq.com/sz000625/gp"},
+ {name:"长城汽车",ticker:"601633.SH / 2333.HK",symbol:"sh601633",market:"A股 / 港股",currency:"CNY",url:"https://gu.qq.com/sh601633/gp"},
+ {name:"广汽集团",ticker:"601238.SH / 2238.HK",symbol:"sh601238",market:"A股 / 港股",currency:"CNY",url:"https://gu.qq.com/sh601238/gp"},
+ {name:"北汽蓝谷",ticker:"600733.SH",symbol:"sh600733",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh600733/gp"},
+ {name:"赛力斯",ticker:"601127.SH",symbol:"sh601127",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh601127/gp"},
+ {name:"江淮汽车",ticker:"600418.SH",symbol:"sh600418",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh600418/gp"},
+ {name:"吉利汽车",ticker:"0175.HK",symbol:"hk00175",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk00175/gp"},
+ {name:"东风集团股份",ticker:"0489.HK",symbol:"hk00489",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk00489/gp"},
+ {name:"零跑汽车",ticker:"9863.HK",symbol:"hk09863",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk09863/gp"},
+ {name:"小米集团",ticker:"1810.HK",symbol:"hk01810",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk01810/gp"},
+ {name:"蔚来",ticker:"NIO.N / 9866.HK",symbol:"usNIO",market:"美股 / 港股",currency:"USD",url:"https://gu.qq.com/usNIO/gp"},
+ {name:"理想汽车",ticker:"LI.O / 2015.HK",symbol:"usLI",market:"美股 / 港股",currency:"USD",url:"https://gu.qq.com/usLI/gp"},
+ {name:"小鹏汽车",ticker:"XPEV.N / 9868.HK",symbol:"usXPEV",market:"美股 / 港股",currency:"USD",url:"https://gu.qq.com/usXPEV/gp"},
+ {name:"特斯拉",ticker:"TSLA.O",symbol:"usTSLA",market:"美股",currency:"USD",url:"https://gu.qq.com/usTSLA/gp"},
+ {name:"通用汽车",ticker:"GM.N",symbol:"usGM",market:"美股",currency:"USD",url:"https://gu.qq.com/usGM/gp"},
+ {name:"福特汽车",ticker:"F.N",symbol:"usF",market:"美股",currency:"USD",url:"https://gu.qq.com/usF/gp"},
+ {name:"丰田汽车",ticker:"TM.N",symbol:"usTM",market:"美股 / 东京",currency:"USD",url:"https://gu.qq.com/usTM/gp"},
+ {name:"本田汽车",ticker:"HMC.N",symbol:"usHMC",market:"美股 / 东京",currency:"USD",url:"https://gu.qq.com/usHMC/gp"},
+ {name:"大众汽车",ticker:"VOW3.DE",market:"德国",currency:"EUR",fallbackKey:"vow3",url:"https://www.volkswagen-group.com/en/share-15791"},
+ {name:"宝马集团",ticker:"BMW.DE",market:"德国",currency:"EUR",fallbackKey:"bmw",url:"https://www.bmwgroup.com/en/investor-relations/bmw-shares.html"},
+ {name:"梅赛德斯-奔驰",ticker:"MBG.DE",market:"德国",currency:"EUR",fallbackKey:"mbg",url:"https://group.mercedes-benz.com/investors/share/"},
+ {name:"Stellantis",ticker:"STLAM.MI / STLA.N",symbol:"usSTLA",market:"欧洲 / 美股",currency:"USD",url:"https://gu.qq.com/usSTLA/gp"},
+ {name:"现代汽车",ticker:"005380.KS",market:"韩国",currency:"KRW",fallbackKey:"hyundai",url:"https://www.hyundai.com/worldwide/en/company/ir/stock-information"}
 ];
-
-const financialDisclosureGaps = ["延锋","诺博","成航模塑","富诚","重庆平伟","重庆赛帕斯","宣城托新精密","奥克伍德"];
-
-const audienceProfiles = {
-  "销售": { en:"SALES", title:"技术、竞争环境和定点", description:"优先关注客户车型、竞争对手定点、量产技术、消费者偏好和可能改变报价策略的经营信号。", types:["客户与车型","消费者偏好","产品与技术","业绩财报","声学与座舱","新材料","年度报告","行业展会"] },
-  "研发": { en:"R&D", title:"技术路线、材料与量产工艺", description:"优先关注消费者偏好、中控、门板、座椅、声学、智能表面、循环材料与可制造性变化。", types:["消费者偏好","产品与技术","新材料","声学与座舱","行业展会","客户与车型","业绩财报","年度报告"] },
-  "管理层": { en:"MANAGEMENT", title:"竞争格局、盈利与战略动作", description:"优先关注收入与利润变化、消费者趋势、业务出售、客户结构和影响资源配置的行业方向。", types:["业绩财报","消费者偏好","年度报告","客户与车型","产品与技术","新材料","行业展会","声学与座舱"] }
+const CHINA_STOCK_NAMES = new Set(["理想汽车","蔚来","小米集团","小鹏汽车","上汽集团","比亚迪","长安汽车","长城汽车","广汽集团","北汽蓝谷","赛力斯","江淮汽车","吉利汽车","东风集团股份","零跑汽车"]);
+const SORTED_STOCKS = [...STOCKS].sort((a,b)=>{
+  const ap=FRONT_ORDER.indexOf(a.name), bp=FRONT_ORDER.indexOf(b.name);
+  if(ap>=0 || bp>=0) return (ap>=0?ap:999)-(bp>=0?bp:999);
+  const ac=CHINA_STOCK_NAMES.has(a.name), bc=CHINA_STOCK_NAMES.has(b.name);
+  return ac===bc?0:ac?-1:1;
+});
+const FALLBACK_QUOTES = {
+ vow3:{price:71.50,pct:-2.03,cap:35.82,date:"2026/07/28",trend:[72.98,71.50],cached:true},
+ bmw:{price:56.96,pct:0.07,cap:34.16,date:"2026/07/28",trend:[56.92,56.96],cached:true},
+ mbg:{price:45.32,pct:1.21,cap:43.11,date:"2026/07/27",trend:[44.78,45.32],cached:true},
+ hyundai:{price:364000,pct:-9.68,cap:84083.61,date:"2026/07/28",trend:[403000,364000],cached:true},
+ sh600104:{price:11.03,pct:2.41,cap:1267.93,date:"20260730",trend:[10.05,10.34,10.52,10.39,10.60,10.46,10.53,10.61,10.38,10.44,10.58,10.77,11.03],cached:true},
+ sz002594:{price:95.64,pct:0.83,cap:8719.69,date:"20260730",trend:[90.18,91.76,94.14,93.47,93.92,94.30,91.57,92.65,91.89,92.40,93.35,94.85,95.64],cached:true},
+ sz000625:{price:7.71,pct:2.53,cap:764.29,date:"20260730",trend:[6.824,7.034,7.19,7.11,7.28,7.20,7.21,7.33,7.20,7.26,7.31,7.52,7.71],cached:true},
+ sh601633:{price:16.84,pct:1.32,cap:1440.40,date:"20260730",trend:[15.03,15.58,15.89,15.66,16.36,16.09,16.08,16.21,16.12,16.15,16.43,16.62,16.84],cached:true},
+ sh601238:{price:5.52,pct:2.79,cap:562.88,date:"20260730",trend:[4.94,5.08,5.16,5.04,5.18,5.10,5.12,5.27,5.10,5.14,5.20,5.37,5.52],cached:true},
+ sh600733:{price:6.10,pct:6.27,cap:388.40,date:"20260730",trend:[4.57,4.67,4.79,4.62,4.70,4.66,4.68,4.81,4.73,4.91,5.22,5.74,6.10],cached:true},
+ sh601127:{price:60.40,pct:4.14,cap:1052.16,date:"20260730",trend:[53.38,55.89,56.37,54.30,55.61,55.51,55.98,56.38,54.33,55.41,55.93,58.00,60.40],cached:true},
+ sh600418:{price:23.76,pct:7.17,cap:535.59,date:"20260730",trend:[22.50,22.50,22.97,21.35,21.05,20.80,20.61,20.77,19.64,20.43,20.96,22.17,23.76],cached:true},
+ hk00175:{price:20.28,pct:-0.10,cap:2187.2241,date:"20260730",trend:[18.31,18.40,19.39,18.48,18.79,18.62,17.93,18.52,19.06,18.82,19.12,20.30,20.28],cached:true},
+ hk00489:{price:9.54,pct:0,cap:787.2969,date:"20260318",trend:[9.81,9.70,9.71,9.70,9.81,9.61,9.41,9.44,9.35,9.66,9.38,9.54],cached:true},
+ hk09863:{price:41.28,pct:-2.13,cap:586.9243,date:"20260730",trend:[36.30,36.06,37.24,35.14,34.92,35.32,33.46,34.64,36.34,37.14,38.52,42.18,41.28],cached:true},
+ hk01810:{price:30.96,pct:-2.89,cap:8000.2428,date:"20260730",trend:[26.04,25.86,27.50,26.88,27.74,27.42,26.68,27.14,26.72,28.68,29.26,31.88,30.96],cached:true},
+ usNIO:{price:4.76,pct:1.71,cap:119.26975,date:"20260729",trend:[4.68,4.76],cached:true},
+ usLI:{price:13.80,pct:4.47,cap:143.61395,date:"20260729",trend:[13.21,13.80],cached:true},
+ usXPEV:{price:13.06,pct:2.75,cap:124.93113,date:"20260729",trend:[12.71,13.06],cached:true},
+ usTSLA:{price:298.32,pct:-2.97,cap:11782.28979,date:"20260729",trend:[307.45,298.32],cached:true},
+ usGM:{price:89.40,pct:-1.00,cap:784.44168,date:"20260729",trend:[90.30,89.40],cached:true},
+ usF:{price:15.28,pct:2.14,cap:609.30462,date:"20260729",trend:[14.96,15.28],cached:true},
+ usTM:{price:192.84,pct:3.51,cap:2283.42856,date:"20260729",trend:[186.30,192.84],cached:true},
+ usHMC:{price:30.68,pct:1.32,cap:398.08123,date:"20260729",trend:[30.28,30.68],cached:true},
+ usSTLA:{price:6.01,pct:4.34,cap:174.14022,date:"20260729",trend:[5.76,6.01],cached:true}
 };
 
-const audiencePriorities = {
-  "销售": [
-    {level:"高", company:"延锋", title:"XiM27 展示可量产整舱集成能力", why:"客户对整舱、场景化和软硬件一体化的询价门槛可能提升。", action:"梳理现有中控与门板项目中可组合报价的功能件和合作伙伴。", newsId:1},
-    {level:"高", company:"FORVIA", title:"推进 Interiors 业务出售", why:"潜在股权与客户关系变化可能带来供应链重新选择窗口。", action:"跟踪买方、重点客户和中国区项目团队变化，建立替代切入清单。", newsId:17},
-    {level:"中", company:"Audi / 行业", title:"高端车型继续强化材料与座舱体验", why:"可见件质感、舒适性和用户体验仍是中高端项目的核心卖点。", action:"将表面工艺、低气味和触感方案转化为客户可比较的样件包。", newsId:10}
-  ],
-  "研发": [
-    {level:"高", company:"延锋", title:"XiM27 集成 AI、可重构座椅与集中式架构", why:"内饰件正在从结构和装饰件转向可交互的整舱系统。", action:"评估中控、扶手与门板的电气接口、模块化及场景切换能力。", newsId:1},
-    {level:"高", company:"材料技术", title:"高比例 PCR PP 与天然纤维复合材料加速", why:"低碳材料需要同时满足外观、气味、耐久和批次稳定性。", action:"建立 PCR PP、天然纤维及现有材料的性能与成本对标矩阵。", newsId:9},
-    {level:"中", company:"智能表面", title:"触控、发光与无缝表面制造协同", why:"门板和中控可见件将承载更多交互功能，工艺链更加复杂。", action:"识别 IME/IML、透光装饰、触控膜与注塑工艺的能力缺口。", newsId:8}
-  ],
-  "管理层": [
-    {level:"高", company:"FORVIA", title:"内饰业务出售进入推进阶段", why:"全球内饰供应格局可能重组，并影响客户、人才与产能分布。", action:"建立潜在买方情景及对中国市场竞争强度的影响评估。", newsId:17},
-    {level:"高", company:"财务对标", title:"同业收入与盈利表现明显分化", why:"Lear、Magna 利润改善，而部分 A 股同业收入承压，反映客户结构与运营效率差异。", action:"按客户、产品和区域拆解自身增长与利润差距，确定资源优先级。", newsId:13},
-    {level:"中", company:"技术投资", title:"智能座舱与循环材料继续获得投入", why:"技术升级与可持续要求将提高研发投入和供应商协同成本。", action:"明确未来两年必须自研、联合开发和外购的能力边界。", newsId:6}
-  ]
-};
-
-const signalItems = news.slice(0,3);
-const productColumns = ["副仪表板","门板","座椅扶手","内饰总成","金属扬声器罩","新材料"];
-
-const listedStocks = [
-  { id:"xinquan", name:"新泉股份", ticker:"603179.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh603179", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh603179/gp" },
-  { id:"huaxiang", name:"宁波华翔", ticker:"002048.SZ", market:"深交所", currency:"CNY", quoteSymbol:"sz002048", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sz002048/gp" },
-  { id:"faway", name:"富维股份", ticker:"600742.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh600742", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh600742/gp" },
-  { id:"jifeng", name:"继峰股份", ticker:"603997.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh603997", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh603997/gp" },
-  { id:"changshu", name:"常熟汽饰", ticker:"603035.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh603035", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh603035/gp" },
-  { id:"daimay", name:"岱美股份", ticker:"603730.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh603730", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh603730/gp" },
-  { id:"foseal", name:"福赛科技", ticker:"301529.SZ", market:"深交所", currency:"CNY", quoteSymbol:"sz301529", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sz301529/gp" },
-  { id:"huayu", name:"华域汽车", ticker:"600741.SH", market:"上交所", currency:"CNY", quoteSymbol:"sh600741", source:"腾讯证券", sourceUrl:"https://gu.qq.com/sh600741/gp" },
-  { id:"forvia", name:"FORVIA", ticker:"FRVIA.PA", market:"巴黎泛欧", currency:"EUR", source:"Euronext", sourceUrl:"https://live.euronext.com/en/product/equities/FR0000121147-XPAR" },
-  { id:"lear", name:"李尔", ticker:"LEA.N", market:"纽约证交所", currency:"USD", quoteSymbol:"usLEA", source:"腾讯证券", sourceUrl:"https://gu.qq.com/usLEA/gp" },
-  { id:"magna", name:"麦格纳", ticker:"MGA.N", market:"纽约证交所", currency:"USD", quoteSymbol:"usMGA", source:"腾讯证券", sourceUrl:"https://gu.qq.com/usMGA/gp" },
-  { id:"grammer", name:"GRAMMER AG", ticker:"GMM.DE", market:"德国 Xetra", currency:"EUR", source:"GRAMMER / Stuttgart", sourceUrl:"https://www.grammer.com/en/investor-relations/share/" }
-];
-
-const fallbackQuotes = {
-  xinquan:{price:35.91, previous:37.83, change:-1.92, percent:-5.08, cap:256.47, date:"2026-07-30", trend:[41.04,40.81,42.61,42.90,40.58,38.51,39.49,38.00,37.83,35.91], cached:true},
-  huaxiang:{price:17.69, previous:18.21, change:-0.52, percent:-2.86, cap:125.28, date:"2026-07-30", trend:[19.35,18.43,18.78,18.48,18.30,17.50,18.52,18.26,18.21,17.69], cached:true},
-  faway:{price:7.55, previous:7.42, change:0.13, percent:1.75, cap:56.10, date:"2026-07-30", trend:[7.21,7.20,7.15,7.16,7.30,7.15,7.20,7.27,7.42,7.55], cached:true},
-  forvia:{price:8.736, previous:null, change:null, percent:null, cap:1.722, date:"2026-07-24", trend:[8.736], cached:true, official:true},
-  lear:{price:147.51, previous:148.68, change:-1.17, percent:-0.79, cap:73.89528, date:"2026-07-29", trend:[147.63,147.51], cached:true},
-  magna:{price:69.10, previous:69.02, change:0.08, percent:0.12, cap:188.10716, date:"2026-07-29", trend:[68.98,69.10], cached:true},
-  jifeng:{price:12.75, previous:12.12, change:0.63, percent:5.20, cap:162.21, date:"2026-07-30", trend:[11.94,12.14,11.99,11.44,11.70,11.38,11.57,11.60,12.12,12.75], cached:true},
-  grammer:{price:10.80, previous:null, change:null, percent:null, cap:0.165, date:"2026-07-23", trend:[10.80], cached:true, official:true},
-  changshu:{price:11.09, previous:10.93, change:0.16, percent:1.46, cap:40.63, date:"2026-07-30", trend:[10.87,10.85,10.76,10.62,10.78,10.47,10.60,10.67,10.93,11.09], cached:true},
-  daimay:{price:9.02, previous:9.40, change:-0.38, percent:-4.04, cap:193.80, date:"2026-07-30", trend:[10.40,10.44,10.54,10.15,10.11,9.61,9.72,9.27,9.40,9.02], cached:true},
-  foseal:{price:68.81, previous:76.00, change:-7.19, percent:-9.46, cap:43.74, date:"2026-07-30", trend:[89.40,80.73,82.73,79.94,79.65,75.35,84.00,81.66,76.00,68.81], cached:true},
-  huayu:{price:16.92, previous:16.57, change:0.35, percent:2.11, cap:533.44, date:"2026-07-30", trend:[15.89,16.05,16.24,16.20,16.20,16.35,16.11,16.22,16.57,16.92], cached:true}
-};
-
-function makeSparkPath(values=[]) {
-  if (values.length < 2) return "M2 18 L88 18";
-  const min=Math.min(...values), max=Math.max(...values), span=max-min||1;
-  return values.map((value,index)=>`${index?"L":"M"}${2+(86*index/(values.length-1))} ${32-(28*(value-min)/span)}`).join(" ");
-}
-
-function StockSparkline({state="pending", values=[]}) {
-  const path = makeSparkPath(values);
-  return <svg className={`stock-sparkline ${state}`} viewBox="0 0 90 36" preserveAspectRatio="none" aria-hidden="true"><path className="spark-area" d={`${path} L88 36 L2 36 Z`}/><path className="spark-line" d={path}/></svg>;
-}
-
-function GrowthValue({value}) {
-  const normalized=String(value||"");
-  const state=normalized.includes("-")?"down":normalized.includes("+")?"up":"neutral";
-  return <span className={`growth-value ${state}`}>{state!=="neutral"&&<span className="growth-triangle" aria-hidden="true">{state==="up"?"▲":"▼"}</span>}{normalized}</span>;
-}
-
-function CompactMetric({value, type, className=""}) {
+function Growth({value}) { const down=/^-|下降|亏损扩大|由盈转亏/.test(value); const up=/^\+|收窄/.test(value); return <span title={value} className={down?"down":up?"up":"neutral"}>{down?"▼ ":up?"▲ ":""}{value}</span> }
+function Metric({value,type}) {
   const raw=String(value||"—");
-  let display=raw;
-  if (type==="profit") {
-    display=raw
-      .replace(/^归母净利\s*/,"")
-      .replace(/^净利润\s*/,"")
-      .replace(/^核心经营利润\s*/,"")
-      .replace(/^EBIT\s*/,"");
-    if (/仅披露|调整后 EBIT$/.test(raw)) display="—";
+  const isStatus=/未披露|未单列|季度未披露|—/.test(raw);
+  let short=raw;
+  if(!isStatus && type==="margin") {
+    short=(raw.match(/-?\d+(?:\.\d+)?%\*?/)||[raw])[0];
+  } else if(!isStatus && type==="profit") {
+    short=(raw.match(/-?[¥$€₩]?\d+(?:\.\d+)?(?:bn|tn)?/)||[raw])[0];
+    if(/亏损|亏损/.test(raw) && !short.startsWith("-")) short=`-${short}`;
+  } else if(!isStatus && type==="cash") {
+    short=(raw.match(/-?[¥$€₩]?\d+(?:\.\d+)?(?:bn|tn)?/)||[raw])[0];
   }
-  if (type==="margin") {
-    display=raw
-      .replace(/^归母净利率\s*/,"")
-      .replace(/^EBITDA率\s*/,"")
-      .replace(/^核心利润率\s*/,"")
-      .replace(/^调整后 EBIT率\s*/,"")
-      .replace(/^EBIT率\s*/,"");
-    if (/未披露/.test(raw)) display="—";
-  }
-  if (type==="cash") {
-    display=raw
-      .replace(/^经营现金流\s*/,"")
-      .replace(/^自由现金流\s*/,"")
-      .replace(" / FCF "," / ");
-    if (/未量化披露/.test(raw)) display="—";
-  }
-  return <span className={`compact-metric ${className}`.trim()} title={raw} aria-label={raw}>{display}</span>;
+  return <span className="metric" title={raw}>{short}</span>
 }
-
-function quoteDate(raw="") {
-  const digits=raw.replace(/\D/g,"");
-  return digits.length>=8?`${digits.slice(0,4)}-${digits.slice(4,6)}-${digits.slice(6,8)}`:"";
+function formatMarketCap(stock,value){
+ if(!Number.isFinite(value)) return "—";
+ if(stock.currency==="CNY") return `¥${value.toFixed(2)}亿`;
+ if(stock.currency==="HKD") return `HK$${value.toFixed(2)}亿`;
+ if(stock.currency==="EUR") return `€${value.toFixed(2)}bn`;
+ if(stock.currency==="KRW") return `₩${value.toFixed(2)}bn`;
+ return `$${(value/10).toFixed(2)}bn`;
 }
-
-function formatMarketCap(stock, value) {
-  if (!Number.isFinite(value)) return "—";
-  if (stock.currency==="CNY") return `${value.toFixed(2)}亿元`;
-  if (stock.currency==="EUR") return `€${value.toFixed(2)}bn`;
-  return `$${(value/10).toFixed(2)}bn`;
+function displayQuoteDate(value=""){const digits=String(value).replace(/\D/g,"");return digits.length>=8?`${digits.slice(0,4)}-${digits.slice(4,6)}-${digits.slice(6,8)}`:value}
+function stockSource(stock){return stock.symbol?"腾讯证券":"官方投资者关系"}
+function App(){
+ const [quotes,setQuotes]=React.useState(FALLBACK_QUOTES); const [status,setStatus]=React.useState("显示最近行情"); const [scope,setScope]=React.useState("全部");
+ const refreshMarketQuotes=React.useCallback(async()=>{setStatus("正在刷新");const rs=await Promise.allSettled(SORTED_STOCKS.filter(s=>s.symbol).map(async s=>{const u=`https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=${s.symbol},day,,,12,qfq`;const response=await fetch(u,{cache:"no-store"});if(!response.ok)throw Error();const p=await response.json();const x=p?.data?.[s.symbol];const q=x?.qt?.[s.symbol];const rows=x?.qfqday||x?.day||[];if(!q)throw Error();return [s.symbol,{price:Number(q[3]),pct:Number(q[32]),cap:Number(q[45]),date:String(q[30]||"").replace(/\D/g,"").slice(0,8),trend:rows.map(r=>Number(r[2])).filter(Number.isFinite),cached:false}] }));const live={};rs.forEach(r=>r.status==="fulfilled"&&(live[r.value[0]]=r.value[1]));setQuotes(current=>{const next={...current,...live};try{localStorage.setItem("vehicle-financial-market-quotes-v1",JSON.stringify(next))}catch(error){}return next});const expected=SORTED_STOCKS.filter(s=>s.symbol).length;setStatus(Object.keys(live).length===expected?"行情已同步":Object.keys(live).length?"部分行情已同步":"显示最近行情")},[]);
+ React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
+ const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
+ return <div className="shell">
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-07-29</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <main>
+   <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
+   <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>全部企业 · 各自最新披露 · 悬浮数值查看完整指标口径</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
+    <div className="table-wrap"><table><thead><tr><th>企业 / 报告期</th><th>收入</th><th>收入增长</th><th>利润</th><th>利润率</th><th>利润变化</th><th>现金流</th><th>现金储备</th><th>经营解读</th></tr></thead><tbody>{SORTED_FINANCIALS.map(x=><tr key={x.company}><td><a href={x.url} target="_blank"><strong>{x.company}</strong><small>{x.region} · {x.period} ↗</small></a></td><td><Metric value={x.revenue}/></td><td><Growth value={x.growth}/></td><td><Metric value={x.profit} type="profit"/></td><td><Metric value={x.margin} type="margin"/></td><td><Growth value={x.profitGrowth}/></td><td><Metric value={cashFlowValue(x)} type="cash"/></td><td><Metric value={cashReserveValue(x)} type="cash"/></td><td className="view">{x.view}<small>披露：{x.fresh}</small></td></tr>)}</tbody></table></div>
+    <div className="note">* 根据披露值计算。现金流采用报告期经营现金流或企业披露的自由现金流；现金储备采用报告期末现金、现金等价物及企业明确披露的短期投资或净流动性口径，悬浮数值查看完整定义。中国合资公司通常由海外母公司按权益法或区域口径披露。</div>
+   </section>
+   <section className="panel stock-panel"><div className="panel-head"><div><b>02</b><h2>股市综合看板</h2><p>对应实际上市主体 · 最近交易日或盘中行情 · 不同币种不做市值合计</p></div><div className="market-actions"><span className={`market-status ${status==="行情已同步"?"live":status==="部分行情已同步"?"partial":"cached"}`}><span></span>{status}</span><button className={`market-refresh ${status==="正在刷新"?"loading":""}`} type="button" onClick={refreshMarketQuotes} disabled={status==="正在刷新"} title="手动刷新最新行情" aria-label="手动刷新最新行情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 5v6h-6"/></svg><span>{status==="正在刷新"?"刷新中":"刷新"}</span></button></div></div>
+    <div className="stock-summary"><div><span>覆盖上市公司</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>中国上市主体</span><strong>{SORTED_STOCKS.filter(s=>CHINA_STOCK_NAMES.has(s.name)).length}</strong></div><div><span>海外母公司</span><strong>{SORTED_STOCKS.filter(s=>!CHINA_STOCK_NAMES.has(s.name)).length}</strong></div></div>
+    <div className="controls">{["全部","中国上市主体","海外母公司"].map(x=><button className={scope===x?"active":""} onClick={()=>setScope(x)} key={x}>{x}</button>)}</div>
+    <div className="stock-list" role="list">{filtered.map(s=>{const q=quotes[s.symbol||s.fallbackKey]||{};const state=q.pct>0?"up":q.pct<0?"down":"pending";return <a href={s.url} target="_self" className="stock-row" key={s.name} role="listitem" aria-label={`${s.name} ${s.ticker} 行情来源`}><div className="stock-identity"><strong>{s.name}</strong><span>{s.ticker} · {s.market}</span><em>{displayQuoteDate(q.date)||"待同步"}{q.cached?" · 最近缓存":""}</em></div><StockSparkline values={q.trend} state={state}/><div className={`stock-quote ${state}`}><strong>{Number.isFinite(q.price)?q.price.toFixed(s.currency==="EUR"?3:2):"—"}</strong><span>{Number.isFinite(q.pct)?`${q.pct>0?"+":""}${q.pct.toFixed(2)}%`:"收盘价"}</span></div><div className="stock-cap"><span>市值</span><strong>{formatMarketCap(s,q.cap)}</strong></div><div className="stock-source">{stockSource(s)} ↗</div></a>})}</div>
+    <div className="note">行情优先由腾讯证券公开接口在页面打开时同步；德国、韩国市场显示最近公开行情快照，并保留官方投资者关系入口。价格仅作信息展示，不构成投资建议。</div>
+   </section>
+  </main><footer>数据来源：上市公司公告、交易所文件及企业投资者关系页面 · 财报与行情存在披露及交易时差 · 点击企业名称或股票行查看原始来源</footer>
+ </div>
 }
-
-async function fetchTencentQuote(stock) {
-  const url=`https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=${stock.quoteSymbol},day,,,10,qfq`;
-  const response=await fetch(url,{cache:"no-store"});
-  if (!response.ok) throw new Error(`行情请求失败 ${response.status}`);
-  const payload=await response.json();
-  const item=payload?.data?.[stock.quoteSymbol];
-  const quote=item?.qt?.[stock.quoteSymbol];
-  if (!quote || !Number.isFinite(Number(quote[3]))) throw new Error("行情字段缺失");
-  const rows=item.qfqday||item.day||[];
-  const trend=rows.map(row=>Number(row[2])).filter(Number.isFinite).slice(-10);
-  return {price:Number(quote[3]),previous:Number(quote[4]),change:Number(quote[31]),percent:Number(quote[32]),cap:Number(quote[45]),date:quoteDate(quote[30]),trend:trend.length>1?trend:[Number(quote[4]),Number(quote[3])],cached:false};
-}
-
-function IconChart() {
-  return <svg className="empty-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 39V10M7 39h35" stroke="currentColor" strokeWidth="2"/><path d="m12 31 8-8 7 4 11-14" stroke="currentColor" strokeWidth="2.5"/><circle cx="12" cy="31" r="2" fill="currentColor"/><circle cx="20" cy="23" r="2" fill="currentColor"/><circle cx="27" cy="27" r="2" fill="currentColor"/><circle cx="38" cy="13" r="2" fill="currentColor"/></svg>;
-}
-
-function App() {
-  const [audience, setAudience] = React.useState("销售");
-  const [selected, setSelected] = React.useState(null);
-  const [stockQuotes, setStockQuotes] = React.useState(fallbackQuotes);
-  const [marketSync, setMarketSync] = React.useState("syncing");
-  const refreshMarketQuotes = React.useCallback(async()=>{
-    setMarketSync("syncing");
-    const results=await Promise.allSettled(listedStocks.filter(stock=>stock.quoteSymbol).map(async stock=>[stock.id,await fetchTencentQuote(stock)]));
-    const live={};
-    results.forEach(result=>{if(result.status==="fulfilled") live[result.value[0]]=result.value[1]});
-    setStockQuotes(current=>{
-      const next={...current,...live};
-      try {localStorage.setItem("interior-market-quotes-v2",JSON.stringify(next))} catch (error) {}
-      return next;
-    });
-    const expected=listedStocks.filter(stock=>stock.quoteSymbol).length;
-    setMarketSync(Object.keys(live).length===expected?"live":Object.keys(live).length?"partial":"cached");
-  },[]);
-  React.useEffect(()=>{
-    const cacheKey="interior-market-quotes-v2";
-    try {
-      const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
-      if (cached) setStockQuotes(current=>({...current,...cached}));
-    } catch (error) {}
-    refreshMarketQuotes();
-  },[refreshMarketQuotes]);
-  const profile = audienceProfiles[audience];
-  const filteredCompanies = companies;
-  const filteredNews = [...news].sort((a,b)=>{const ar=profile.types.indexOf(a.type),br=profile.types.indexOf(b.type);return (ar<0?999:ar)-(br<0?999:br)||b.date.localeCompare(a.date)});
-  const signalStructure = [
-    {name:"产品、技术与客户", value:filteredNews.filter(n=>["产品与技术","客户与车型","声学与座舱"].includes(n.type)).length},
-    {name:"业绩与年度报告", value:filteredNews.filter(n=>["业绩财报","年度报告"].includes(n.type)).length},
-    {name:"新材料与表面", value:filteredNews.filter(n=>n.type==="新材料").length},
-    {name:"消费者偏好", value:filteredNews.filter(n=>n.type==="消费者偏好").length}
-  ];
-  const signalMax = Math.max(1, ...signalStructure.map(item=>item.value));
-
-  return <div className="app-shell" data-screen-label="汽车内饰竞争情报总览">
-    <header className="topbar">
-      <div>
-        <div className="eyebrow">INTERIOR COMPETITIVE INTELLIGENCE</div>
-        <h1>汽车内饰竞争情报看板</h1>
-        <p>综合内饰与金属扬声器罩 · 集团、关联公司、产品、财务与竞争动态</p>
-      </div>
-      <div className="freshness">
-        <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-07-27 · 内部使用</div>
-      </div>
-    </header>
-
-    <section className="audience-bar" aria-label="读者视角">
-      <div className="audience-label">关注视角</div>
-      <div className="audience-tabs">{Object.keys(audienceProfiles).map(item=><button key={item} className={`audience-tab ${audience===item?"active":""}`} onClick={()=>setAudience(item)}><span>{audienceProfiles[item].en}</span>{item}</button>)}</div>
-      <div className="audience-window">近三个月 · 每日滚动更新</div>
-    </section>
-
-    <main className="main">
-      <section className="audience-brief" aria-live="polite">
-        <div><div className="brief-kicker">{profile.en} INTELLIGENCE</div><h2>{profile.title}</h2></div>
-        <p>{profile.description}</p>
-      </section>
-
-      <section className="priority-section priority-theme-porcelain">
-        <div className="section-heading"><div><div className="brief-kicker">DECISION PRIORITIES</div><h2>{audience}本周优先关注</h2></div><span>按业务影响与紧迫度排序</span></div>
-        <div className="priority-grid">{audiencePriorities[audience].map((item,index)=>{const source=news.find(n=>n.id===item.newsId);return <article className="priority-card" key={item.title}><div className="priority-top"><span className={`priority-level ${item.level==="高"?"high":""}`}>{item.level}优先级</span><span>0{index+1}</span></div><div className="priority-company">{item.company}</div><h3>{item.title}</h3><div className="priority-block"><span>为什么重要</span><p>{item.why}</p></div><div className="priority-block action"><span>建议动作</span><p>{item.action}</p></div>{source&&<a href={source.url} target="_blank" rel="noreferrer">查看依据 ↗</a>}</article>})}</div>
-      </section>
-
-      <section className="grid-primary">
-        <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">最新竞争动态</h2><div className="panel-hint">已按{audience}视角的重要度排序 · 最新财报追溯至 2026-04-23</div></div><span className="news-count">{filteredNews.length} 条</span></div>
-          <div className="news-list">{filteredNews.length ? filteredNews.map(item=><article className="news-item" key={item.id}><div><div className="news-company">{item.company}</div><span className="news-track">{item.track}</span></div><div><h3 className="news-title">{item.title}</h3><div className="news-summary">{item.summary}</div></div><div className="news-source"><span>{item.date}</span><a href={item.url} target="_blank" rel="noreferrer">{item.source} ↗</a></div></article>) : <div className="empty-news">当前筛选没有匹配的动态</div>}</div>
-        </div>
-        <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">信号结构</h2><div className="panel-hint">当前样板已验证的来源条目</div></div></div>
-          <div className="track-stack">
-            {signalStructure.map(item=><div className="track-row" key={item.name}><div className="track-row-head"><span>{item.name}</span><strong>{item.value}</strong></div><div className="track-bar"><div className="track-fill" style={{width:`${item.value/signalMax*100}%`}}></div></div></div>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="grid-even reference-grid">
-        <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">核心企业图谱</h2><div className="panel-hint">点击企业查看集团口径、产品标签与来源</div></div><span className="panel-hint">当前显示 {filteredCompanies.length} 家</span></div>
-          <div className="company-grid">{filteredCompanies.map(item=><button className="company-card" key={item.id} onClick={()=>setSelected(item)}><div className="company-card-name">{item.name}</div><div className="company-card-en">{item.en}</div><div className="company-tags">{item.products.slice(0,3).map(tag=><span className={`tag ${item.track==="金属扬声器罩"?"grille":""}`} key={tag}>{tag}</span>)}</div></button>)}</div>
-        </div>
-        <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">企业 × 产品矩阵</h2><div className="panel-hint">完整展示15家企业；副仪表板仅标记综合内饰制造商</div></div><span className="panel-hint">综合内饰12家 · 喇叭网罩3家</span></div>
-          <div className="matrix-wrap"><table className="matrix"><thead><tr><th>企业</th>{productColumns.map(p=><th key={p}>{p}</th>)}</tr></thead><tbody>{filteredCompanies.map(c=><tr key={c.id} className={c.track==="金属扬声器罩"?"matrix-grille-row":""}><td><strong>{c.name}</strong><span className="matrix-company-track">{c.track}</span></td>{productColumns.map(p=>{const marked=(p==="副仪表板"&&c.track==="综合内饰")||c.products.includes(p)||(c.products.includes("座椅扶手")&&p==="座椅扶手");return <td key={p}>{marked?<span className={`matrix-mark ${c.track==="金属扬声器罩"?"secondary":""}`}></span>:<span className="matrix-dash">—</span>}</td>})}</tr>)}</tbody></table></div>
-        </div>
-      </section>
-
-      <section className="grid-even evidence-grid">
-        <div className="panel financial-panel">
-          <div className="panel-header"><div><h2 className="panel-title">最新业绩与财报关键指标</h2><div className="panel-hint">优先使用最新季报；现金流保留原披露口径，经营现金流与自由现金流不直接横向比较；* 为根据披露值计算</div></div><span className="news-count">{financialResults.length} 家</span></div>
-          <div className="financial-table-wrap"><table className="financial-table"><thead><tr><th>企业 / 报告期</th><th>销售额</th><th>营收增长</th><th>利润</th><th>利润率</th><th>利润增长</th><th>现金流</th><th>经营概况</th></tr></thead><tbody>{financialResults.map(item=><tr key={item.company}><td><a href={item.url} target="_blank" rel="noreferrer"><strong>{item.company}</strong><span>{item.period} ↗</span></a></td><td>{item.revenue}</td><td><GrowthValue value={item.growth}/></td><td><CompactMetric value={item.profit} type="profit"/></td><td><CompactMetric value={item.profitMargin} type="margin" className="profit-margin"/></td><td><GrowthValue value={item.profitGrowth}/></td><td><CompactMetric value={item.cashFlow} type="cash" className="cash-flow"/></td><td className="operating-overview"><span>{item.overview}</span><strong>战略：{item.strategy}</strong></td></tr>)}</tbody></table></div>
-          <div className="disclosure-status"><strong>未独立披露财务指标</strong><div>{financialDisclosureGaps.map(name=><span key={name}>{name}</span>)}</div><p>以上企业多为非上市主体、集团业务单元或专业制造商；看板保留监控对象，但不以母集团数据替代。</p></div>
-          <div className="stock-footnote">口径说明：A 股显示营业收入与归母净利润；海外集团优先显示销售额、核心经营利润、调整后 EBIT/EBITDA。点击企业名称可查阅原始披露。</div>
-        </div>
-        <div className="panel stock-panel">
-          <div className="panel-header"><div><h2 className="panel-title">股市综合看板</h2><div className="panel-hint">全部上市竞争对手 · 最近交易日或盘中行情 · 打开页面自动更新</div></div><div className="market-actions"><span className={`market-status ${marketSync}`}><span></span>{marketSync==="live"?"行情已同步":marketSync==="partial"?"部分行情已同步":marketSync==="cached"?"显示最近缓存":"正在同步行情"}</span><button className={`market-refresh ${marketSync==="syncing"?"loading":""}`} type="button" onClick={refreshMarketQuotes} disabled={marketSync==="syncing"} title="手动刷新最新行情" aria-label="手动刷新最新行情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 5v6h-6"/></svg><span>{marketSync==="syncing"?"刷新中":"刷新"}</span></button></div></div>
-          <div className="stock-summary"><div><span>覆盖上市公司</span><strong>{listedStocks.length}</strong></div><div><span>A 股</span><strong>{listedStocks.filter(stock=>stock.currency==="CNY").length}</strong></div><div><span>海外市场</span><strong>{listedStocks.filter(stock=>stock.currency!=="CNY").length}</strong></div></div>
-          <div className="stock-list" role="list">
-            {listedStocks.map(stock=>{const quote=stockQuotes[stock.id]||{};const state=quote.percent>0?"up":quote.percent<0?"down":"pending";return <a className="stock-row" href={stock.sourceUrl} target="_self" key={stock.id} role="listitem" aria-label={`${stock.name} ${stock.ticker} 行情来源`}>
-              <div className="stock-identity"><strong>{stock.name}</strong><span>{stock.ticker} · {stock.market}</span><em>{quote.date||"待同步"}{quote.cached?" · 最近缓存":""}</em></div>
-              <StockSparkline state={state} values={quote.trend}/>
-              <div className={`stock-quote ${state}`}><strong>{Number.isFinite(quote.price)?quote.price.toFixed(stock.currency==="EUR"?3:2):"—"}</strong><span>{Number.isFinite(quote.percent)?`${quote.percent>0?"+":""}${quote.percent.toFixed(2)}%`:"收盘价"}</span></div>
-              <div className="stock-cap"><span>市值</span><strong>{formatMarketCap(stock,quote.cap)}</strong></div>
-              <div className="stock-source">{stock.source} ↗</div>
-            </a>})}
-          </div>
-          <div className="stock-footnote">全部A股、李尔和麦格纳由腾讯证券公开行情在页面打开时同步；接口短暂不可用时显示浏览器最近缓存。FORVIA与GRAMMER AG使用欧洲交易所最近公开价格快照。列表按A股在前、海外市场在后排列；不同市场保留原交易币种，不做跨币种市值合计。</div>
-        </div>
-      </section>
-
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口为近三个月，最新财报因披露日略早而追溯至 2026-04-23。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
-    </main>
-
-    <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
-    <aside className={`drawer ${selected?"open":""}`} aria-hidden={!selected}>
-      {selected && <><div className="drawer-head"><div><div className="eyebrow">COMPANY PROFILE</div><h2>{selected.name}</h2><div className="source-note">{selected.en}</div></div><button className="close-button" onClick={()=>setSelected(null)} aria-label="关闭">×</button></div><div className="drawer-body"><section className="drawer-section"><h3>监控口径</h3><div className="drawer-copy">{selected.note}</div></section><section className="drawer-section"><h3>基础属性</h3><div className="drawer-copy">赛道：{selected.track}<br/>地区：{selected.region}<br/>上市状态：{selected.listed?`上市 · ${selected.ticker}`:"非上市或集团主体"}</div></section><section className="drawer-section"><h3>产品标签</h3><div className="company-tags">{selected.products.map(tag=><span className={`tag ${selected.track==="金属扬声器罩"?"grille":""}`} key={tag}>{tag}</span>)}</div></section><section className="drawer-section"><h3>可信来源</h3><a className="drawer-link" href={selected.url} target="_blank" rel="noreferrer">打开企业或监管来源 ↗</a></section></div></>}
-    </aside>
-  </div>;
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+function makeSparkPath(values=[]){if(values.length<2)return "M2 18 L88 18";const min=Math.min(...values),max=Math.max(...values),span=max-min||1;return values.map((value,index)=>`${index?"L":"M"}${2+(86*index/(values.length-1))} ${32-(28*(value-min)/span)}`).join(" ")}
+function StockSparkline({state="pending",values=[]}){const path=makeSparkPath(values);return <svg className={`stock-sparkline ${state}`} viewBox="0 0 90 36" preserveAspectRatio="none" aria-hidden="true"><path className="spark-area" d={`${path} L88 36 L2 36 Z`}/><path className="spark-line" d={path}/></svg>}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
