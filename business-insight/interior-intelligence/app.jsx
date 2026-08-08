@@ -11,9 +11,11 @@ const companies = [
   { id:"caht", track:"综合内饰", name:"成航模塑", en:"Chengdu Aerospace Mould & Plastic", listed:false, region:"中国", products:["仪表板","门板","内饰总成"], note:"主档使用成都航天模塑有限责任公司全称。", url:"https://www.casic.com.cn/" },
   { id:"fucheng", track:"综合内饰", name:"富诚", en:"Fucheng Group", listed:false, region:"中国", products:["内饰总成","表面工艺"], note:"重点补齐关联制造主体、产品和客户证据。", url:"https://www.fcheng.com/mobilec/index.php/about/index.html" },
   { id:"pingwei", track:"综合内饰", name:"重庆平伟", en:"Perfectway Automotive", listed:false, region:"中国", products:["模具","表面工艺","内饰件"], note:"与重庆平伟半导体严格区分，监控汽车科技业务。", url:"https://www.pwjt.com/" },
-  { id:"sps", track:"金属扬声器罩", name:"重庆赛帕斯", en:"Chongqing SPS", listed:false, region:"中国", products:["金属扬声器罩","细孔格栅"], note:"汽车音响金属网罩、细孔格栅及金属内饰专业制造商。", url:"https://www.spsjs.com/article/type/18-1.html" },
-  { id:"tuoxin", track:"金属扬声器罩", name:"宣城托新精密", en:"Xuancheng Tuoxin Precision", listed:false, region:"中国", products:["金属扬声器罩","表面工艺"], note:"主档为宣城托新精密科技有限公司，追踪喇叭网装饰面板及金属饰件。", url:"https://www.xuancheng.gov.cn/OpennessContent/show/2328615.html" },
-  { id:"oakwood", track:"金属扬声器罩", name:"奥克伍德", en:"Oakwood Group", listed:false, region:"美国", products:["金属扬声器罩","音频罩盖"], note:"全球汽车金属扬声器格栅专业制造商。", url:"https://www.oakwoodgroup.com/product" }
+  { id:"sps", track:"金属扬声器罩", name:"重庆赛帕斯", en:"Suppass", listed:false, region:"中国", products:["金属扬声器罩","细孔格栅"], note:"汽车音响金属网罩、细孔格栅及金属内饰专业制造商。", url:"https://www.spsjs.com/article/type/18-1.html" },
+  { id:"tuoxin", track:"金属扬声器罩", name:"宣城托新", en:"Top Sun", listed:false, region:"中国", products:["金属扬声器罩","表面工艺"], note:"主档为宣城托新精密科技有限公司，追踪喇叭网装饰面板及金属饰件。", url:"https://www.xuancheng.gov.cn/OpennessContent/show/2328615.html" },
+  { id:"oakwood", track:"金属扬声器罩", name:"奥克伍德", en:"Oakwood", listed:false, region:"美国", products:["金属扬声器罩","音频罩盖"], note:"全球汽车金属扬声器格栅专业制造商。", url:"https://www.oakwoodgroup.com/product" },
+  { id:"zhuanjing", track:"金属扬声器罩", name:"吉安专精", en:"Zhuanjing", listed:false, region:"中国", products:["金属扬声器罩","表面工艺"], note:"主档为吉安专精科技有限公司，聚焦汽车金属蚀刻喇叭网、装饰条及相关表面工艺。", url:"https://www.sohu.com/a/962055381_121977469" },
+  { id:"yecheng", track:"金属扬声器罩", name:"佛山叶诚", en:"Yecheng", listed:false, region:"中国", products:["金属扬声器罩"], note:"主档为佛山叶诚科技有限公司，公开项目披露年产500万件汽车喇叭网建设项目。", url:"https://www.ixbang.com/gd/area-440600/history-17/20250418.html" }
 ];
 
 const news = [
@@ -30,7 +32,7 @@ const news = [
   { id:11, company:"安通林", track:"综合内饰", type:"年度报告", date:"2026-05-13", title:"Antolin 发布 2025 年综合报告", summary:"披露全年经营、转型计划、产品创新与可持续发展；2025 年 EBITDA 为 2.96 亿欧元。", source:"Antolin", url:"https://annualreport.antolin.com/2025/en/" },
   { id:12, company:"安通林", track:"综合内饰", type:"业绩财报", date:"2026-05-07", title:"Antolin 披露 2026 年第一季度经营表现", summary:"净销售额 8.516 亿欧元，同比下降 13.5%；净利润 7,250 万欧元主要受益于出售印度三家子公司，run-rate EBITDA 率为 9.2%。", source:"Antolin", url:"https://www.antolin.com/en/antolin-reports-eu725-million-profit-first-quarter-following-sale-three-subsidiaries-india" },
   { id:13, company:"李尔", track:"综合内饰", type:"业绩财报", date:"2026-05-01", title:"Lear 发布 2026 年第一季度业绩", summary:"收入 58.23 亿美元，同比增长 5%；核心经营利润 2.97 亿美元，同比增长 10%，核心经营利润率 5.1%。", source:"Lear", url:"https://www.lear.com/de/newsroom/lear-reports-first-quarter-2026-results" },
-  { id:14, company:"麦格纳", track:"综合内饰", type:"业绩财报", date:"2026-05-01", title:"Magna 发布 2026 年第一季度业绩", summary:"销售额同比增长 3%，调整后 EBIT 同比增长 58%，调整后 EBIT 利润率提升至 5.4%。", source:"Magna", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-first-quarter-results--maintains-positive-outlook-for-2026" },
+  { id:14, company:"麦格纳", track:"综合内饰", type:"业绩财报", date:"2026-07-31", title:"Magna 发布 2026 年第二季度业绩并上调全年展望", summary:"季度销售额 109.8 亿美元，同比增长 3%；调整后 EBIT 6.77 亿美元，同比增长 16%，调整后 EBIT 利润率升至 6.2%，自由现金流为 6.17 亿美元。", source:"Magna", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-second-quarter-results--raises-outlook-for-2026" },
   { id:15, company:"新泉", track:"综合内饰", type:"业绩财报", date:"2026-04-30", title:"新泉股份披露 2026 年第一季度报告", summary:"营业收入 36.39 亿元，同比增长 3.42%；归母净利润 2.03 亿元，同比下降 4.57%。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12274734&stockid=603179" },
   { id:16, company:"宁波华翔", track:"综合内饰", type:"业绩财报", date:"2026-04-28", title:"宁波华翔披露 2026 年第一季度报告", summary:"营业收入 51.69 亿元，同比下降 17.43%；归母净利润 2.73 亿元，同比增长 6.63%。", source:"巨潮资讯", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225202599.PDF" },
   { id:17, company:"佛吉亚", track:"综合内饰", type:"业绩财报", date:"2026-04-24", title:"FORVIA 披露 2026 年第一季度销售", summary:"季度销售额 51.4 亿欧元，有机口径同比下降 2.2%；公司同时推进 Interiors 业务出售进程。", source:"FORVIA", url:"https://www.globenewswire.com/news-release/2026/04/24/3280513/0/en/solid-q1-sales-ignite-priorities-in-motion.html" },
@@ -39,7 +41,10 @@ const news = [
   { id:20, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-23", title:"触感和手工纹理正在替代单纯色彩表达", summary:"家居设计中雕刻、凹凸和不完全规则的表面获得关注。对门板、中控和扬声器罩的启示是通过微纹理、光影和触感建立品质感，而非只依赖颜色。", source:"Livingetc", url:"https://www.livingetc.com/ideas/dimpled-wood-trend" },
   { id:21, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-06-17", title:"AI智能设备普及，但消费者对隐私仍高度敏感", summary:"Pew 调查显示约35%的美国成年人拥有智能音箱，71%认为AI会降低个人信息安全。座舱AI需要清晰的录音状态、可见隐私提示和可立即操作的物理关闭方式。", source:"Pew Research Center", url:"https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/" },
   { id:22, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-05-27", title:"消费者希望AI提供建议，但不愿完全交出最终决定", summary:"Gartner 调查指出，消费者更接受AI帮助筛选和研究，而非替其做最终选择。对智能座舱的启示是保留确认步骤、可撤销操作和明确的人工控制权。", source:"Gartner", url:"https://www.gartner.com/en/newsroom/press-releases/2026-05-27-gartner-survey-finds-consumers-want-ai-shopping-help-but-not-ai-purchase-decisions" },
-  { id:23, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-05-05", title:"42%的消费者已经使用AI工具辅助选购", summary:"NIQ 数据显示AI正参与产品发现、比较和选择，但消费者仍倾向保留控制权。汽车内饰卖点需要更结构化、可比较，并能被AI推荐系统准确理解。", source:"NIQ", url:"https://nielseniq.com/global/en/news-center/2026/42-of-consumers-now-use-ai-tools-to-shop-niq-data-shows/" }
+  { id:23, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-05-05", title:"42%的消费者已经使用AI工具辅助选购", summary:"NIQ 数据显示AI正参与产品发现、比较和选择，但消费者仍倾向保留控制权。汽车内饰卖点需要更结构化、可比较，并能被AI推荐系统准确理解。", source:"NIQ", url:"https://nielseniq.com/global/en/news-center/2026/42-of-consumers-now-use-ai-tools-to-shop-niq-data-shows/" },
+  { id:24, company:"GRAMMER AG", track:"综合内饰", type:"业绩财报", date:"2026-07-10", title:"GRAMMER 二季度初步经营利润显著改善", summary:"初步数据显示，二季度收入约 4.995 亿欧元，经营 EBIT 约 2,340 万欧元；上半年经营 EBIT 约 4,170 万欧元，同比增长 17.2%。正式半年报计划于 8 月 14 日发布。", source:"GRAMMER", url:"https://www.grammer.com/en/investor-relations/detailview/grammer-ag-ergebnis-im-zweiten-quartal-2026-deutlich-ueber-vorjahresniveau/" },
+  { id:25, company:"佛吉亚", track:"综合内饰", type:"新材料", date:"2026-07-09", title:"Materi’Act 与雷诺推进报废汽车回收塑料用于量产仪表板", summary:"FORVIA 旗下 Materi’Act 将报废车辆回收塑料用于 Renault Master 大型可见仪表板部件，显示闭环材料开始由概念验证走向可见内饰件量产。", source:"FORVIA / Materi’Act", url:"https://www.marketscreener.com/news/forvia-ex-faurecia-materia-act-and-renault-pioneer-the-use-of-end-of-life-vehicle-plastics-for-th-ce7f5ededb8aff22" },
+  { id:26, company:"安通林", track:"综合内饰", type:"经营与战略", date:"2026-06-24", title:"Antolin 推进债务重组并获得长期营运资金安排", summary:"公司与主要银行达成再融资安排，延长债务期限并设置最高 2.2 亿欧元长期营运资金支持；该事项关系其转型执行能力、融资成本和供应稳定性。", source:"Cinco Días", url:"https://cincodias.elpais.com/companias/2026-06-24/antolin-alcanza-un-acuerdo-con-la-banca-espanola-para-refinanciar-su-deuda.html" }
 ];
 
 const financialResults = [
@@ -54,16 +59,16 @@ const financialResults = [
   {company:"FORVIA", period:"2026 Q1", revenue:"€5.14bn", growth:"-2.2%", profit:"季度仅披露销售额", profitMargin:"Q1利润率未披露", profitGrowth:"—", cashFlow:"Q1未量化披露", overview:"市场产量偏弱使销售承压；年度亏损主要来自组合重塑的非现金费用。", strategy:"出售内饰业务、简化组合并继续降本降杠杆。", url:"https://www.forvia.com/en/investors"},
   {company:"Antolin", period:"2026 Q1", revenue:"€851.6m", growth:"-13.5%", profit:"净利润 €72.5m", profitMargin:"EBITDA率 7.8%", profitGrowth:"+1,194.6%*", cashFlow:"Q1未量化披露", overview:"可比营收下降5.9%；净利润跃升主要来自出售印度三家子公司的资本收益，run-rate EBITDA率为9.2%。", strategy:"聚焦高价值内饰技术方案，继续重组与区域效率提升。", url:"https://www.antolin.com/en/antolin-reports-eu725-million-profit-first-quarter-following-sale-three-subsidiaries-india"},
   {company:"Lear", period:"2026 Q1", revenue:"$5.82bn", growth:"+5.0%", profit:"核心经营利润 $297m", profitMargin:"核心利润率 5.1%", profitGrowth:"+10.0%", cashFlow:"经营现金流 $98m / FCF -$27m", overview:"重点平台增产、新业务及重组节省推动收入与利润率共同提升。", strategy:"以自动化和数字工具提效，扩大座椅及电子系统定点。", url:"https://ir.lear.com/news-releases/news-release-details/lear-reports-first-quarter-2026-results-highest-eps-2021-and/"},
-  {company:"Magna", period:"2026 Q1", revenue:"同比口径", growth:"+3.0%", profit:"调整后 EBIT", profitMargin:"调整后 EBIT率 5.4%", profitGrowth:"+58.0%", cashFlow:"自由现金流 $372m", overview:"重组、生产率、组合和汇率改善抵消部分有机销售压力。", strategy:"优化业务组合，扩大利润率与自由现金流并持续股东回报。", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-first-quarter-results--maintains-positive-outlook-for-2026"},
+  {company:"Magna", period:"2026 Q2", revenue:"$10.98bn", growth:"+3.0%", profit:"调整后 EBIT $677m", profitMargin:"调整后 EBIT率 6.2%", profitGrowth:"+16.0%", cashFlow:"自由现金流 $617m", overview:"新项目投产、生产率改善、重组收益及汇率正向影响推动盈利增长，抵消区域产量走弱和部分项目停产影响。", strategy:"上调全年利润率、EPS与自由现金流展望，继续优化业务组合并提高资本回报。", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-second-quarter-results--raises-outlook-for-2026"},
   {company:"GRAMMER AG", period:"2026 Q1", revenue:"€0.46bn", growth:"-5.2%", profit:"EBIT €23.3m", profitMargin:"EBIT率 5.0%", profitGrowth:"+21.4%", cashFlow:"自由现金流 -€36.1m", overview:"市场需求偏弱导致收入下降，但区域整合和成本措施显著改善EBIT。", strategy:"推进全球协同、成本优化及汽车与商用车座椅产品升级。", url:"https://www.grammer.com/en/investor-relations/financial-publications-presentations/quarterly-reports/"}
 ];
 
-const financialDisclosureGaps = ["延锋","诺博","成航模塑","富诚","重庆平伟","重庆赛帕斯","宣城托新精密","奥克伍德"];
+const financialDisclosureGaps = ["延锋","诺博","成航模塑","富诚","重庆平伟","重庆赛帕斯","宣城托新","奥克伍德","吉安专精","佛山叶诚"];
 
 const audienceProfiles = {
-  "销售": { en:"SALES", title:"技术、竞争环境和定点", description:"优先关注客户车型、竞争对手定点、量产技术、消费者偏好和可能改变报价策略的经营信号。", types:["客户与车型","消费者偏好","产品与技术","业绩财报","声学与座舱","新材料","年度报告","行业展会"] },
-  "研发": { en:"R&D", title:"技术路线、材料与量产工艺", description:"优先关注消费者偏好、中控、门板、座椅、声学、智能表面、循环材料与可制造性变化。", types:["消费者偏好","产品与技术","新材料","声学与座舱","行业展会","客户与车型","业绩财报","年度报告"] },
-  "管理层": { en:"MANAGEMENT", title:"竞争格局、盈利与战略动作", description:"优先关注收入与利润变化、消费者趋势、业务出售、客户结构和影响资源配置的行业方向。", types:["业绩财报","消费者偏好","年度报告","客户与车型","产品与技术","新材料","行业展会","声学与座舱"] }
+  "销售": { en:"SALES", title:"技术、竞争环境和定点", description:"优先关注客户车型、竞争对手定点、量产技术、消费者偏好和可能改变报价策略的经营信号。", types:["客户与车型","消费者偏好","产品与技术","业绩财报","经营与战略","声学与座舱","新材料","年度报告","行业展会"] },
+  "研发": { en:"R&D", title:"技术路线、材料与量产工艺", description:"优先关注消费者偏好、中控、门板、座椅、声学、智能表面、循环材料与可制造性变化。", types:["消费者偏好","产品与技术","新材料","声学与座舱","行业展会","客户与车型","业绩财报","经营与战略","年度报告"] },
+  "管理层": { en:"MANAGEMENT", title:"竞争格局、盈利与战略动作", description:"优先关注收入与利润变化、消费者趋势、业务出售、客户结构和影响资源配置的行业方向。", types:["业绩财报","经营与战略","消费者偏好","年度报告","客户与车型","产品与技术","新材料","行业展会","声学与座舱"] }
 };
 
 const audiencePriorities = {
@@ -79,7 +84,7 @@ const audiencePriorities = {
   ],
   "管理层": [
     {level:"高", company:"FORVIA", title:"内饰业务出售进入推进阶段", why:"全球内饰供应格局可能重组，并影响客户、人才与产能分布。", action:"建立潜在买方情景及对中国市场竞争强度的影响评估。", newsId:17},
-    {level:"高", company:"财务对标", title:"同业收入与盈利表现明显分化", why:"Lear、Magna 利润改善，而部分 A 股同业收入承压，反映客户结构与运营效率差异。", action:"按客户、产品和区域拆解自身增长与利润差距，确定资源优先级。", newsId:13},
+    {level:"高", company:"Magna", title:"二季度盈利与现金流改善并上调展望", why:"收入增长3%的同时调整后EBIT增长16%，反映生产率、重组和项目组合对利润弹性的贡献。", action:"对照自身项目爬坡、产能利用率和自由现金流，识别可以复制的运营改善抓手。", newsId:14},
     {level:"中", company:"技术投资", title:"智能座舱与循环材料继续获得投入", why:"技术升级与可持续要求将提高研发投入和供应商协同成本。", action:"明确未来两年必须自研、联合开发和外购的能力边界。", newsId:6}
   ]
 };
@@ -224,7 +229,7 @@ function App() {
   const filteredNews = [...news].sort((a,b)=>{const ar=profile.types.indexOf(a.type),br=profile.types.indexOf(b.type);return (ar<0?999:ar)-(br<0?999:br)||b.date.localeCompare(a.date)});
   const signalStructure = [
     {name:"产品、技术与客户", value:filteredNews.filter(n=>["产品与技术","客户与车型","声学与座舱"].includes(n.type)).length},
-    {name:"业绩与年度报告", value:filteredNews.filter(n=>["业绩财报","年度报告"].includes(n.type)).length},
+    {name:"业绩与经营战略", value:filteredNews.filter(n=>["业绩财报","年度报告","经营与战略"].includes(n.type)).length},
     {name:"新材料与表面", value:filteredNews.filter(n=>n.type==="新材料").length},
     {name:"消费者偏好", value:filteredNews.filter(n=>n.type==="消费者偏好").length}
   ];
@@ -239,7 +244,7 @@ function App() {
       </div>
       <div className="freshness">
         <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-07-27 · 内部使用</div>
+        <div className="source-note">检索截至：2026-08-08 · 内部使用</div>
       </div>
     </header>
 
@@ -262,7 +267,7 @@ function App() {
 
       <section className="grid-primary">
         <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">最新竞争动态</h2><div className="panel-hint">已按{audience}视角的重要度排序 · 最新财报追溯至 2026-04-23</div></div><span className="news-count">{filteredNews.length} 条</span></div>
+          <div className="panel-header"><div><h2 className="panel-title">最新竞争动态</h2><div className="panel-hint">已按{audience}视角的重要度排序 · 正式财报与初步业绩分开标注</div></div><span className="news-count">{filteredNews.length} 条</span></div>
           <div className="news-list">{filteredNews.length ? filteredNews.map(item=><article className="news-item" key={item.id}><div><div className="news-company">{item.company}</div><span className="news-track">{item.track}</span></div><div><h3 className="news-title">{item.title}</h3><div className="news-summary">{item.summary}</div></div><div className="news-source"><span>{item.date}</span><a href={item.url} target="_blank" rel="noreferrer">{item.source} ↗</a></div></article>) : <div className="empty-news">当前筛选没有匹配的动态</div>}</div>
         </div>
         <div className="panel">
@@ -279,14 +284,14 @@ function App() {
           <div className="company-grid">{filteredCompanies.map(item=><button className="company-card" key={item.id} onClick={()=>setSelected(item)}><div className="company-card-name">{item.name}</div><div className="company-card-en">{item.en}</div><div className="company-tags">{item.products.slice(0,3).map(tag=><span className={`tag ${item.track==="金属扬声器罩"?"grille":""}`} key={tag}>{tag}</span>)}</div></button>)}</div>
         </div>
         <div className="panel">
-          <div className="panel-header"><div><h2 className="panel-title">企业 × 产品矩阵</h2><div className="panel-hint">完整展示15家企业；副仪表板仅标记综合内饰制造商</div></div><span className="panel-hint">综合内饰12家 · 喇叭网罩3家</span></div>
+          <div className="panel-header"><div><h2 className="panel-title">企业 × 产品矩阵</h2><div className="panel-hint">完整展示17家企业；副仪表板仅标记综合内饰制造商</div></div><span className="panel-hint">综合内饰12家 · 喇叭网罩5家</span></div>
           <div className="matrix-wrap"><table className="matrix"><thead><tr><th>企业</th>{productColumns.map(p=><th key={p}>{p}</th>)}</tr></thead><tbody>{filteredCompanies.map(c=><tr key={c.id} className={c.track==="金属扬声器罩"?"matrix-grille-row":""}><td><strong>{c.name}</strong><span className="matrix-company-track">{c.track}</span></td>{productColumns.map(p=>{const marked=(p==="副仪表板"&&c.track==="综合内饰")||c.products.includes(p)||(c.products.includes("座椅扶手")&&p==="座椅扶手");return <td key={p}>{marked?<span className={`matrix-mark ${c.track==="金属扬声器罩"?"secondary":""}`}></span>:<span className="matrix-dash">—</span>}</td>})}</tr>)}</tbody></table></div>
         </div>
       </section>
 
       <section className="grid-even evidence-grid">
         <div className="panel financial-panel">
-          <div className="panel-header"><div><h2 className="panel-title">最新业绩与财报关键指标</h2><div className="panel-hint">优先使用最新季报；现金流保留原披露口径，经营现金流与自由现金流不直接横向比较；* 为根据披露值计算</div></div><span className="news-count">{financialResults.length} 家</span></div>
+          <div className="panel-header"><div><h2 className="panel-title">最新业绩与财报关键指标</h2><div className="panel-hint">优先使用最新正式季报；A股半年报待正式披露，现保留Q1；现金流口径不直接横向比较</div></div><span className="news-count">{financialResults.length} 家</span></div>
           <div className="financial-table-wrap"><table className="financial-table"><thead><tr><th>企业 / 报告期</th><th>销售额</th><th>营收增长</th><th>利润</th><th>利润率</th><th>利润增长</th><th>现金流</th><th>经营概况</th></tr></thead><tbody>{financialResults.map(item=><tr key={item.company}><td><a href={item.url} target="_blank" rel="noreferrer"><strong>{item.company}</strong><span>{item.period} ↗</span></a></td><td>{item.revenue}</td><td><GrowthValue value={item.growth}/></td><td><CompactMetric value={item.profit} type="profit"/></td><td><CompactMetric value={item.profitMargin} type="margin" className="profit-margin"/></td><td><GrowthValue value={item.profitGrowth}/></td><td><CompactMetric value={item.cashFlow} type="cash" className="cash-flow"/></td><td className="operating-overview"><span>{item.overview}</span><strong>战略：{item.strategy}</strong></td></tr>)}</tbody></table></div>
           <div className="disclosure-status"><strong>未独立披露财务指标</strong><div>{financialDisclosureGaps.map(name=><span key={name}>{name}</span>)}</div><p>以上企业多为非上市主体、集团业务单元或专业制造商；看板保留监控对象，但不以母集团数据替代。</p></div>
           <div className="stock-footnote">口径说明：A 股显示营业收入与归母净利润；海外集团优先显示销售额、核心经营利润、调整后 EBIT/EBITDA。点击企业名称可查阅原始披露。</div>
@@ -307,7 +312,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口为近三个月，最新财报因披露日略早而追溯至 2026-04-23。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
+      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口更新至 2026-08-08，正式财报按最新披露追溯。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
     </main>
 
     <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
