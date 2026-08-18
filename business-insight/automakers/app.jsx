@@ -1,12 +1,12 @@
 const FINANCIALS = [
   {company:"大众汽车集团",region:"海外母公司",period:"2026 H1",revenue:"€158.1bn",growth:"-0.2%",profit:"经营利润 €5.93bn",margin:"3.8%",profitGrowth:"-11.6%",cash:"汽车业务净现金流 €3.2bn",view:"中国权益法合资销量承压；集团成本与产品组合改善是下半年重点。",url:"https://www.volkswagen-group.com/en/half-yearly-financial-report-and-results-2026-20506",fresh:"2026-07-24"},
-  {company:"特斯拉",region:"海外母公司",period:"2026 Q1",revenue:"$22.39bn",growth:"+16.0%",profit:"归母净利 $0.48bn",margin:"经营利润率 4.2%",profitGrowth:"+17.0%",cash:"经营现金流 $3.94bn",view:"汽车、储能与服务收入共同增长；采用已提交SEC的最新完整季度报表。",url:"https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/tsla-20260331.htm",fresh:"2026-04-23"},
+  {company:"特斯拉",region:"海外母公司",period:"2026 Q2",revenue:"$28.24bn",growth:"+25.5%",profit:"归母净利 $1.11bn",margin:"经营利润率 1.4%",profitGrowth:"-4.9%",cash:"经营现金流 $4.70bn",view:"交付与收入增长，但AI及产能投入压低经营利润率并使自由现金流转负。",url:"https://ir.tesla.com/press-release/tesla-releases-second-quarter-2026-financial-results",fresh:"2026-07-22"},
   {company:"比亚迪",region:"中国集团",period:"2026 Q1",revenue:"¥150.23bn",growth:"-11.82%",profit:"归母净利 ¥4.08bn",margin:"2.72%*",profitGrowth:"-55.38%",cash:"经营现金流 ¥2.79bn",view:"收入与利润同比回落，研发、融资需求与海外扩张仍是重点观察项。",url:"https://www.bydglobal.com/en/InvestorAnnals.html?scroll=true",fresh:"2026-04-29"},
   {company:"上汽集团",region:"中国集团",period:"2026 Q1",revenue:"¥140.42bn",growth:"—",profit:"归母净利 ¥3.03bn",margin:"2.15%*",profitGrowth:"—",cash:"经营现金流 ¥31.99bn",view:"自主乘用车销量增长，合资业务转型与盈利修复仍是核心变量。",url:"https://www.saicmotor.com/e/investor_relations/financial_data/index.shtml",fresh:"2026-04-30"},
   {company:"蔚来",region:"中国新势力",period:"2026 Q1",revenue:"¥25.53bn",growth:"+112.2%",profit:"净亏损 ¥0.33bn",margin:"毛利率 19.0%",profitGrowth:"大幅收窄",cash:"现金储备 ¥48.2bn",view:"三品牌交付推动收入扩张，经营亏损接近盈亏平衡，现金储备仍充足。",url:"https://ir.nio.com/zh-hans/news-releases/news-release-details/nio-inc-reports-unaudited-first-quarter-2026-financial-results?mobile=1",fresh:"2026-05-21"},
   {company:"理想汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥23.0bn",growth:"-11.4%",profit:"净亏损 ¥2.3bn",margin:"毛利率 7.9%",profitGrowth:"由盈转亏",cash:"经营现金流 -¥6.1bn",view:"交付同比增长但收入下降，车辆毛利率与纯电产品爬坡是关键观察项。",url:"https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-announces-unaudited-first-quarter-2026-financial/",fresh:"2026-05-28"},
   {company:"小鹏汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥13.03bn",growth:"-17.6%",profit:"净亏损 ¥1.78bn",margin:"毛利率 20.6%",profitGrowth:"亏损扩大",cash:"现金储备 ¥42.09bn",view:"收入受交付回落影响，但毛利率继续改善；新车型节奏决定后续恢复速度。",url:"https://ir.xiaopeng.com/zh-hans/news-releases/news-release-details/xpeng-reports-first-quarter-2026-unaudited-financial-results",fresh:"2026-05-28"},
-  {company:"宝马集团",region:"海外母公司",period:"2026 Q1",revenue:"€30.9bn",growth:"约-9.0%",profit:"税前利润 €2.35bn",margin:"税前利润率 7.6%",profitGrowth:"-24.6%",cash:"汽车业务自由现金流 €0.78bn",view:"中国市场竞争与电动化产品周期是集团全年表现的重要影响因素。",url:"https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/ir/downloads/en/2026/q1/BMW_Q1-2026-EN.pdf",fresh:"2026-05-06"},
+  {company:"宝马集团",region:"海外母公司",period:"2026 H1",revenue:"€62.27bn",growth:"-8.0%",profit:"税前利润 €4.05bn",margin:"税前利润率 6.5%",profitGrowth:"-29.4%",cash:"汽车业务自由现金流 €1.29bn",view:"中国需求和关税拖累盈利；库存上升令汽车业务自由现金流同比下降。",url:"https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/ir/downloads/en/2026/q2/BMW_Q2-2026-EN.pdf",fresh:"2026-07-30"},
   {company:"梅赛德斯-奔驰集团",region:"海外母公司",period:"2026 Q1",revenue:"€31.60bn",growth:"-4.9%",profit:"EBIT €1.90bn",margin:"EBIT率 6.0%*",profitGrowth:"-16.8%",cash:"工业业务自由现金流 €1.86bn",view:"中国高端车需求、价格体系和本土智能化合作是经营质量的核心变量。",url:"https://group.mercedes-benz.com/documents/investors/reports/interim-reports/q1/mercedes-benz-interim-report-q1-2026.pdf",fresh:"2026-04-30"},
   {company:"小米集团",region:"中国新势力",period:"2026 Q1",revenue:"¥99.14bn",growth:"约-11.0%",profit:"调整后净利 ¥6.1bn",margin:"集团毛利率 22.0%",profitGrowth:"—",cash:"汽车分部未单列",view:"智能电动汽车收入约190亿元；集团指标不直接等同于汽车业务指标。",url:"https://ir.mi.com/financial-information/quarterly-results",fresh:"2026-05-26"}
 ];
@@ -23,14 +23,14 @@ const MORE_FINANCIALS = [
   {company:"江淮汽车",region:"中国集团",period:"2026 Q1",revenue:"¥11.46bn",growth:"+16.91%",profit:"归母亏损 ¥0.61bn",margin:"-5.29%*",profitGrowth:"亏损扩大",cash:"经营现金流 -¥3.90bn",view:"收入增长，但亏损和经营现金流出同比扩大。",url:"https://www.jac.com.cn/u/cms/www/202604/29103922otgu.pdf",fresh:"2026-04-29"},
   {company:"中国一汽",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团未上市且不独立发布季度财务报表；不以一汽解放等子公司数据替代。",url:"https://www.faw.com/fawcn/373694/373706/index.html",fresh:"持续监控"},
   {company:"奇瑞集团",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团暂无独立上市季度财报；保留经营信息监控，不使用媒体估算值。",url:"https://www.cheryholding.com/news.html",fresh:"持续监控"},
-  {company:"通用汽车",region:"海外母公司",period:"2026 Q1",revenue:"$43.6bn",growth:"—",profit:"净利润 $2.6bn",margin:"6.0%*",profitGrowth:"—",cash:"汽车业务经营现金流 $0.53bn",view:"集团维持盈利，中国业务重组与新能源产品节奏继续影响区域表现。",url:"https://www.sec.gov/Archives/edgar/data/1467858/000146785826000033/gmq12026pressreleaseandfin.htm",fresh:"2026-04-28"},
-  {company:"福特汽车",region:"海外母公司",period:"2026 Q1",revenue:"$43.25bn",growth:"+6.4%",profit:"归母净利 $2.55bn",margin:"5.9%*",profitGrowth:"—",cash:"调整后自由现金流 -$1.9bn",view:"北美业务支撑利润；中国合资业务不单独作为集团财务替代项。",url:"https://www.sec.gov/Archives/edgar/data/37996/000003799626000086/f-20260331.htm",fresh:"2026-04-29"},
-  {company:"丰田汽车",region:"海外母公司",period:"FY2026",revenue:"¥50.68tn",growth:"+5.5%",profit:"归母净利 ¥3.85tn",margin:"经营利润率 7.4%",profitGrowth:"-19.2%",cash:"经营现金流 ¥5.47tn",view:"财年截至2026年3月；中国合资公司主要按权益法反映。",url:"https://global.toyota/pages/global_toyota/ir/financial-results/2026_4q_summary_en.pdf",fresh:"2026-05-08"},
-  {company:"本田汽车",region:"海外母公司",period:"FY2026",revenue:"¥21.80tn",growth:"+0.5%",profit:"归母亏损 ¥0.42tn",margin:"经营利润率 -1.9%",profitGrowth:"由盈转亏",cash:"自由现金流 ¥1.06tn",view:"电动化战略重估产生重大损失；摩托车和金融服务继续提供现金支撑。",url:"https://global.honda/en/investors/library/financialresult.html",fresh:"2026-05-14"},
-  {company:"日产汽车",region:"海外母公司",period:"FY2026",revenue:"¥12.0tn",growth:"约-5.0%",profit:"归母亏损 ¥0.53tn",margin:"经营利润率 0.5%",profitGrowth:"亏损收窄",cash:"未披露统一FCF",view:"财年截至2026年3月；重组与产能调整仍是核心议题。",url:"https://www.nissan-global.com/EN/IR/FINANCIAL/",fresh:"2026-05-13"},
-  {company:"Stellantis",region:"海外母公司",period:"2026 Q1",revenue:"€38.13bn",growth:"+6.0%",profit:"净利润 €0.38bn",margin:"调整后经营利润率 2.5%",profitGrowth:"扭亏",cash:"工业自由现金流 -€1.92bn",view:"收入恢复并转盈，季节性营运资金仍造成现金流出。",url:"https://www.stellantis.com/content/dam/stellantis-corporate/news/press-releases/2026/april/30-04-2026/en/EN-20260430-Stellantis-Q1-2026-Financial-Results.pdf",fresh:"2026-04-30"},
+  {company:"通用汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.03bn",growth:"+1.9%",profit:"归母净利 $1.30bn",margin:"2.7%*",profitGrowth:"约-31%",cash:"汽车业务经营现金流 $5.07bn",view:"北美核心业务保持韧性；中国合资权益收益改善至约0.83亿美元。",url:"https://investor.gm.com/static-files/4ee9aed7-9a23-46d5-aa6c-093668907497",fresh:"2026-07-21"},
+  {company:"福特汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.3bn",growth:"约+6%",profit:"归母亏损 $1.3bn",margin:"调整后EBIT率 5.2%",profitGrowth:"由盈转亏",cash:"调整后自由现金流 $2.1bn",view:"营收与调整后经营利润增长，但特殊项目使GAAP口径转为净亏损。",url:"https://www.fromtheroad.ford.com/ca/en/articles/2026/ford-reports-second-quarter-2026-financial-results",fresh:"2026-07-29"},
+  {company:"丰田汽车",region:"海外母公司",period:"FY2027 Q1",revenue:"¥13.53tn",growth:"+10.4%",profit:"归母净利 ¥1.48tn",margin:"经营利润率 7.9%",profitGrowth:"+75.6%",cash:"经营现金流 ¥0.54tn",view:"销量与收入增长，投资收益等非经营项目推动归母利润显著上升。",url:"https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf",fresh:"2026-08-04"},
+  {company:"本田汽车",region:"海外母公司",period:"FY2027 Q1",revenue:"¥6.06tn",growth:"+13.5%",profit:"归母净利 ¥0.45tn",margin:"经营利润率 8.8%",profitGrowth:"+129.3%",cash:"经营现金流 ¥0.29tn",view:"金融服务与摩托车业务增长，且上年同期电动车相关损失形成低基数。",url:"https://data.swcms.net/file/honda-ir/dam/jcr%3Abd619e88-b049-4e52-aca6-670ab3081b20/140120260804508592.pdf",fresh:"2026-08-05"},
+  {company:"日产汽车",region:"海外母公司",period:"FY2026 Q1",revenue:"¥2.96tn",growth:"+9.5%",profit:"归母净利 ¥3.8bn",margin:"经营利润率 2.6%",profitGrowth:"扭亏",cash:"季度未披露",view:"收入和经营利润恢复增长，但重组、产品更新与中国市场修复仍是核心议题。",url:"https://www.nissan-global.com/EN/IR/FINANCIAL_RESULTS/ASSETS/DATA/2026/20261st_summary_641_e.pdf",fresh:"2026-08-03"},
+  {company:"Stellantis",region:"海外母公司",period:"2026 Q2",revenue:"€43.48bn",growth:"+13.1%",profit:"净利润 €0.29bn",margin:"调整后经营利润率 1.8%",profitGrowth:"扭亏",cash:"工业自由现金流 €1.00bn",view:"北美带动收入与经营表现改善，工业自由现金流恢复为正。",url:"https://www.media.stellantis.com/uk-en/corporate/press/stellantis-reports-q2-2026-financial-results",fresh:"2026-07-30"},
   {company:"现代汽车集团",region:"海外母公司",period:"2026 Q2",revenue:"₩49.22tn",growth:"+1.9%",profit:"净利润 ₩2.89tn",margin:"经营利润率 5.8%",profitGrowth:"-11.2%",cash:"季度未披露",view:"混动车和北美市场支撑收入，原材料及生产约束压低利润。",url:"https://www.hyundai.com/worldwide/en/newsroom/detail/0000001234",fresh:"2026-07-23"},
-  {company:"雷诺集团",region:"海外母公司",period:"2026 Q1",revenue:"€12.53bn",growth:"+7.3%",profit:"季度未披露",margin:"季度未披露",profitGrowth:"—",cash:"季度未披露",view:"一季度按惯例仅披露收入；汽车业务收入108.07亿欧元，同比增长6.5%。",url:"https://assets.renaultgroup.com/uploads/2026/04/20260423_Renault-Group_Press-Release_2026-Q1-revenue-EN.pdf",fresh:"2026-04-23"}
+  {company:"雷诺集团",region:"海外母公司",period:"2026 H1",revenue:"€30.3bn",growth:"+9.5%",profit:"归母净利 €0.71bn",margin:"经营利润率 5.2%",profitGrowth:"扭亏",cash:"汽车业务自由现金流 €0.65bn",view:"收入增长且现金流稳健，集团确认全年利润率和自由现金流目标。",url:"https://media.renaultgroup.com/renault-group-delivers-robust-performance-confirms-its-2026-fy-guidance-and-rapidly-implements-futuready/?lang=eng",fresh:"2026-07-29"}
 ];
 
 const ALL_FINANCIALS = [...FINANCIALS, ...MORE_FINANCIALS];
@@ -56,12 +56,15 @@ const CASH_RESERVES = {
   "北汽蓝谷":"货币资金 ¥6.96bn",
   "赛力斯":"货币资金 ¥63.85bn",
   "大众汽车集团":"汽车业务净流动性 €34.24bn",
-  "特斯拉":"现金、现金等价物及短期投资 $44.74bn",
-  "宝马集团":"汽车业务净金融资产 €44.86bn",
+  "特斯拉":"现金、现金等价物及短期投资 $43.52bn",
+  "宝马集团":"汽车业务净金融资产 €42.65bn",
   "梅赛德斯-奔驰集团":"工业业务净流动性 €33.81bn",
-  "丰田汽车":"现金及现金等价物 ¥12.66tn",
-  "本田汽车":"现金及现金等价物 ¥4.56tn",
-  "Stellantis":"工业业务可用流动性 €44.1bn"
+  "丰田汽车":"现金及现金等价物 ¥8.21tn",
+  "本田汽车":"现金及现金等价物 ¥5.30tn",
+  "通用汽车":"汽车业务现金及受限现金 $15.27bn",
+  "福特汽车":"总流动性 超$43bn",
+  "Stellantis":"工业业务可用流动性 €44.1bn",
+  "雷诺集团":"汽车业务净现金 €6.57bn"
 };
 function cashFlowValue(item){ return /^现金储备/.test(item.cash)?"季度未披露":item.cash }
 function cashReserveValue(item){ return CASH_RESERVES[item.company]||"未披露" }
@@ -159,7 +162,7 @@ function App(){
  React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
  const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
  return <div className="shell">
-  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-07-29</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-08-18</strong><span>内部研究 · 原始披露可追溯</span></div></header>
   <main>
    <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
    <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>全部企业 · 各自最新披露 · 悬浮数值查看完整指标口径</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
