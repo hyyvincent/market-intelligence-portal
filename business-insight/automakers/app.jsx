@@ -7,12 +7,12 @@ const FINANCIALS = [
   {company:"理想汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥23.0bn",growth:"-11.4%",profit:"净亏损 ¥2.3bn",margin:"毛利率 7.9%",profitGrowth:"由盈转亏",cash:"经营现金流 -¥6.1bn",view:"交付同比增长但收入下降，车辆毛利率与纯电产品爬坡是关键观察项。",url:"https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-announces-unaudited-first-quarter-2026-financial/",fresh:"2026-05-28"},
   {company:"小鹏汽车",region:"中国新势力",period:"2026 Q1",revenue:"¥13.03bn",growth:"-17.6%",profit:"净亏损 ¥1.78bn",margin:"毛利率 20.6%",profitGrowth:"亏损扩大",cash:"现金储备 ¥42.09bn",view:"收入受交付回落影响，但毛利率继续改善；新车型节奏决定后续恢复速度。",url:"https://ir.xiaopeng.com/zh-hans/news-releases/news-release-details/xpeng-reports-first-quarter-2026-unaudited-financial-results",fresh:"2026-05-28"},
   {company:"宝马集团",region:"海外母公司",period:"2026 H1",revenue:"€62.27bn",growth:"-8.0%",profit:"税前利润 €4.05bn",margin:"税前利润率 6.5%",profitGrowth:"-29.4%",cash:"汽车业务自由现金流 €1.29bn",view:"中国需求和关税拖累盈利；库存上升令汽车业务自由现金流同比下降。",url:"https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/ir/downloads/en/2026/q2/BMW_Q2-2026-EN.pdf",fresh:"2026-07-30"},
-  {company:"梅赛德斯-奔驰集团",region:"海外母公司",period:"2026 Q1",revenue:"€31.60bn",growth:"-4.9%",profit:"EBIT €1.90bn",margin:"EBIT率 6.0%*",profitGrowth:"-16.8%",cash:"工业业务自由现金流 €1.86bn",view:"中国高端车需求、价格体系和本土智能化合作是经营质量的核心变量。",url:"https://group.mercedes-benz.com/documents/investors/reports/interim-reports/q1/mercedes-benz-interim-report-q1-2026.pdf",fresh:"2026-04-30"},
-  {company:"小米集团",region:"中国新势力",period:"2026 Q1",revenue:"¥99.14bn",growth:"约-11.0%",profit:"调整后净利 ¥6.1bn",margin:"集团毛利率 22.0%",profitGrowth:"—",cash:"汽车分部未单列",view:"智能电动汽车收入约190亿元；集团指标不直接等同于汽车业务指标。",url:"https://ir.mi.com/financial-information/quarterly-results",fresh:"2026-05-26"}
+  {company:"梅赛德斯-奔驰集团",region:"海外母公司",period:"2026 Q2",revenue:"€32.06bn",growth:"-3.3%",profit:"调整后EBIT €2.30bn",margin:"调整后EBIT率 7.2%*",profitGrowth:"+15.6%",cash:"工业业务自由现金流 €1.10bn",view:"中国高端车需求、关税与产品换代仍是关键变量；调整后盈利同比改善。",url:"https://group.mercedes-benz.com/dokumente/investoren/berichte/zwischenberichte/q2/mercedes-benz-fact-sheet-q2-2026.pdf",fresh:"2026-07-22"},
+  {company:"小米集团",region:"中国新势力",period:"2026 Q2",revenue:"¥108.92bn",growth:"-6.1%",profit:"调整后净利 ¥6.22bn",margin:"集团毛利率 19.8%",profitGrowth:"-42.6%",cash:"经营现金流 ¥3.84bn",view:"智能电动汽车及AI等创新业务收入249亿元；集团指标不等同于汽车业务指标。",url:"https://ir.mi.com/static-files/bdeea0b9-246c-45be-8cb4-ab4faaddf80a",fresh:"2026-08-18"}
 ];
 
 const MORE_FINANCIALS = [
-  {company:"吉利汽车",region:"中国集团",period:"2026 Q1",revenue:"¥83.78bn",growth:"+15.0%",profit:"归母净利 ¥4.17bn",margin:"4.97%*",profitGrowth:"-27.0%",cash:"未单列",view:"销量保持增长，核心利润同比增长31%；归母利润受可比基数影响回落。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042900391.pdf",fresh:"2026-04-29"},
+  {company:"吉利汽车",region:"中国集团",period:"2026 H1",revenue:"¥173.60bn",growth:"+15.0%",profit:"归母净利 ¥9.09bn",margin:"毛利率 17.9%",profitGrowth:"-2.0%",cash:"经营现金流 ¥19.92bn",view:"销量与收入增长，核心归母利润同比增长46%；可比项目影响法定归母利润。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081700257.pdf",fresh:"2026-08-17"},
   {company:"广汽集团",region:"中国集团",period:"2026 Q1",revenue:"¥20.23bn",growth:"+1.76%",profit:"归母亏损 ¥0.66bn",margin:"-3.24%*",profitGrowth:"减亏10.29%",cash:"经营现金流 -¥3.25bn",view:"自主品牌销量同比增长，经营现金流明显改善；合资品牌转型仍是重点。",url:"https://www.gacgroup.com/cn/news/detail?baseid=19150",fresh:"2026-04-29"},
   {company:"长安汽车",region:"中国集团",period:"2026 Q1",revenue:"¥32.71bn",growth:"-4.26%",profit:"归母净利 ¥0.35bn",margin:"1.07%*",profitGrowth:"-74.09%",cash:"经营现金流 -¥11.65bn",view:"收入小幅回落，汇兑收益基数与回款减少显著影响利润和现金流。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12216780&stockid=000625",fresh:"2026-04-28"},
   {company:"长城汽车",region:"中国集团",period:"2026 Q1",revenue:"¥45.11bn",growth:"+12.72%",profit:"归母净利 ¥0.95bn",margin:"2.10%*",profitGrowth:"-46.01%",cash:"经营现金流 ¥3.27bn",view:"销量与收入增长，汇兑收益可比基数导致归母利润下降。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042401572.pdf",fresh:"2026-04-24"},
@@ -44,7 +44,7 @@ const SORTED_FINANCIALS = [...ALL_FINANCIALS].sort((a,b)=>{
 const CASH_RESERVES = {
   "理想汽车":"现金及现金等价物、受限现金、定期存款和短期投资 ¥94.3bn",
   "蔚来":"现金及现金等价物、受限现金、短期投资和长期定期存款 ¥48.2bn",
-  "小米集团":"现金资源 ¥127.3bn",
+  "小米集团":"现金储备 ¥219.3bn",
   "小鹏汽车":"现金及现金等价物、受限现金、短期投资和定期存款 ¥42.09bn",
   "比亚迪":"货币资金 ¥75.79bn",
   "上汽集团":"货币资金 ¥144.69bn",
@@ -58,7 +58,8 @@ const CASH_RESERVES = {
   "大众汽车集团":"汽车业务净流动性 €34.24bn",
   "特斯拉":"现金、现金等价物及短期投资 $43.52bn",
   "宝马集团":"汽车业务净金融资产 €42.65bn",
-  "梅赛德斯-奔驰集团":"工业业务净流动性 €33.81bn",
+  "吉利汽车":"银行结余及现金 ¥59.36bn",
+  "梅赛德斯-奔驰集团":"工业业务净流动性 €30.43bn",
   "丰田汽车":"现金及现金等价物 ¥8.21tn",
   "本田汽车":"现金及现金等价物 ¥5.30tn",
   "通用汽车":"汽车业务现金及受限现金 $15.27bn",
@@ -162,7 +163,7 @@ function App(){
  React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
  const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
  return <div className="shell">
-  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-08-18</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-08-24</strong><span>内部研究 · 原始披露可追溯</span></div></header>
   <main>
    <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
    <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>全部企业 · 各自最新披露 · 悬浮数值查看完整指标口径</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
