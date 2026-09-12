@@ -34,9 +34,9 @@ const news = [
   { id:13, company:"李尔", track:"综合内饰", type:"业绩财报", date:"2026-07-31", title:"Lear 发布 2026 年第二季度业绩并上调全年展望", summary:"收入 62.09 亿美元，同比增长 3%；核心经营利润 3.13 亿美元，同比增长 7%，核心经营利润率为 5.0%；自由现金流 2.88 亿美元，同比增长 69%。", source:"Lear", url:"https://www.lear.com/newsroom/lear-reports-second-quarter-2026-results" },
   { id:14, company:"麦格纳", track:"综合内饰", type:"业绩财报", date:"2026-07-31", title:"Magna 发布 2026 年第二季度业绩并上调全年展望", summary:"季度销售额 109.8 亿美元，同比增长 3%；调整后 EBIT 6.77 亿美元，同比增长 16%，调整后 EBIT 利润率升至 6.2%，自由现金流为 6.17 亿美元。", source:"Magna", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-second-quarter-results--raises-outlook-for-2026" },
   { id:15, company:"新泉", track:"综合内饰", type:"业绩财报", date:"2026-08-04", title:"新泉股份披露 2026 年半年报", summary:"上半年营业收入 80.15 亿元，同比增长 7.45%；归母净利润 4.14 亿元，同比下降 1.90%；经营现金流 2.05 亿元，同比增长 15.69%。仪表板与门板收入分别增长 7.25% 和 8.24%。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12474866&stockid=603179" },
-  { id:16, company:"宁波华翔", track:"综合内饰", type:"业绩财报", date:"2026-04-28", title:"宁波华翔披露 2026 年第一季度报告", summary:"营业收入 51.69 亿元，同比下降 17.43%；归母净利润 2.73 亿元，同比增长 6.63%。", source:"巨潮资讯", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225202599.PDF" },
+  { id:16, company:"宁波华翔", track:"综合内饰", type:"业绩财报", date:"2026-08-29", title:"宁波华翔披露 2026 年半年报", summary:"上半年营业收入 102.49 亿元，同比下降 20.42%；归母净利润 7.23 亿元，同比扭亏，扣非净利润 5.49 亿元，同比下降 8.41%；经营现金流 7.79 亿元。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12573812&stockid=002048" },
   { id:17, company:"佛吉亚", track:"综合内饰", type:"业绩财报", date:"2026-07-31", title:"FORVIA 发布 2026 年半年报，利润率与现金流改善", summary:"上半年销售额 105.09 亿欧元，同比下降 4.3%；经营利润 6.32 亿欧元，同比增长 1.6%，经营利润率升至 6.0%；净现金流 4.32 亿欧元，同比增长 18.8%。", source:"FORVIA", url:"https://www.forvia.com/en/investors/equity-investors-analyst/financial-results" },
-  { id:18, company:"一汽富维", track:"综合内饰", type:"业绩财报", date:"2026-04-23", title:"富维股份披露 2026 年第一季度报告", summary:"营业收入 39.08 亿元，同比下降 17.88%；归母净利润 0.82 亿元，同比下降 17.18%，经营现金流同比增长 144.22%。", source:"法定披露", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149032&stockid=600742" },
+  { id:18, company:"一汽富维", track:"综合内饰", type:"业绩财报", date:"2026-08-29", title:"富维股份披露 2026 年半年报", summary:"上半年营业收入 71.41 亿元，同比下降 23.23%；归母净利润 1.90 亿元，同比下降 28.28%；经营现金流 11.11 亿元，同比增长 111.7%。", source:"法定披露", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12568376&stockid=600742" },
   { id:19, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-24", title:"家居审美重新重视天然木纹与个性化表面", summary:"消费者偏好有识别度但不过度张扬的天然纹理，并希望获得接近定制的质感。对汽车内饰的潜在影响是木纹、金属组合和个性化饰板需求上升。", source:"Livingetc", url:"https://www.livingetc.com/shopping/westwing-ako-collection" },
   { id:20, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-23", title:"触感和手工纹理正在替代单纯色彩表达", summary:"家居设计中雕刻、凹凸和不完全规则的表面获得关注。对门板、中控和扬声器罩的启示是通过微纹理、光影和触感建立品质感，而非只依赖颜色。", source:"Livingetc", url:"https://www.livingetc.com/ideas/dimpled-wood-trend" },
   { id:21, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-06-17", title:"AI智能设备普及，但消费者对隐私仍高度敏感", summary:"Pew 调查显示约35%的美国成年人拥有智能音箱，71%认为AI会降低个人信息安全。座舱AI需要清晰的录音状态、可见隐私提示和可立即操作的物理关闭方式。", source:"Pew Research Center", url:"https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/" },
@@ -45,18 +45,25 @@ const news = [
   { id:24, company:"GRAMMER AG", track:"综合内饰", type:"业绩财报", date:"2026-08-14", title:"GRAMMER 正式发布 2026 年半年报", summary:"上半年收入 9.614 亿欧元，同比增长 0.8%；经营 EBIT 4,170 万欧元，同比增长 17.1%，经营 EBIT 率升至 4.3%；自由现金流由负转正至 150 万欧元。", source:"GRAMMER", url:"https://www.grammer.com/en/press-releases/article/grammer-ag-veroeffentlicht-ergebnisse-fuer-das-erste-halbjahr-2026/" },
   { id:25, company:"佛吉亚", track:"综合内饰", type:"新材料", date:"2026-07-09", title:"Materi’Act 与雷诺推进报废汽车回收塑料用于量产仪表板", summary:"FORVIA 旗下 Materi’Act 将报废车辆回收塑料用于 Renault Master 大型可见仪表板部件，显示闭环材料开始由概念验证走向可见内饰件量产。", source:"FORVIA / Materi’Act", url:"https://www.marketscreener.com/news/forvia-ex-faurecia-materia-act-and-renault-pioneer-the-use-of-end-of-life-vehicle-plastics-for-th-ce7f5ededb8aff22" },
   { id:26, company:"安通林", track:"综合内饰", type:"经营与战略", date:"2026-06-24", title:"Antolin 推进债务重组并获得长期营运资金安排", summary:"公司与主要银行达成再融资安排，延长债务期限并设置最高 2.2 亿欧元长期营运资金支持；该事项关系其转型执行能力、融资成本和供应稳定性。", source:"Cinco Días", url:"https://cincodias.elpais.com/companias/2026-06-24/antolin-alcanza-un-acuerdo-con-la-banca-espanola-para-refinanciar-su-deuda.html" },
-  { id:27, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-23", title:"新车体验提升中，内饰成为消费者感知改善最大的类别", summary:"J.D. Power 2026 APEAL 研究显示，新车内饰体验得分同比提升 11 分，是所有类别中增幅最大的一项；说明触感、做工、空间便利性和整体座舱体验正更直接影响消费者评价。", source:"J.D. Power", url:"https://jdpower.com/business/press-releases/2026-u-s-automotive-performance-execution-and-layout-apeal-study" }
+  { id:27, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-07-23", title:"新车体验提升中，内饰成为消费者感知改善最大的类别", summary:"J.D. Power 2026 APEAL 研究显示，新车内饰体验得分同比提升 11 分，是所有类别中增幅最大的一项；说明触感、做工、空间便利性和整体座舱体验正更直接影响消费者评价。", source:"J.D. Power", url:"https://jdpower.com/business/press-releases/2026-u-s-automotive-performance-execution-and-layout-apeal-study" },
+  { id:28, company:"华域汽车", track:"综合内饰", type:"业绩财报", date:"2026-08-28", title:"华域汽车披露 2026 年半年报", summary:"上半年营业收入 839.39 亿元，同比下降 1.43%；归母净利润 26.47 亿元，同比下降 8.67%；经营现金流 79.68 亿元，同比增长 16.69%。新能源车型与自主品牌新订单占比分别达到 78% 和 68%。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12556283&stockid=600741" },
+  { id:29, company:"常熟汽饰", track:"综合内饰", type:"业绩财报", date:"2026-08-29", title:"常熟汽饰披露 2026 年半年报", summary:"上半年营业收入 34.91 亿元，同比增长 25.58%；归母净利润 1.17 亿元，同比下降 46.09%；经营现金流 2.61 亿元，同比增长 196.63%。新工厂量产拉动收入，但成本和费用上升压低利润。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569272&stockid=603035" },
+  { id:30, company:"岱美股份", track:"综合内饰", type:"业绩财报", date:"2026-08-29", title:"岱美股份披露 2026 年半年报", summary:"上半年营业收入 30.22 亿元，同比下降 4.82%；归母净利润 4.20 亿元，同比增长 74.16%，但扣非净利润同比下降 12.91%；经营现金流 4.36 亿元。利润高增长主要受上年墨西哥火灾低基数影响。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12567241&stockid=603730" },
+  { id:31, company:"福赛科技", track:"综合内饰", type:"业绩财报", date:"2026-08-29", title:"福赛科技披露 2026 年半年报", summary:"上半年营业收入 8.23 亿元，同比增长 0.36%；归母净利润 0.72 亿元，同比增长 14.2%；经营现金流 0.67 亿元，同比下降 57.03%。研发投入同比增长 12.72%。", source:"法定披露", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569905&stockid=301529" },
+  { id:32, company:"安通林", track:"综合内饰", type:"产品与技术", date:"2026-09-08", title:"Antolin 与 UltraSense 推进全球车型智能表面 HMI", summary:"方案把触摸、压力感知、视觉和触觉反馈集成进轻薄固态表面；Antolin 负责完整方案的集成、工程开发与工业化，显示智能表面正从概念进入全球车型平台开发。", source:"Antolin", url:"https://www.antolin.com/en/antolin-and-ultrasense-develop-smart-surface-hmi-global-vehicle-platform" },
+  { id:33, company:"行业", track:"综合内饰", type:"新材料", date:"2026-09-01", title:"丰田量产内饰采用免喷涂大理石纹效果材料", summary:"SUSONITY、丰田欧洲与 PVL 将效果颜料和注塑着色工艺用于 Aygo X Hybrid 的侧出风口及中控部件，在减少后喷涂工序的同时实现高端纹理。", source:"环球新材国际", url:"https://www.chesir.com/en/2026/09/global-new-material-international-collaborates-with-toyota-susonity-premium-effect-pigment-technology-supports-toyotas-new-model-vehicles/" },
+  { id:34, company:"行业", track:"综合内饰", type:"新材料", date:"2026-09-03", title:"Polyblend 投资再生塑料复合材料产能", summary:"材料企业投资 400 万欧元改造再生塑料复合材料生产，反映汽车内饰对可循环材料稳定供应和量产成本的关注继续上升。", source:"Automotive Interiors World", url:"https://www.automotiveinteriorsworld.com/news/materials" }
 ];
 
 const financialResults = [
   {company:"新泉股份", period:"2026 H1", revenue:"80.15亿元", growth:"+7.45%", profit:"归母净利 4.14亿元", profitMargin:"归母净利率 5.17%", profitGrowth:"-1.90%", cashFlow:"经营现金流 2.05亿元", overview:"仪表板、门板等核心产品保持增长，现金流改善；行业价格竞争、研发投入和海外产能爬坡使利润略有下降。", strategy:"扩充德国、北美产能并建设马来西亚基地，推进H股上市和海外客户本地化配套。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12474866&stockid=603179"},
-  {company:"宁波华翔", period:"2026 Q1", revenue:"51.69亿元", growth:"-17.43%", profit:"归母净利 2.73亿元", profitMargin:"归母净利率 5.28%", profitGrowth:"+6.63%", cashFlow:"经营现金流 1.89亿元", overview:"剥离海外低效业务导致收入下降，但资产结构优化后盈利韧性改善。", strategy:"聚焦车身、底盘、电池轻量化，并拓展机器人硬件。", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225202599.PDF"},
-  {company:"富维股份", period:"2026 Q1", revenue:"39.08亿元", growth:"-17.88%", profit:"归母净利 0.82亿元", profitMargin:"归母净利率 2.10%", profitGrowth:"-17.18%", cashFlow:"经营现金流 5.40亿元", overview:"主要客户产销波动拖累收入，降本与业务结构调整维持利润韧性。", strategy:"拓展一汽体系外客户，推进机器人和低空相关业务。", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149032&stockid=600742"},
-  {company:"华域汽车", period:"2026 Q1", revenue:"401.83亿元", growth:"-0.97%", profit:"归母净利 12.44亿元", profitMargin:"归母净利率 3.10%", profitGrowth:"-2.63%", cashFlow:"经营现金流 51.98亿元", overview:"整车市场竞争和产品结构变化使收入、利润小幅承压。", strategy:"创新与成本双驱动，巩固智能座舱并做大智能底盘及海外市场。", url:"https://static.cninfo.com.cn/finalpage/2026-04-29/1225225765.PDF"},
+  {company:"宁波华翔", period:"2026 H1", revenue:"102.49亿元", growth:"-20.42%", profit:"归母净利 7.23亿元", profitMargin:"归母净利率 7.05%", profitGrowth:"+293.60%", cashFlow:"经营现金流 7.79亿元", overview:"海外低效业务剥离导致收入下降；上年同期处置损失形成低基数，本期归母净利润扭亏，但汇兑损失使扣非利润仍下降。", strategy:"优化全球资产与客户结构，聚焦轻量化、智能底盘并拓展机器人硬件。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12573812&stockid=002048"},
+  {company:"富维股份", period:"2026 H1", revenue:"71.41亿元", growth:"-23.23%", profit:"归母净利 1.90亿元", profitMargin:"归母净利率 2.66%", profitGrowth:"-28.28%", cashFlow:"经营现金流 11.11亿元", overview:"主要客户需求和销量承压拖累收入与利润；累计降本约4.2亿元、回款改善使经营现金流大幅增长。", strategy:"巩固一汽体系并拓展外部客户，推进智能座舱、轻量化及新兴业务布局。", url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12568376&stockid=600742"},
+  {company:"华域汽车", period:"2026 H1", revenue:"839.39亿元", growth:"-1.43%", profit:"归母净利 26.47亿元", profitMargin:"归母净利率 3.15%", profitGrowth:"-8.67%", cashFlow:"经营现金流 79.68亿元", overview:"内外饰收入小幅下降，汇率波动导致财务费用上升；经营现金流改善，电子电器业务保持较快增长。", strategy:"围绕智能座舱、智能底盘和智能动力转型，提升新能源、自主品牌及海外客户占比。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12556283&stockid=600741"},
   {company:"继峰股份", period:"2026 H1", revenue:"130.78亿元", growth:"+24.28%", profit:"归母净利 3.65亿元", profitMargin:"归母净利率 2.79%", profitGrowth:"+137.26%", cashFlow:"经营现金流 2.43亿元", overview:"乘用车座椅收入同比增长110.62%，项目放量、规模效应、格拉默整合与降本共同推动盈利和现金流显著改善。", strategy:"持续推进以乘用车座椅为核心的智能座舱战略，并以工业机器人打造第三增长曲线。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12495745&stockid=603997"},
-  {company:"常熟汽饰", period:"2026 Q1", revenue:"16.72亿元", growth:"+24.99%", profit:"归母净利 0.72亿元", profitMargin:"归母净利率 4.28%", profitGrowth:"-18.34%", cashFlow:"经营现金流 1.36亿元", overview:"订单放量拉动收入，但研发增加、新工厂爬坡及投资收益下降压制利润。", strategy:"扩大新能源客户与海外布局，推动新产能尽快达产。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12209000&stockid=603035"},
-  {company:"岱美股份", period:"2026 Q1", revenue:"15.39亿元", growth:"-3.36%", profit:"归母净利 1.86亿元", profitMargin:"归母净利率 12.11%", profitGrowth:"-10.79%", cashFlow:"经营现金流 0.97亿元", overview:"需求与汇率扰动造成收入和利润回落，遮阳板业务仍保持较高盈利。", strategy:"推动汽车顶棚放量，并探索机器人等第二增长曲线。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12275504&stockid=603730"},
-  {company:"福赛科技", period:"2026 Q1", revenue:"3.82亿元", growth:"-8.74%", profit:"归母净利 0.31亿元", profitMargin:"归母净利率 8.05%", profitGrowth:"+9.90%", cashFlow:"经营现金流 0.07亿元", overview:"收入短期回落，但墨西哥业务改善和运营效率提升带动利润逆势增长。", strategy:"扩建墨西哥产能，拓展智能表面、功能件和三电嵌件。", url:"https://static.cninfo.com.cn/finalpage/2026-04-28/1225198228.PDF"},
+  {company:"常熟汽饰", period:"2026 H1", revenue:"34.91亿元", growth:"+25.58%", profit:"归母净利 1.17亿元", profitMargin:"归母净利率 3.34%", profitGrowth:"-46.09%", cashFlow:"经营现金流 2.61亿元", overview:"订单增长和安庆、合肥新工厂量产拉动收入，但产能爬坡、人员及研发费用增加，利润率明显承压。", strategy:"扩大新能源客户和海外布局，提高新工厂利用率与规模化盈利。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569272&stockid=603035"},
+  {company:"岱美股份", period:"2026 H1", revenue:"30.22亿元", growth:"-4.82%", profit:"归母净利 4.20亿元", profitMargin:"归母净利率 13.90%", profitGrowth:"+74.16%", cashFlow:"经营现金流 4.36亿元", overview:"需求和汇兑损失压低收入及扣非利润；归母利润高增长主要来自上年墨西哥火灾低基数，不能直接视作经营性跃升。", strategy:"推动汽车顶棚业务放量，巩固遮阳板优势并探索机器人等第二增长曲线。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12567241&stockid=603730"},
+  {company:"福赛科技", period:"2026 H1", revenue:"8.23亿元", growth:"+0.36%", profit:"归母净利 0.72亿元", profitMargin:"归母净利率 8.79%", profitGrowth:"+14.20%", cashFlow:"经营现金流 0.67亿元", overview:"收入基本持平，成本改善支持利润增长；研发投入增加，但销售回款减少使经营现金流同比下降57%。", strategy:"扩建墨西哥产能，拓展智能表面、功能件和新能源三电嵌件。", url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569905&stockid=301529"},
   {company:"FORVIA", period:"2026 H1", revenue:"€10.51bn", growth:"-4.3%", profit:"经营利润 €632m", profitMargin:"经营利润率 6.0%", profitGrowth:"+1.6%", cashFlow:"净现金流 €432m", overview:"市场产量偏弱及中国客户结构拖累销售，但成本纪律与自助改善措施推动利润率和现金流提升。", strategy:"Interiors 出售预计四季度完成，继续执行 IGNITE、降本和降杠杆。", url:"https://www.forvia.com/en/investors/equity-investors-analyst/financial-results"},
   {company:"Antolin", period:"2026 Q1", revenue:"€851.6m", growth:"-13.5%", profit:"净利润 €72.5m", profitMargin:"EBITDA率 7.8%", profitGrowth:"+1,194.6%*", cashFlow:"Q1未量化披露", overview:"可比营收下降5.9%；净利润跃升主要来自出售印度三家子公司的资本收益，run-rate EBITDA率为9.2%。", strategy:"聚焦高价值内饰技术方案，继续重组与区域效率提升。", url:"https://www.antolin.com/en/antolin-reports-eu725-million-profit-first-quarter-following-sale-three-subsidiaries-india"},
   {company:"Lear", period:"2026 Q2", revenue:"$6.21bn", growth:"+3.0%", profit:"核心经营利润 $313m", profitMargin:"核心利润率 5.0%", profitGrowth:"+7.0%", cashFlow:"经营现金流 $461m / FCF $288m", overview:"重点平台增产、重组节省与运营效率改善推动利润增长，自由现金流同比增长69%。", strategy:"上调全年展望，以自动化和数字工具提效，并扩大座椅及电子系统定点。", url:"https://www.lear.com/newsroom/lear-reports-second-quarter-2026-results"},
@@ -90,7 +97,7 @@ const audiencePriorities = {
   ]
 };
 
-const signalItems = news.slice(0,3);
+const signalItems = [...news].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
 const productColumns = ["副仪表板","门板","座椅扶手","内饰总成","金属扬声器罩","新材料"];
 
 const listedStocks = [
@@ -109,18 +116,18 @@ const listedStocks = [
 ];
 
 const fallbackQuotes = {
-  xinquan:{price:37.55, previous:36.73, change:0.82, percent:2.23, cap:276.05, date:"2026-08-24", trend:[41.66,41.37,41.28,40.35,39.73,39.62,35.66,35.05,36.73,37.55], cached:true},
-  huaxiang:{price:19.00, previous:19.33, change:-0.33, percent:-1.71, cap:154.32, date:"2026-08-24", trend:[19.49,19.73,20.01,20.12,20.30,20.38,18.67,19.00,19.33,19.00], cached:true},
-  faway:{price:7.57, previous:7.55, change:0.02, percent:0.26, cap:56.25, date:"2026-08-24", trend:[7.65,7.72,7.64,7.60,7.65,7.61,7.40,7.57,7.55,7.57], cached:true},
+  xinquan:{price:37.50, previous:38.78, change:-1.28, percent:-3.30, cap:267.82, date:"2026-09-11", trend:[39.59,39.40,40.50,41.78,39.45,41.64,41.08,39.84,38.78,37.50], cached:true},
+  huaxiang:{price:17.53, previous:18.15, change:-0.62, percent:-3.42, cap:124.14, date:"2026-09-11", trend:[20.05,19.57,19.25,19.22,18.72,19.26,19.06,18.71,18.15,17.53], cached:true},
+  faway:{price:7.55, previous:7.76, change:-0.21, percent:-2.71, cap:56.10, date:"2026-09-11", trend:[7.75,7.82,7.82,7.77,7.76,7.81,7.92,7.87,7.76,7.55], cached:true},
   forvia:{price:8.736, previous:null, change:null, percent:null, cap:1.722, date:"2026-07-24", trend:[8.736], cached:true, official:true},
-  lear:{price:128.54, previous:125.43, change:3.11, percent:2.48, cap:63.40205, date:"2026-08-21", trend:[125.43,128.54], cached:true},
-  magna:{price:73.05, previous:70.39, change:2.66, percent:3.78, cap:195.42325, date:"2026-08-21", trend:[70.39,73.05], cached:true},
-  jifeng:{price:11.47, previous:11.58, change:-0.11, percent:-0.95, cap:145.93, date:"2026-08-24", trend:[12.70,12.81,12.63,12.34,12.59,12.21,11.70,11.51,11.58,11.47], cached:true},
+  lear:{price:130.82, previous:127.84, change:2.98, percent:2.33, cap:64.52666, date:"2026-09-11", trend:[127.84,130.82], cached:true},
+  magna:{price:66.13, previous:65.14, change:0.99, percent:1.52, cap:176.91087, date:"2026-09-11", trend:[65.14,66.13], cached:true},
+  jifeng:{price:11.77, previous:12.20, change:-0.43, percent:-3.52, cap:149.75, date:"2026-09-11", trend:[11.41,11.29,11.26,11.57,11.43,11.75,12.29,12.30,12.20,11.77], cached:true},
   grammer:{price:10.80, previous:null, change:null, percent:null, cap:0.165, date:"2026-07-23", trend:[10.80], cached:true, official:true},
-  changshu:{price:11.04, previous:11.02, change:0.02, percent:0.18, cap:40.44, date:"2026-08-24", trend:[11.16,11.26,11.01,11.01,11.09,11.11,10.83,11.10,11.02,11.04], cached:true},
-  daimay:{price:10.39, previous:10.02, change:0.37, percent:3.69, cap:223.24, date:"2026-08-24", trend:[10.27,10.20,10.21,10.07,10.28,10.19,9.79,9.69,10.02,10.39], cached:true},
-  foseal:{price:109.64, previous:107.31, change:2.33, percent:2.17, cap:129.84, date:"2026-08-24", trend:[96.16,99.01,106.32,103.13,106.80,105.00,88.01,99.15,107.31,109.64], cached:true},
-  huayu:{price:15.52, previous:15.26, change:0.26, percent:1.70, cap:489.30, date:"2026-08-24", trend:[15.86,15.82,15.52,15.40,15.32,15.32,15.33,15.45,15.26,15.52], cached:true}
+  changshu:{price:10.32, previous:10.62, change:-0.30, percent:-2.82, cap:37.81, date:"2026-09-11", trend:[10.80,10.92,10.82,10.80,10.76,10.78,10.87,10.83,10.62,10.32], cached:true},
+  daimay:{price:10.23, previous:10.67, change:-0.44, percent:-4.12, cap:219.80, date:"2026-09-11", trend:[10.48,10.33,10.57,10.77,10.84,11.21,11.35,11.07,10.67,10.23], cached:true},
+  foseal:{price:113.70, previous:118.37, change:-4.67, percent:-3.95, cap:72.28, date:"2026-09-11", trend:[114.10,113.65,113.12,115.76,107.00,125.70,126.55,122.90,118.37,113.70], cached:true},
+  huayu:{price:15.24, previous:15.45, change:-0.21, percent:-1.36, cap:480.48, date:"2026-09-11", trend:[15.45,15.72,15.53,15.55,15.58,15.39,15.50,15.49,15.45,15.24], cached:true}
 };
 
 function makeSparkPath(values=[]) {
@@ -245,7 +252,7 @@ function App() {
       </div>
       <div className="freshness">
         <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-08-24 · 内部使用</div>
+        <div className="source-note">检索截至：2026-09-12 · 内部使用</div>
       </div>
     </header>
 
@@ -292,7 +299,7 @@ function App() {
 
       <section className="grid-even evidence-grid">
         <div className="panel financial-panel">
-          <div className="panel-header"><div><h2 className="panel-title">最新业绩与财报关键指标</h2><div className="panel-hint">优先使用最新正式季报/半年报；已纳入新泉、继峰H1，其余尚未披露的A股保留Q1；现金流口径不直接横向比较</div></div><span className="news-count">{financialResults.length} 家</span></div>
+          <div className="panel-header"><div><h2 className="panel-title">最新业绩与财报关键指标</h2><div className="panel-hint">8家A股已统一更新至2026 H1；海外企业使用最新正式季报/半年报；现金流口径不直接横向比较</div></div><span className="news-count">{financialResults.length} 家</span></div>
           <div className="financial-table-wrap"><table className="financial-table"><thead><tr><th>企业 / 报告期</th><th>销售额</th><th>营收增长</th><th>利润</th><th>利润率</th><th>利润增长</th><th>现金流</th><th>经营概况</th></tr></thead><tbody>{financialResults.map(item=><tr key={item.company}><td><a href={item.url} target="_blank" rel="noreferrer"><strong>{item.company}</strong><span>{item.period} ↗</span></a></td><td>{item.revenue}</td><td><GrowthValue value={item.growth}/></td><td><CompactMetric value={item.profit} type="profit"/></td><td><CompactMetric value={item.profitMargin} type="margin" className="profit-margin"/></td><td><GrowthValue value={item.profitGrowth}/></td><td><CompactMetric value={item.cashFlow} type="cash" className="cash-flow"/></td><td className="operating-overview"><span>{item.overview}</span><strong>战略：{item.strategy}</strong></td></tr>)}</tbody></table></div>
           <div className="disclosure-status"><strong>未独立披露财务指标</strong><div>{financialDisclosureGaps.map(name=><span key={name}>{name}</span>)}</div><p>以上企业多为非上市主体、集团业务单元或专业制造商；看板保留监控对象，但不以母集团数据替代。</p></div>
           <div className="stock-footnote">口径说明：A 股显示营业收入与归母净利润；海外集团优先显示销售额、核心经营利润、调整后 EBIT/EBITDA。点击企业名称可查阅原始披露。</div>
@@ -313,7 +320,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口更新至 2026-08-24，正式财报按最新披露追溯，业绩预告不混入正式财报表。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
+      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口更新至 2026-09-12，正式财报按最新披露追溯，业绩预告不混入正式财报表。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
     </main>
 
     <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
