@@ -16,13 +16,13 @@ const MORE_FINANCIALS = [
   {company:"广汽集团",region:"中国集团",period:"2026 H1",revenue:"¥46.12bn",growth:"+9.38%",profit:"归母亏损 ¥4.47bn",margin:"-9.69%*",profitGrowth:"亏损扩大76.0%",cash:"经营现金流 -¥7.10bn",view:"自主业务收入增长，但合资盈利和投资收益承压，集团亏损同比扩大。",url:"https://www.gacgroup.com/cn/invest/notice",fresh:"2026-08-28"},
   {company:"长安汽车",region:"中国集团",period:"2026 H1",revenue:"¥65.63bn",growth:"-9.71%",profit:"归母净利 ¥0.82bn",margin:"1.25%*",profitGrowth:"-64.32%",cash:"经营现金流 -¥11.41bn",view:"销量下降和汇兑收益减少拖累利润；扣除汇兑影响后归母利润同比改善。",url:"https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=10000959&gather=1&id=12572357",fresh:"2026-08-28"},
   {company:"长城汽车",region:"中国集团",period:"2026 H1",revenue:"¥102.10bn",growth:"+10.58%",profit:"归母净利 ¥2.46bn",margin:"2.41%*",profitGrowth:"-61.11%",cash:"经营现金流 ¥10.44bn",view:"销量和收入增长，但汇率波动及上年高基数使归母利润明显下降。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12533776&stockid=601633",fresh:"2026-08-25"},
-  {company:"东风集团股份",region:"中国集团",period:"2026 Q1",revenue:"季度未披露",growth:"—",profit:"季度未披露",margin:"—",profitGrowth:"—",cash:"季度未披露",view:"港股上市主体未发布完整一季度利润表；保持最近法定报告期口径。",url:"https://www1.hkexnews.hk/search/titlesearch.xhtml?lang=en",fresh:"截至2026-07-29"},
+  {company:"岚图汽车",region:"中国新势力",period:"2026 H1",revenue:"¥18.16bn",growth:"+42.4%",profit:"净亏损 ¥0.39bn",margin:"毛利率 17.7%",profitGrowth:"由盈转亏",cash:"经营现金流 ¥0.21bn",view:"交付增长带动收入扩张；原材料价格和费用投入令毛利率下降并转为净亏损。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700155.pdf",fresh:"2026-08-27"},
   {company:"北汽蓝谷",region:"中国集团",period:"2026 H1",revenue:"¥11.60bn",growth:"+21.86%",profit:"归母亏损 ¥1.94bn",margin:"-16.71%*",profitGrowth:"减亏16.0%",cash:"经营现金流 -¥1.75bn",view:"收入增长且亏损收窄，但经营现金流转为净流出。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12567997&stockid=600733",fresh:"2026-08-28"},
   {company:"赛力斯",region:"中国集团",period:"2026 H1",revenue:"¥57.49bn",growth:"-7.87%",profit:"归母亏损 ¥1.72bn",margin:"-2.99%*",profitGrowth:"由盈转亏",cash:"经营现金流 -¥12.38bn",view:"主力车型换代使收入和规模效应承压，销售回款减少导致现金流转负。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12505883&stockid=601127",fresh:"2026-08-20"},
   {company:"零跑汽车",region:"中国新势力",period:"2026 H1",revenue:"¥38.11bn",growth:"+57.1%",profit:"归母净利 ¥0.21bn",margin:"毛利率 11.7%",profitGrowth:"+600.0%",cash:"经营现金流 ¥2.17bn",view:"交付增长推动收入和利润提升，但原材料及车型结构令毛利率与现金流同比下降。",url:"https://financialfilings.com/filings/zhejiang-leapmotor-technology-co-ltd/earnings-release/2026/57412661/",fresh:"2026-08-24"},
   {company:"江淮汽车",region:"中国集团",period:"2026 H1",revenue:"¥22.13bn",growth:"+14.31%",profit:"归母亏损 ¥0.75bn",margin:"-3.38%*",profitGrowth:"减亏3.1%",cash:"经营现金流 -¥5.29bn",view:"收入增长且归母亏损略有收窄，但经营现金流出进一步扩大。",url:"https://www.jac.com.cn/u/cms/www/202608/20090324lry1.pdf",fresh:"2026-08-20"},
   {company:"中国一汽",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团未上市且不独立发布季度财务报表；不以一汽解放等子公司数据替代。",url:"https://www.faw.com/fawcn/373694/373706/index.html",fresh:"持续监控"},
-  {company:"奇瑞集团",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团暂无独立上市季度财报；保留经营信息监控，不使用媒体估算值。",url:"https://www.cheryholding.com/news.html",fresh:"持续监控"},
+  {company:"奇瑞汽车",region:"中国集团",period:"2026 H1",revenue:"¥143.28bn",growth:"+1.2%",profit:"归母净利 ¥8.57bn",margin:"毛利率 16.1%",profitGrowth:"-11.7%",cash:"经营现金流 ¥37.76bn",view:"海外收入增长支撑营收，毛利率提升；汇兑收益转为损失拖累归母利润。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0907/2026090701305.pdf",fresh:"2026-09-07"},
   {company:"通用汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.03bn",growth:"+1.9%",profit:"归母净利 $1.30bn",margin:"2.7%*",profitGrowth:"约-31%",cash:"汽车业务经营现金流 $5.07bn",view:"北美核心业务保持韧性；中国合资权益收益改善至约0.83亿美元。",url:"https://investor.gm.com/static-files/4ee9aed7-9a23-46d5-aa6c-093668907497",fresh:"2026-07-21"},
   {company:"福特汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.3bn",growth:"约+6%",profit:"归母亏损 $1.3bn",margin:"调整后EBIT率 5.2%",profitGrowth:"由盈转亏",cash:"调整后自由现金流 $2.1bn",view:"营收与调整后经营利润增长，但特殊项目使GAAP口径转为净亏损。",url:"https://www.fromtheroad.ford.com/ca/en/articles/2026/ford-reports-second-quarter-2026-financial-results",fresh:"2026-07-29"},
   {company:"丰田汽车",region:"海外母公司",period:"FY2027 Q1",revenue:"¥13.53tn",growth:"+10.4%",profit:"归母净利 ¥1.48tn",margin:"经营利润率 7.9%",profitGrowth:"+75.6%",cash:"经营现金流 ¥0.54tn",view:"销量与收入增长，投资收益等非经营项目推动归母利润显著上升。",url:"https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf",fresh:"2026-08-04"},
@@ -55,6 +55,8 @@ const CASH_RESERVES = {
   "江淮汽车":"货币资金 ¥11.98bn",
   "北汽蓝谷":"货币资金 ¥6.73bn",
   "赛力斯":"货币资金 ¥51.93bn",
+  "岚图汽车":"现金及现金等价物 ¥6.48bn",
+  "奇瑞汽车":"现金及现金等价物 ¥63.42bn",
   "大众汽车集团":"汽车业务净流动性 €34.24bn",
   "特斯拉":"现金、现金等价物及短期投资 $43.52bn",
   "宝马集团":"汽车业务净金融资产 €42.65bn",
@@ -80,7 +82,8 @@ const STOCKS = [
  {name:"赛力斯",ticker:"601127.SH",symbol:"sh601127",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh601127/gp"},
  {name:"江淮汽车",ticker:"600418.SH",symbol:"sh600418",market:"A股",currency:"CNY",url:"https://gu.qq.com/sh600418/gp"},
  {name:"吉利汽车",ticker:"0175.HK",symbol:"hk00175",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk00175/gp"},
- {name:"东风集团股份",ticker:"0489.HK",symbol:"hk00489",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk00489/gp"},
+ {name:"岚图汽车",ticker:"7489.HK",symbol:"hk07489",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk07489/gp"},
+ {name:"奇瑞汽车",ticker:"9973.HK",symbol:"hk09973",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk09973/gp"},
  {name:"零跑汽车",ticker:"9863.HK",symbol:"hk09863",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk09863/gp"},
  {name:"小米集团",ticker:"1810.HK",symbol:"hk01810",market:"港股",currency:"HKD",url:"https://gu.qq.com/hk01810/gp"},
  {name:"蔚来",ticker:"NIO.N / 9866.HK",symbol:"usNIO",market:"美股 / 港股",currency:"USD",url:"https://gu.qq.com/usNIO/gp"},
@@ -97,7 +100,7 @@ const STOCKS = [
  {name:"Stellantis",ticker:"STLAM.MI / STLA.N",symbol:"usSTLA",market:"欧洲 / 美股",currency:"USD",url:"https://gu.qq.com/usSTLA/gp"},
  {name:"现代汽车",ticker:"005380.KS",market:"韩国",currency:"KRW",fallbackKey:"hyundai",url:"https://www.hyundai.com/worldwide/en/company/ir/stock-information"}
 ];
-const CHINA_STOCK_NAMES = new Set(["理想汽车","蔚来","小米集团","小鹏汽车","上汽集团","比亚迪","长安汽车","长城汽车","广汽集团","北汽蓝谷","赛力斯","江淮汽车","吉利汽车","东风集团股份","零跑汽车"]);
+const CHINA_STOCK_NAMES = new Set(["理想汽车","蔚来","小米集团","小鹏汽车","上汽集团","比亚迪","长安汽车","长城汽车","广汽集团","北汽蓝谷","赛力斯","江淮汽车","吉利汽车","岚图汽车","奇瑞汽车","零跑汽车"]);
 const SORTED_STOCKS = [...STOCKS].sort((a,b)=>{
   const ap=FRONT_ORDER.indexOf(a.name), bp=FRONT_ORDER.indexOf(b.name);
   if(ap>=0 || bp>=0) return (ap>=0?ap:999)-(bp>=0?bp:999);
@@ -118,7 +121,6 @@ const FALLBACK_QUOTES = {
  sh601127:{price:60.40,pct:4.14,cap:1052.16,date:"20260730",trend:[53.38,55.89,56.37,54.30,55.61,55.51,55.98,56.38,54.33,55.41,55.93,58.00,60.40],cached:true},
  sh600418:{price:23.76,pct:7.17,cap:535.59,date:"20260730",trend:[22.50,22.50,22.97,21.35,21.05,20.80,20.61,20.77,19.64,20.43,20.96,22.17,23.76],cached:true},
  hk00175:{price:20.28,pct:-0.10,cap:2187.2241,date:"20260730",trend:[18.31,18.40,19.39,18.48,18.79,18.62,17.93,18.52,19.06,18.82,19.12,20.30,20.28],cached:true},
- hk00489:{price:9.54,pct:0,cap:787.2969,date:"20260318",trend:[9.81,9.70,9.71,9.70,9.81,9.61,9.41,9.44,9.35,9.66,9.38,9.54],cached:true},
  hk09863:{price:41.28,pct:-2.13,cap:586.9243,date:"20260730",trend:[36.30,36.06,37.24,35.14,34.92,35.32,33.46,34.64,36.34,37.14,38.52,42.18,41.28],cached:true},
  hk01810:{price:30.96,pct:-2.89,cap:8000.2428,date:"20260730",trend:[26.04,25.86,27.50,26.88,27.74,27.42,26.68,27.14,26.72,28.68,29.26,31.88,30.96],cached:true},
  usNIO:{price:4.76,pct:1.71,cap:119.26975,date:"20260729",trend:[4.68,4.76],cached:true},
@@ -163,7 +165,7 @@ function App(){
  React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
  const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
  return <div className="shell">
-  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-09-02</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-09-13</strong><span>内部研究 · 原始披露可追溯</span></div></header>
   <main>
    <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
    <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>全部企业 · 各自最新披露 · 悬浮数值查看完整指标口径</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
