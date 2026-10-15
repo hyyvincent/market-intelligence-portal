@@ -69,6 +69,37 @@ const CASH_RESERVES = {
   "Stellantis":"工业业务可用流动性 €44.1bn",
   "雷诺集团":"汽车业务净现金 €6.57bn"
 };
+const CORPORATE_UPDATES = {
+  "理想汽车":{sales:"9月交付31,817辆；累计交付183.37万辆",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10-01",flags:[]},
+  "蔚来":{sales:"9月交付37,408辆，同比+7.7%；Q3交付109,178辆",capital:"吉利以换电资产+¥0.64bn认购蔚来能源；蔚来中国拟持浩瀚能源10%",management:"未见核心高管重大变动",source:"2026-10-01",flags:["capital"]},
+  "小米集团":{sales:"Q2交付104,199辆，同比+28.2%；H1交付185,055辆",capital:"未见汽车业务重大股权变动",management:"未见核心高管重大变动",source:"2026-08-18",flags:["sales"]},
+  "小鹏汽车":{sales:"9月交付41,256辆，环比+5%；Q3交付118,390辆，环比+15%",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10-01",flags:["sales"]},
+  "比亚迪":{sales:"9月新能源车销量463,561辆，同比+17%；出口180,700辆",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10-01",flags:["sales"]},
+  "上汽集团":{sales:"9月整车406,051辆，同比-7.7%；新能源+18.7%、海外+49.1%",capital:"未见重大股权变动",management:"未见核心高管重大变动",source:"2026-10-08",flags:["sales"]},
+  "吉利汽车":{sales:"9月销量292,168辆，同比+7%",capital:"极氪私有化后已并入全资体系；持续披露关联交易",management:"安聪慧任董事长、淦家阅任CEO，李书福转任终身名誉主席",source:"2026-10-01",flags:["capital","management"]},
+  "广汽集团":{sales:"最近正式月报显示合资板块仍承压",capital:"拟发行股份收购目标公司50%股权，并拟定增募集配套资金",management:"重大资产重组推进中，管理责任边界需持续跟踪",source:"2026-09-28",flags:["capital"]},
+  "长安汽车":{sales:"9月新能源乘用车批发保持行业前列；集团月报待完整核验",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "长城汽车":{sales:"9月销量114,944辆，同比-14.0%；海外60,019辆",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10-08",flags:["sales"]},
+  "岚图汽车":{sales:"9月交付13,025辆；1-9月累计115,481辆，同比+19%",capital:"完成上市主体切换后，继续跟踪股份及融资变化",management:"未见核心高管重大变动",source:"2026-10-01",flags:["sales"]},
+  "北汽蓝谷":{sales:"9月产销快报待正式数值核验",capital:"未见重大股权或融资变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "赛力斯":{sales:"9月新能源车销量29,271辆，同比-34.5%；集团销量32,218辆",capital:"控股股东、董事高管及骨干完成增持，并持续推进股份回购",management:"核心管理层参与A/H股增持，治理绑定增强",source:"2026-10-09",flags:["sales","capital"]},
+  "零跑汽车":{sales:"9月全球交付105,656辆，同比+59%；Q3交付310,052辆",capital:"Stellantis仍为重要战略股东，海外合资架构持续扩张",management:"零跑国际任命Danilo Annese为CEO，9月1日起生效",source:"2026-10-12",flags:["sales","management"]},
+  "江淮汽车":{sales:"9月销量27,201辆，同比-18.7%；新能源乘用车2,932辆",capital:"持续实施集中竞价股份回购",management:"未见核心高管重大变动",source:"2026-10-13",flags:["sales","capital"]},
+  "奇瑞汽车":{sales:"9月集团销量待正式快报核验；出口仍为主要增长支撑",capital:"港股上市后进入持续股份变动监测期",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "中国一汽":{sales:"集团未统一披露可比月度销量；红旗等品牌分散披露",capital:"非上市集团，未见重大资本结构公开变动",management:"未见集团核心高管重大变动",source:"持续监控",flags:[]},
+  "大众汽车集团":{sales:"最近季度全球交付待Q3正式报告确认；中国市场仍承压",capital:"未见控股结构重大变动",management:"Erika Rasch于10月1日就任集团人力资源董事",source:"2026-10-01",flags:["management"]},
+  "特斯拉":{sales:"Q3全球交付数据已进入监测；待与正式财报统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "宝马集团":{sales:"最近季度全球交付待Q3正式报告确认；中国需求仍偏弱",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "梅赛德斯-奔驰集团":{sales:"最近季度全球销量待Q3正式报告确认；高端车需求承压",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "通用汽车":{sales:"Q3全球及北美销量待与公司正式发布统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "福特汽车":{sales:"Q3销量待与公司正式发布统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "丰田汽车":{sales:"8月全球产销已披露；中国两家合资公司签署战略联盟框架",capital:"未见控股结构重大变动",management:"近健太4月起任社长兼CEO；佐藤恒治转任副会长兼CIO",source:"2026-10-08",flags:["management"]},
+  "本田汽车":{sales:"8月全球产销已披露；汽车业务仍处结构调整期",capital:"未见控股结构重大变动",management:"4月完成执行层及汽车研发组织调整",source:"2026-09-29",flags:["management"]},
+  "日产汽车":{sales:"最近全球销量按月披露；中国业务仍处修复阶段",capital:"未见控股结构重大变动",management:"9月公布高级管理层调整，10月1日起生效",source:"2026-10-01",flags:["management"]},
+  "Stellantis":{sales:"Q3预计出货130万辆，同比-1%；欧洲+10%、北美-12%",capital:"公布五年€60bn战略投资与资本配置框架",management:"Ram、Jeep及欧洲品牌负责人于7-8月集中调整",source:"2026-10-13",flags:["capital","management"]},
+  "现代汽车集团":{sales:"Q3全球销量待与正式季度披露统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "雷诺集团":{sales:"最近季度集团销量待正式报告确认",capital:"未见控股结构重大变动",management:"现任管理架构延续；未见近期核心高管重大变动",source:"2026-10",flags:[]}
+};
 function cashFlowValue(item){ return /^现金储备/.test(item.cash)?"季度未披露":item.cash }
 function cashReserveValue(item){ return CASH_RESERVES[item.company]||"未披露" }
 
@@ -149,6 +180,11 @@ function Metric({value,type}) {
   }
   return <span className="metric" title={raw}>{short}</span>
 }
+function InfoCell({item,type}) {
+  const update=CORPORATE_UPDATES[item.company]||{sales:"待核验",capital:"待核验",management:"待核验",source:"持续监控",flags:[]};
+  const emphasized=update.flags.includes(type);
+  return <td className={`info-cell ${emphasized?"important":""}`}><span>{update[type]}</span>{emphasized&&<strong>重要变化</strong>}<small>更新：{update.source}</small></td>
+}
 function formatMarketCap(stock,value){
  if(!Number.isFinite(value)) return "—";
  if(stock.currency==="CNY") return `¥${value.toFixed(2)}亿`;
@@ -165,12 +201,12 @@ function App(){
  React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
  const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
  return <div className="shell">
-  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-09-27</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-10-15</strong><span>内部研究 · 原始披露可追溯</span></div></header>
   <main>
    <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
-   <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>全部企业 · 各自最新披露 · 悬浮数值查看完整指标口径</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
-    <div className="table-wrap"><table><thead><tr><th>企业 / 报告期</th><th>收入</th><th>收入增长</th><th>利润</th><th>利润率</th><th>利润变化</th><th>现金流</th><th>现金储备</th><th>经营解读</th></tr></thead><tbody>{SORTED_FINANCIALS.map(x=><tr key={x.company}><td><a href={x.url} target="_blank"><strong>{x.company}</strong><small>{x.region} · {x.period} ↗</small></a></td><td><Metric value={x.revenue}/></td><td><Growth value={x.growth}/></td><td><Metric value={x.profit} type="profit"/></td><td><Metric value={x.margin} type="margin"/></td><td><Growth value={x.profitGrowth}/></td><td><Metric value={cashFlowValue(x)} type="cash"/></td><td><Metric value={cashReserveValue(x)} type="cash"/></td><td className="view">{x.view}<small>披露：{x.fresh}</small></td></tr>)}</tbody></table></div>
-    <div className="note">* 根据披露值计算。现金流采用报告期经营现金流或企业披露的自由现金流；现金储备采用报告期末现金、现金等价物及企业明确披露的短期投资或净流动性口径，悬浮数值查看完整定义。中国合资公司通常由海外母公司按权益法或区域口径披露。</div>
+   <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>财务、销量、资本与高管动态 · 醒目标记仅用于正式披露的重要变化</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
+    <div className="table-wrap"><table><thead><tr><th>企业 / 报告期</th><th>收入</th><th>收入增长</th><th>利润</th><th>利润率</th><th>利润变化</th><th>现金流</th><th>现金储备</th><th>销量动态</th><th>资本动态</th><th>高管动态</th><th>经营解读</th></tr></thead><tbody>{SORTED_FINANCIALS.map(x=><tr key={x.company}><td><a href={x.url} target="_blank"><strong>{x.company}</strong><small>{x.region} · {x.period} ↗</small></a></td><td><Metric value={x.revenue}/></td><td><Growth value={x.growth}/></td><td><Metric value={x.profit} type="profit"/></td><td><Metric value={x.margin} type="margin"/></td><td><Growth value={x.profitGrowth}/></td><td><Metric value={cashFlowValue(x)} type="cash"/></td><td><Metric value={cashReserveValue(x)} type="cash"/></td><InfoCell item={x} type="sales"/><InfoCell item={x} type="capital"/><InfoCell item={x} type="management"/><td className="view">{x.view}<small>披露：{x.fresh}</small></td></tr>)}</tbody></table></div>
+    <div className="note">* 根据正式披露值整理。销量可能采用交付、批发、集团销量或出货口径，已在单元格中注明；“重要变化”用于显著销量波动、重大股权/融资交易或核心管理层调整。未披露不以媒体估算补齐。</div>
    </section>
    <section className="panel stock-panel"><div className="panel-head"><div><b>02</b><h2>股市综合看板</h2><p>对应实际上市主体 · 最近交易日或盘中行情 · 不同币种不做市值合计</p></div><div className="market-actions"><span className={`market-status ${status==="行情已同步"?"live":status==="部分行情已同步"?"partial":"cached"}`}><span></span>{status}</span><button className={`market-refresh ${status==="正在刷新"?"loading":""}`} type="button" onClick={refreshMarketQuotes} disabled={status==="正在刷新"} title="手动刷新最新行情" aria-label="手动刷新最新行情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 5v6h-6"/></svg><span>{status==="正在刷新"?"刷新中":"刷新"}</span></button></div></div>
     <div className="stock-summary"><div><span>覆盖上市公司</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>中国上市主体</span><strong>{SORTED_STOCKS.filter(s=>CHINA_STOCK_NAMES.has(s.name)).length}</strong></div><div><span>海外母公司</span><strong>{SORTED_STOCKS.filter(s=>!CHINA_STOCK_NAMES.has(s.name)).length}</strong></div></div>

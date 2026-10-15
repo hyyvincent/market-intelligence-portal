@@ -60,3 +60,12 @@ header p, .eyebrow { color: #fff; }
   .stock-cap, .stock-source { display: none; }
   .market-status { display: none; }
 }
+
+/* 2026-10 corporate-change columns */
+.table-wrap { max-height: 680px; }
+table { min-width: 1980px; }
+.info-cell { min-width: 210px; max-width: 260px; color: #334451; }
+.info-cell span { display: block; }
+.info-cell small { margin-top: 6px; }
+.info-cell.important { background: #fff5e8; border-left: 3px solid #e17824; }
+.info-cell.important strong { display: inline-block; margin-top: 7px; padding: 2px 6px; border-radius: 2px; background: #e17824; color: #fff; font-size: 9px; letter-spacing: .04em; }
