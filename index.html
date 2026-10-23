@@ -162,20 +162,6 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
     }
-    .lower-groups {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
-      align-items: start;
-      margin-top: 24px;
-    }
-    .lower-groups .group {
-      min-width: 0;
-      margin-top: 0;
-    }
-    .lower-groups .modules {
-      grid-template-columns: repeat(var(--module-count), minmax(0, 1fr));
-    }
     .module {
       min-height: 248px;
       background: var(--panel);
@@ -242,6 +228,12 @@
       background: #005195;
       box-shadow: 0 5px 14px rgba(0, 81, 149, .22);
       padding-inline: 10px;
+      white-space: nowrap;
+    }
+    .badge.beta {
+      border-color: #0069b8;
+      background: #0069b8;
+      box-shadow: 0 5px 14px rgba(0, 105, 184, .24);
       white-space: nowrap;
     }
     .module.disabled {
@@ -345,8 +337,6 @@
     }
     @media (max-width: 1360px) {
       .modules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .lower-groups { grid-template-columns: 1fr; }
-      .lower-groups .modules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
     @media (max-width: 900px) {
       header { padding-left: 22px; padding-right: 22px; }
@@ -361,7 +351,6 @@
       .mission-line { white-space: normal; font-size: 24px; }
       main { padding-left: 22px; padding-right: 22px; }
       .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .lower-groups .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .group-head { display: block; }
       .group-count { margin-top: 6px; }
       h1 { font-size: 30px; }
@@ -369,7 +358,6 @@
     }
     @media (max-width: 620px) {
       .modules { grid-template-columns: 1fr; }
-      .lower-groups .modules { grid-template-columns: 1fr; }
     }
     /* Concept E: GRAMMER Blue Spectrum */
     :root {
@@ -547,12 +535,46 @@
         </div>
       </section>
 
-      <div class="lower-groups">
-        <section class="group" aria-labelledby="cv-title">
+      <section class="group" aria-labelledby="bi-title">
+        <div class="group-head">
+          <h2 class="group-title" id="bi-title">Business Insight <span>商业洞察</span></h2>
+        </div>
+        <div class="modules">
+          <a class="module" href="https://hyyvincent.github.io/market-intelligence-portal/business-insight/automakers/" target="_blank" rel="noopener">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 2 4-6"/><path d="M16 7h2v2"/></svg>
+            </div>
+            <h2>Passenger Vehicle Financial &amp; Capital Market Dashboard</h2>
+            <div class="cn">车企财报与资本市场看板</div>
+            <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
+          </a>
+
+          <a class="module" href="https://hyyvincent.github.io/market-intelligence-portal/business-insight/interior-intelligence/" target="_blank" rel="noopener">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><path d="m14 10 4-4"/></svg>
+            </div>
+            <h2>Automotive Interior Competitive Intelligence Dashboard</h2>
+            <div class="cn">汽车内饰竞争情报看板</div>
+            <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
+          </a>
+
+          <a class="module" href="./business-insight/supplier-search/" target="_blank" rel="noopener" aria-label="Automotive Supplier Search, beta version">
+            <div class="badge beta">Beta / 测试版</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="5"/><path d="m14 14 6 6"/><path d="M7 10h6M10 7v6"/></svg>
+            </div>
+            <h2>Automotive Supplier Search</h2>
+            <div class="cn">供应商查询</div>
+            <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="group" aria-labelledby="cv-title">
           <div class="group-head">
             <h2 class="group-title" id="cv-title">Commercial Vehicle <span>商用车</span></h2>
           </div>
-          <div class="modules" style="--module-count: 3">
+          <div class="modules">
             <a class="module" href="./commercial-vehicle/china-mhdt-model/" target="_blank" rel="noopener">
               <div class="badge update-date">Updated Q3 2026</div>
               <div class="icon" aria-hidden="true">
@@ -581,35 +603,8 @@
               <div class="cn">中国轻卡预测</div>
               <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
             </a>
-
           </div>
-        </section>
-
-        <section class="group" aria-labelledby="bi-title">
-          <div class="group-head">
-            <h2 class="group-title" id="bi-title">Business Insight <span>商业洞察</span></h2>
-          </div>
-          <div class="modules" style="--module-count: 2">
-            <a class="module" href="https://hyyvincent.github.io/market-intelligence-portal/business-insight/automakers/" target="_blank" rel="noopener">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 2 4-6"/><path d="M16 7h2v2"/></svg>
-              </div>
-              <h2>Passenger Vehicle Financial &amp; Capital Market Dashboard</h2>
-              <div class="cn">车企财报与资本市场看板</div>
-              <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
-            </a>
-
-            <a class="module" href="https://hyyvincent.github.io/market-intelligence-portal/business-insight/interior-intelligence/" target="_blank" rel="noopener">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><path d="m14 10 4-4"/></svg>
-              </div>
-              <h2>Automotive Interior Competitive Intelligence Dashboard</h2>
-              <div class="cn">汽车内饰竞争情报看板</div>
-              <div class="open"><span>Open Dashboard</span><span class="arrow">→</span></div>
-            </a>
-          </div>
-        </section>
-      </div>
+      </section>
 
       <div class="footer">
         <span>For internal business planning and discussion support. <span class="cn-inline">供内部业务规划与沟通参考。</span></span>
