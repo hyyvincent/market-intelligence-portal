@@ -1,6 +1,6 @@
 const FINANCIALS = [
   {company:"大众汽车集团",region:"海外母公司",period:"2026 H1",revenue:"€158.1bn",growth:"-0.2%",profit:"经营利润 €5.93bn",margin:"3.8%",profitGrowth:"-11.6%",cash:"汽车业务净现金流 €3.2bn",view:"中国权益法合资销量承压；集团成本与产品组合改善是下半年重点。",url:"https://www.volkswagen-group.com/en/half-yearly-financial-report-and-results-2026-20506",fresh:"2026-07-24"},
-  {company:"特斯拉",region:"海外母公司",period:"2026 Q2",revenue:"$28.24bn",growth:"+25.5%",profit:"归母净利 $1.11bn",margin:"经营利润率 1.4%",profitGrowth:"-4.9%",cash:"经营现金流 $4.70bn",view:"交付与收入增长，但AI及产能投入压低经营利润率并使自由现金流转负。",url:"https://ir.tesla.com/press-release/tesla-releases-second-quarter-2026-financial-results",fresh:"2026-07-22"},
+  {company:"特斯拉",region:"海外母公司",period:"2026 Q3",revenue:"$28.05bn",growth:"持平",profit:"归母净利 $0.79bn",margin:"经营利润率 2.6%",profitGrowth:"-42.7%",cash:"经营现金流 $6.26bn",view:"交付创阶段高位、毛利率环比改善，但AI、机器人与新产能投入令经营利润同比下降。",url:"https://ir.tesla.com/press-release/tesla-releases-third-quarter-2026-financial-results",fresh:"2026-10-21"},
   {company:"比亚迪",region:"中国集团",period:"2026 H1",revenue:"¥344.82bn",growth:"-7.13%",profit:"归母净利 ¥12.33bn",margin:"3.57%*",profitGrowth:"-20.54%",cash:"经营现金流 ¥37.33bn",view:"国内收入承压、境外收入增长；汽车业务毛利率提升，但汇兑损失拖累利润。",url:"https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12572791&stockid=002594",fresh:"2026-08-28"},
   {company:"上汽集团",region:"中国集团",period:"2026 H1",revenue:"¥298.65bn",growth:"-0.31%",profit:"归母净利 ¥5.15bn",margin:"毛利率 12.6%",profitGrowth:"-14.38%",cash:"经营现金流 ¥54.30bn",view:"自主品牌和海外业务支撑经营韧性；核心归母利润增长，但法定归母利润仍下降。",url:"https://www.saicmotor.com/m/xwzx/xwk/2026/65230.shtml",fresh:"2026-08-28"},
   {company:"蔚来",region:"中国新势力",period:"2026 Q2",revenue:"¥32.14bn",growth:"+69.1%",profit:"归母净亏损 ¥0.72bn",margin:"毛利率 18.4%",profitGrowth:"亏损收窄86.0%",cash:"经营现金流为正（金额未列）",view:"三品牌交付推动收入增长，调整后净利润转正；GAAP口径仍为小幅亏损。",url:"https://ir.nio.com/news-releases/news-release-details/nio-inc-reports-unaudited-second-quarter-2026-financial-results/",fresh:"2026-09-01"},
@@ -23,7 +23,7 @@ const MORE_FINANCIALS = [
   {company:"江淮汽车",region:"中国集团",period:"2026 H1",revenue:"¥22.13bn",growth:"+14.31%",profit:"归母亏损 ¥0.75bn",margin:"-3.38%*",profitGrowth:"减亏3.1%",cash:"经营现金流 -¥5.29bn",view:"收入增长且归母亏损略有收窄，但经营现金流出进一步扩大。",url:"https://www.jac.com.cn/u/cms/www/202608/20090324lry1.pdf",fresh:"2026-08-20"},
   {company:"中国一汽",region:"中国非上市集团",period:"最新公开信息",revenue:"未独立披露",growth:"—",profit:"未独立披露",margin:"—",profitGrowth:"—",cash:"未独立披露",view:"集团未上市且不独立发布季度财务报表；不以一汽解放等子公司数据替代。",url:"https://www.faw.com/fawcn/373694/373706/index.html",fresh:"持续监控"},
   {company:"奇瑞汽车",region:"中国集团",period:"2026 H1",revenue:"¥143.28bn",growth:"+1.2%",profit:"归母净利 ¥8.57bn",margin:"毛利率 16.1%",profitGrowth:"-11.7%",cash:"经营现金流 ¥37.76bn",view:"海外收入增长支撑营收，毛利率提升；汇兑收益转为损失拖累归母利润。",url:"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0907/2026090701305.pdf",fresh:"2026-09-07"},
-  {company:"通用汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.03bn",growth:"+1.9%",profit:"归母净利 $1.30bn",margin:"2.7%*",profitGrowth:"约-31%",cash:"汽车业务经营现金流 $5.07bn",view:"北美核心业务保持韧性；中国合资权益收益改善至约0.83亿美元。",url:"https://investor.gm.com/static-files/4ee9aed7-9a23-46d5-aa6c-093668907497",fresh:"2026-07-21"},
+  {company:"通用汽车",region:"海外母公司",period:"2026 Q3",revenue:"$50.02bn",growth:"+2.9%",profit:"归母净利 $3.34bn",margin:"净利率 6.7%",profitGrowth:"+151.3%",cash:"汽车业务经营现金流 $8.05bn",view:"北美盈利与现金流改善，但中国合资权益收益同比下降；全年调整后自由现金流指引上调。",url:"https://investor.gm.com/news-releases/news-release-details/gm-releases-2026-third-quarter-results-and-updates-full-year",fresh:"2026-10-20"},
   {company:"福特汽车",region:"海外母公司",period:"2026 Q2",revenue:"$48.3bn",growth:"约+6%",profit:"归母亏损 $1.3bn",margin:"调整后EBIT率 5.2%",profitGrowth:"由盈转亏",cash:"调整后自由现金流 $2.1bn",view:"营收与调整后经营利润增长，但特殊项目使GAAP口径转为净亏损。",url:"https://www.fromtheroad.ford.com/ca/en/articles/2026/ford-reports-second-quarter-2026-financial-results",fresh:"2026-07-29"},
   {company:"丰田汽车",region:"海外母公司",period:"FY2027 Q1",revenue:"¥13.53tn",growth:"+10.4%",profit:"归母净利 ¥1.48tn",margin:"经营利润率 7.9%",profitGrowth:"+75.6%",cash:"经营现金流 ¥0.54tn",view:"销量与收入增长，投资收益等非经营项目推动归母利润显著上升。",url:"https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf",fresh:"2026-08-04"},
   {company:"本田汽车",region:"海外母公司",period:"FY2027 Q1",revenue:"¥6.06tn",growth:"+13.5%",profit:"归母净利 ¥0.45tn",margin:"经营利润率 8.8%",profitGrowth:"+129.3%",cash:"经营现金流 ¥0.29tn",view:"金融服务与摩托车业务增长，且上年同期电动车相关损失形成低基数。",url:"https://data.swcms.net/file/honda-ir/dam/jcr%3Abd619e88-b049-4e52-aca6-670ab3081b20/140120260804508592.pdf",fresh:"2026-08-05"},
@@ -58,13 +58,13 @@ const CASH_RESERVES = {
   "岚图汽车":"现金及现金等价物 ¥6.48bn",
   "奇瑞汽车":"现金及现金等价物 ¥63.42bn",
   "大众汽车集团":"汽车业务净流动性 €34.24bn",
-  "特斯拉":"现金、现金等价物及短期投资 $43.52bn",
+  "特斯拉":"现金、现金等价物及短期投资 $45.45bn",
   "宝马集团":"汽车业务净金融资产 €42.65bn",
   "吉利汽车":"银行结余及现金 ¥59.36bn",
   "梅赛德斯-奔驰集团":"工业业务净流动性 €30.43bn",
   "丰田汽车":"现金及现金等价物 ¥8.21tn",
   "本田汽车":"现金及现金等价物 ¥5.30tn",
-  "通用汽车":"汽车业务现金及受限现金 $15.27bn",
+  "通用汽车":"汽车业务现金、现金等价物及有价债券 $23.10bn",
   "福特汽车":"总流动性 超$43bn",
   "Stellantis":"工业业务可用流动性 €44.1bn",
   "雷诺集团":"汽车业务净现金 €6.57bn"
@@ -87,11 +87,11 @@ const CORPORATE_UPDATES = {
   "江淮汽车":{sales:"9月销量27,201辆，同比-18.7%；新能源乘用车2,932辆",capital:"持续实施集中竞价股份回购",management:"未见核心高管重大变动",source:"2026-10-13",flags:["sales","capital"]},
   "奇瑞汽车":{sales:"9月集团销量待正式快报核验；出口仍为主要增长支撑",capital:"港股上市后进入持续股份变动监测期",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
   "中国一汽":{sales:"集团未统一披露可比月度销量；红旗等品牌分散披露",capital:"非上市集团，未见重大资本结构公开变动",management:"未见集团核心高管重大变动",source:"持续监控",flags:[]},
-  "大众汽车集团":{sales:"最近季度全球交付待Q3正式报告确认；中国市场仍承压",capital:"未见控股结构重大变动",management:"Erika Rasch于10月1日就任集团人力资源董事",source:"2026-10-01",flags:["management"]},
-  "特斯拉":{sales:"Q3全球交付数据已进入监测；待与正式财报统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
-  "宝马集团":{sales:"最近季度全球交付待Q3正式报告确认；中国需求仍偏弱",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "大众汽车集团":{sales:"Q3全球交付188.53万辆，同比-14.3%；中国40.58万辆，同比-38.5%",capital:"未见控股结构重大变动",management:"Erika Rasch于10月1日就任集团人力资源董事",source:"2026-10-12",flags:["sales","management"]},
+  "特斯拉":{sales:"Q3全球交付486,532辆；产量464,391辆",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10-21",flags:["sales"]},
+  "宝马集团":{sales:"Q3全球交付551,072辆，同比-6.3%；中国114,355辆，同比-24.8%",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10-14",flags:["sales"]},
   "梅赛德斯-奔驰集团":{sales:"最近季度全球销量待Q3正式报告确认；高端车需求承压",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
-  "通用汽车":{sales:"Q3全球及北美销量待与公司正式发布统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
+  "通用汽车":{sales:"Q3中国销量超358,000辆，新能源占比首次超过60%",capital:"完成$6bn回购后，新批准$20bn多年期股份回购授权",management:"未见核心高管重大变动",source:"2026-10-20",flags:["sales","capital"]},
   "福特汽车":{sales:"Q3销量待与公司正式发布统一口径",capital:"未见控股结构重大变动",management:"未见核心高管重大变动",source:"2026-10",flags:[]},
   "丰田汽车":{sales:"8月全球产销已披露；中国两家合资公司签署战略联盟框架",capital:"未见控股结构重大变动",management:"近健太4月起任社长兼CEO；佐藤恒治转任副会长兼CIO",source:"2026-10-08",flags:["management"]},
   "本田汽车":{sales:"8月全球产销已披露；汽车业务仍处结构调整期",capital:"未见控股结构重大变动",management:"4月完成执行层及汽车研发组织调整",source:"2026-09-29",flags:["management"]},
@@ -201,7 +201,7 @@ function App(){
  React.useEffect(()=>{try{const cached=JSON.parse(localStorage.getItem("vehicle-financial-market-quotes-v1")||"null");if(cached)setQuotes(current=>({...current,...cached}))}catch(error){}refreshMarketQuotes()},[refreshMarketQuotes]);
  const filtered=SORTED_STOCKS.filter(s=>scope==="全部"||(scope==="中国上市主体"&&CHINA_STOCK_NAMES.has(s.name))||(scope==="海外母公司"&&!CHINA_STOCK_NAMES.has(s.name)));
  return <div className="shell">
-  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-10-15</strong><span>内部研究 · 原始披露可追溯</span></div></header>
+  <header><div><div className="eyebrow">CHINA PASSENGER VEHICLE FINANCIAL DASHBOARD</div><h1>中国乘用车企业财报与资本市场看板</h1><p>中国本土车企 · 新势力 · 在华合资车企海外母公司</p></div><div className="meta"><strong><i></i>数据核验至 2026-10-26</strong><span>内部研究 · 原始披露可追溯</span></div></header>
   <main>
    <section className="summary"><div><span>财报覆盖企业</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>全部显示</span><strong>{SORTED_FINANCIALS.length}</strong></div><div><span>上市主体</span><strong>{SORTED_STOCKS.length}</strong></div><div><span>覆盖市场</span><strong>7</strong></div></section>
    <section className="panel"><div className="panel-head"><div><b>01</b><h2>最新业绩与财报关键指标</h2><p>财务、销量、资本与高管动态 · 醒目标记仅用于正式披露的重要变化</p></div><span>{SORTED_FINANCIALS.length} 家全部显示</span></div>
