@@ -64,7 +64,10 @@ const news = [
   { id:43, company:"延锋", track:"综合内饰", type:"产品与技术", date:"2026-08-28", title:"延锋 XiM27 将流动中岛、AI光域与百变座椅整合为整舱方案", summary:"XiM27 面向高阶自动驾驶场景，组合智能全景前舱、多功能流动中岛、AI智能光域和星幕一体顶舱；部分零重力座椅、长滑轨、无线充电和集成饮水机等技术已进入客户项目产业化。", source:"华域汽车半年报", url:"https://static.cninfo.com.cn/finalpage/2026-08-28/1225516573.PDF" },
   { id:44, company:"消费者趋势", track:"跨行业趋势", type:"客户与车型", date:"2026-10-12", title:"smart #2 以贯通式座椅和 S 形座舱验证小型车空间效率", summary:"量产版 smart #2 在超紧凑车身内采用贯通式座椅、S 形座舱及温暖材料配色，强调用结构集成而非堆叠部件提升空间感；对副仪表板、储物和一体化饰件提出更高的薄型化与多功能要求。", source:"smart Newsroom", url:"https://media.smart.com/en-INT/273151-it-s-back-that-s-big-the-all-electric-smart-2-makes-its-world-premiere-at-the-paris-motor-show/" },
   { id:45, company:"华域汽车", track:"综合内饰", type:"经营与战略", date:"2026-10-09", title:"华域拟增持联创汽车电子，继续加码智能底盘与电子能力", summary:"全资子公司上海汇众拟以公开摘牌方式收购联创汽车电子 10.9569% 股权，挂牌底价约 3.20 亿元；若完成，持股比例将升至 16.25%，显示华域继续把资本配置向电子化和智能底盘延伸。", source:"法定披露", url:"https://static.cninfo.com.cn/finalpage/2026-10-09/1225598249.PDF" },
-  { id:46, company:"行业", track:"综合内饰", type:"产品与技术", date:"2026-10-08", title:"智能表面竞争转向可量产、低成本与多材料兼容", summary:"Automotive Surfaces 2026 集中展示照明、HMI 与表面一体化。Preh 的无运动部件中控控制器可适配玻璃、陶瓷、金属、塑料或装饰膜，并提供触觉与视觉反馈；FORVIA、Antolin 同时强调以人为本、可负担和工业化落地。", source:"ITB Group", url:"https://www.itbgroup.com/automotive-surfaces-2026-itb-group" }
+  { id:46, company:"行业", track:"综合内饰", type:"产品与技术", date:"2026-10-08", title:"智能表面竞争转向可量产、低成本与多材料兼容", summary:"Automotive Surfaces 2026 集中展示照明、HMI 与表面一体化。Preh 的无运动部件中控控制器可适配玻璃、陶瓷、金属、塑料或装饰膜，并提供触觉与视觉反馈；FORVIA、Antolin 同时强调以人为本、可负担和工业化落地。", source:"ITB Group", url:"https://www.itbgroup.com/automotive-surfaces-2026-itb-group" },
+  { id:47, company:"GRAMMER AG", track:"综合内饰", type:"业绩财报", date:"2026-10-14", title:"GRAMMER 三季度初步盈利低于预期并下调全年指引", summary:"初步数据显示三季度收入 4.734 亿欧元，但经营 EBIT 降至 1,140 万欧元；前三季度经营 EBIT 为 5,320 万欧元。受美洲新项目投产成本、特殊关税及外部冲突影响，公司将全年经营 EBIT 指引由约 8,000 万欧元下调至约 7,000 万欧元，正式九个月报告定于 10 月 30 日发布。", source:"GRAMMER", url:"https://www.grammer.com/en/press-releases/article/grammer-ag-abweichung-der-ergebnisentwicklung-im-dritten-quartal-2026-zum-vorjahr-und-aktualisierung-der-ergebnisprognose-fuer-das-gesamtjahr-2026/" },
+  { id:48, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-10-20", title:"AI 座舱竞争开始转向品牌一致性与长期可升级体验", summary:"Stellantis 与 Applied Intuition 将 Cabin Intelligence 用于 14 个品牌的个性化座舱体验，强调不同品牌仍需保持独特交互性格。对内饰供应商的影响是硬件界面、灯光和功能表面需要支持软件持续升级，同时避免所有车型体验趋同。", source:"Applied Intuition", url:"https://www.appliedintuition.com/blog/stellantis-ai-in-cabin-experience" },
+  { id:49, company:"消费者趋势", track:"跨行业趋势", type:"产品与技术", date:"2026-10-23", title:"航空内饰把隐藏式 OLED 直接融合进木饰面", summary:"Lufthansa Technik、Pilatus 与 F/LIST 展示将 14.5 英寸 OLED 触控屏隐藏在深色木饰面和触觉材料中的舱内隔断，触摸时才显现。该跨行业方案对汽车门板、中控和座椅后扶手的隐形显示、真材质表面与交互融合具有直接参考价值。", source:"Aviation Week", url:"https://aviationweek.com/business-aviation/interiors-connectivity/intelligent-cabin-divider-demonstrator-unveiled-nbaa" }
 ];
 
 const financialResults = [
@@ -93,19 +96,19 @@ const audienceProfiles = {
 
 const audiencePriorities = {
   "销售": [
-    {level:"高", company:"smart / 行业", title:"小型车座舱开始用结构集成换取空间", why:"贯通式座椅和 S 形座舱压缩传统中控边界，客户可能更关注薄型化、储物效率与跨部件集成。", action:"整理副仪表板、扶手、储物和功能面板的一体化轻量方案，形成小型车报价包。", newsId:44},
-    {level:"高", company:"FORVIA / Antolin", title:"智能表面进入成本与量产可行性竞争", why:"触觉、视觉反馈和多材料适配不再只是概念展示，客户将同时比较体验、成本和制造稳定性。", action:"把现有材料与工艺按玻璃、陶瓷、金属、塑料和膜片路线建立样件及成本对标。", newsId:46},
-    {level:"中", company:"华域汽车", title:"继续增持汽车电子能力", why:"大型内饰集团正通过资本和业务协同向电子化、底盘与系统集成延伸。", action:"跟踪华域电子业务与内饰项目的协同方式，识别客户是否提高软硬件联合报价要求。", newsId:45}
+    {level:"高", company:"Stellantis / 行业", title:"客户要求同一技术平台保留品牌差异", why:"AI 座舱将跨品牌共用软件底座，但每个品牌仍需在交互、灯光和材质上保持辨识度。", action:"把中控、门板和氛围灯方案拆分为共用功能模块与品牌化外观模块，便于平台化报价。", newsId:48},
+    {level:"高", company:"隐藏式显示", title:"真材质表面开始承载隐形交互", why:"木饰面与OLED融合说明高端客户可能要求屏幕未启用时完全隐藏，并保留真实材料质感。", action:"联合显示、膜片和饰面伙伴准备隐藏显示样件，明确透过率、热管理和表面耐久边界。", newsId:49},
+    {level:"中", company:"GRAMMER", title:"新项目投产成本正在侵蚀利润", why:"美洲项目7月投产后成本高于预期并触发全年盈利下调，反映新定点放量不等于即时盈利。", action:"在客户报价和项目评审中单列爬坡损失、关税与产能利用率敏感性。", newsId:47}
   ],
   "研发": [
-    {level:"高", company:"智能表面", title:"无运动部件中控适配多种装饰材料", why:"触觉与视觉反馈可跨玻璃、陶瓷、金属、塑料和膜片部署，接口及表面工艺协同成为核心。", action:"建立多材料 HMI 的透光、触觉、耐久、误触与装配验证矩阵。", newsId:46},
-    {level:"高", company:"smart / 行业", title:"紧凑座舱要求部件边界进一步融合", why:"小型车空间效率会推动中控、座椅、储物和饰板共同设计，而非各自独立开发。", action:"以小型车为场景，验证薄壁、共用骨架、隐藏式储物及模块化装配方案。", newsId:44},
-    {level:"中", company:"延锋", title:"XiM27 集成 AI、可重构座椅与集中式架构", why:"内饰件正在从结构和装饰件转向可交互的整舱系统。", action:"评估中控、扶手与门板的电气接口、模块化及场景切换能力。", newsId:1}
+    {level:"高", company:"隐藏式显示", title:"OLED 与木饰面融合进入跨行业验证", why:"屏幕、触控、饰面和触觉材料被整合为一个部件，传统装饰件需要同时满足光学和电子可靠性。", action:"建立木纹、金属和软触表面的隐显技术路线，验证透光、色差、温升、老化与维修性。", newsId:49},
+    {level:"高", company:"AI 座舱", title:"硬件需要支持软件长期演进与品牌化", why:"同一软件底座服务多个品牌时，灯光、触感和物理界面将成为品牌差异的重要载体。", action:"定义功能表面的可配置接口、OTA兼容边界和失效时的物理备份策略。", newsId:48},
+    {level:"中", company:"智能表面", title:"无运动部件中控适配多种装饰材料", why:"触觉与视觉反馈可跨玻璃、陶瓷、金属、塑料和膜片部署，接口及表面工艺协同成为核心。", action:"建立多材料 HMI 的透光、触觉、耐久、误触与装配验证矩阵。", newsId:46}
   ],
   "管理层": [
-    {level:"高", company:"华域汽车", title:"以股权投资强化电子与系统能力", why:"华域拟继续增持联创汽车电子，反映头部集团通过资本手段加快电子化和系统集成布局。", action:"重新评估自身在软件、电子接口和系统集成方面的自研、合作与并购优先级。", newsId:45},
-    {level:"高", company:"FORVIA / Antolin", title:"智能表面进入量产经济性竞争", why:"竞争焦点已从展示功能转向可负担、可验证和可规模制造，可能改变项目投资与供应链分工。", action:"要求新技术立项同时给出量产成本、良率、验证周期与客户付费意愿。", newsId:46},
-    {level:"中", company:"财务披露", title:"三季报尚未进入正式披露窗口", why:"截至10月15日，核心公司最新正式可比口径仍为半年报或二季度，暂不应以预告替代正式数据。", action:"按披露日历准备10月底批量更新，并优先复核订单、产能爬坡和经营现金流。", newsId:45}
+    {level:"高", company:"GRAMMER", title:"项目爬坡与关税压力触发盈利预警", why:"收入增长但经营 EBIT 下滑，全年指引下调12.5%，说明项目获取、收入增长和利润兑现之间存在明显时滞。", action:"把新项目SOP后的爬坡成本、关税暴露和区域盈亏纳入月度管理层预警。", newsId:47},
+    {level:"高", company:"Stellantis / 行业", title:"座舱价值正在从硬件交付转向持续体验运营", why:"AI软件平台跨14个品牌部署，可能压缩单纯硬件差异并提高接口、数据和持续升级能力的重要性。", action:"明确未来两年软件合作伙伴、电子接口所有权和可持续收费/服务模式。", newsId:48},
+    {level:"中", company:"财务披露", title:"A股三季报集中在10月底披露", why:"截至10月26日，核心A股公司的最新正式可比口径仍为半年报，不宜用市场传闻或预约数据替代。", action:"在正式报告发布后批量更新收入、利润率、现金流及产能爬坡解释。", newsId:47}
   ]
 };
 
@@ -128,18 +131,18 @@ const listedStocks = [
 ];
 
 const fallbackQuotes = {
-  xinquan:{price:32.16, previous:33.67, change:-1.51, percent:-4.48, cap:236.43, date:"2026-10-15", trend:[41.29,40.70,40.22,40.48,37.51,37.10,35.88,34.94,33.67,32.16], cached:true},
-  huaxiang:{price:15.93, previous:16.73, change:-0.80, percent:-4.78, cap:129.38, date:"2026-10-15", trend:[18.36,17.86,17.79,17.67,17.03,17.52,17.33,17.29,16.73,15.93], cached:true},
-  faway:{price:7.44, previous:7.68, change:-0.24, percent:-3.13, cap:55.28, date:"2026-10-15", trend:[7.64,7.65,7.55,7.67,7.70,7.76,7.75,7.73,7.68,7.44], cached:true},
+  xinquan:{price:38.64, previous:36.39, change:2.25, percent:6.18, cap:284.06, date:"2026-10-23", trend:[40.70,40.22,40.48,37.51,37.10,35.88,34.94,32.16,32.28,34.67,37.76,36.73,36.39,38.64].slice(-10), cached:true},
+  huaxiang:{price:18.57, previous:17.55, change:1.02, percent:5.81, cap:150.82, date:"2026-10-23", trend:[17.86,17.79,17.67,17.03,17.52,17.33,17.29,15.93,16.47,17.24,18.00,17.67,17.55,18.57].slice(-10), cached:true},
+  faway:{price:7.58, previous:7.44, change:0.14, percent:1.88, cap:56.33, date:"2026-10-23", trend:[7.65,7.55,7.67,7.70,7.76,7.75,7.73,7.44,7.68,7.61,7.61,7.53,7.44,7.58].slice(-10), cached:true},
   forvia:{price:8.736, previous:null, change:null, percent:null, cap:1.722, date:"2026-07-24", trend:[8.736], cached:true, official:true},
-  lear:{price:119.38, previous:119.60, change:-0.22, percent:-0.18, cap:58.8839, date:"2026-10-14", trend:[119.60,119.38], cached:true},
-  magna:{price:64.45, previous:65.31, change:-0.86, percent:-1.32, cap:172.41654, date:"2026-10-14", trend:[65.31,64.45], cached:true},
-  jifeng:{price:11.27, previous:11.36, change:-0.09, percent:-0.79, cap:143.38, date:"2026-10-15", trend:[14.12,13.65,13.65,13.65,13.47,13.40,13.01,11.72,11.36,11.27], cached:true},
+  lear:{price:116.69, previous:118.61, change:-1.92, percent:-1.62, cap:57.55707, date:"2026-10-23", trend:[118.61,116.69], cached:true},
+  magna:{price:63.97, previous:64.72, change:-0.75, percent:-1.16, cap:171.13245, date:"2026-10-23", trend:[64.72,63.97], cached:true},
+  jifeng:{price:11.24, previous:11.17, change:0.07, percent:0.63, cap:143.01, date:"2026-10-23", trend:[13.65,13.65,13.47,13.40,13.01,11.72,11.36,11.27,11.62,11.96,11.48,11.52,11.17,11.24].slice(-10), cached:true},
   grammer:{price:10.80, previous:null, change:null, percent:null, cap:0.165, date:"2026-07-23", trend:[10.80], cached:true, official:true},
-  changshu:{price:9.82, previous:10.09, change:-0.27, percent:-2.68, cap:35.98, date:"2026-10-15", trend:[10.54,10.47,10.40,10.50,10.39,10.49,10.48,10.26,10.09,9.82], cached:true},
-  daimay:{price:9.75, previous:9.89, change:-0.14, percent:-1.42, cap:209.49, date:"2026-10-15", trend:[10.03,9.33,9.63,9.85,9.68,9.66,10.42,9.87,9.89,9.75], cached:true},
-  foseal:{price:116.13, previous:120.00, change:-3.87, percent:-3.23, cap:137.53, date:"2026-10-15", trend:[136.01,132.37,136.88,140.60,133.06,131.88,125.28,126.72,120.00,116.13], cached:true},
-  huayu:{price:15.47, previous:15.58, change:-0.11, percent:-0.71, cap:487.73, date:"2026-10-15", trend:[14.70,14.98,15.18,15.38,15.15,15.55,15.61,15.56,15.58,15.47], cached:true}
+  changshu:{price:10.13, previous:9.93, change:0.20, percent:2.01, cap:37.11, date:"2026-10-23", trend:[10.47,10.40,10.50,10.39,10.49,10.48,10.26,9.82,10.03,10.11,10.14,9.99,9.93,10.13].slice(-10), cached:true},
+  daimay:{price:10.95, previous:10.11, change:0.84, percent:8.31, cap:235.27, date:"2026-10-23", trend:[9.33,9.63,9.85,9.68,9.66,10.42,9.87,9.75,9.60,9.96,10.75,10.38,10.11,10.95].slice(-10), cached:true},
+  foseal:{price:158.40, previous:142.14, change:16.26, percent:11.44, cap:187.59, date:"2026-10-23", trend:[132.37,136.88,140.60,133.06,131.88,125.28,126.72,116.13,116.63,132.79,144.25,141.55,142.14,158.40].slice(-10), cached:true},
+  huayu:{price:15.11, previous:14.79, change:0.32, percent:2.16, cap:476.37, date:"2026-10-23", trend:[14.98,15.18,15.38,15.15,15.55,15.61,15.56,15.47,15.59,15.70,15.43,14.85,14.79,15.11].slice(-10), cached:true}
 };
 
 function makeSparkPath(values=[]) {
@@ -264,7 +267,7 @@ function App() {
       </div>
       <div className="freshness">
         <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-10-15 · 内部使用</div>
+        <div className="source-note">检索截至：2026-10-26 · 内部使用</div>
       </div>
     </header>
 
@@ -332,7 +335,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口更新至 2026-10-15，正式财报按最新披露追溯，业绩预告不混入正式财报表。股市行情在打开页面时自动请求最近数据，并保留最近成功缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
+      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告及汽车内饰专业媒体；检索窗口更新至 2026-10-26，正式财报按最新披露追溯，初步业绩与正式财报分开标注。股市行情在打开页面时自动请求最近数据，并保留最近完整交易日缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。所有外部信息保留原文链接、发布时间、抓取时间和来源等级。</footer>
     </main>
 
     <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
