@@ -83,7 +83,7 @@ const news = [
   { id:44, company:"消费者趋势", track:"跨行业趋势", type:"客户与车型", date:"2026-10-12", title:"smart #2 以贯通式座椅和 S 形座舱验证小型车空间效率", summary:"量产版 smart #2 在超紧凑车身内采用贯通式座椅、S 形座舱及温暖材料配色，强调用结构集成而非堆叠部件提升空间感；对副仪表板、储物和一体化饰件提出更高的薄型化与多功能要求。", source:"smart Newsroom", url:"https://media.smart.com/en-INT/273151-it-s-back-that-s-big-the-all-electric-smart-2-makes-its-world-premiere-at-the-paris-motor-show/" },
   { id:45, company:"华域汽车", track:"综合内饰", type:"经营与战略", date:"2026-10-09", title:"华域拟增持联创汽车电子，继续加码智能底盘与电子能力", summary:"全资子公司上海汇众拟以公开摘牌方式收购联创汽车电子 10.9569% 股权，挂牌底价约 3.20 亿元；若完成，持股比例将升至 16.25%，显示华域继续把资本配置向电子化和智能底盘延伸。", source:"法定披露", url:"https://static.cninfo.com.cn/finalpage/2026-10-09/1225598249.PDF" },
   { id:46, company:"行业", track:"综合内饰", type:"产品与技术", date:"2026-10-08", title:"智能表面竞争转向可量产、低成本与多材料兼容", summary:"Automotive Surfaces 2026 集中展示照明、HMI 与表面一体化。Preh 的无运动部件中控控制器可适配玻璃、陶瓷、金属、塑料或装饰膜，并提供触觉与视觉反馈；FORVIA、Antolin 同时强调以人为本、可负担和工业化落地。", source:"ITB Group", url:"https://www.itbgroup.com/automotive-surfaces-2026-itb-group" },
-  { id:47, company:"GRAMMER AG", track:"综合内饰", type:"业绩财报", date:"2026-10-14", title:"GRAMMER 三季度初步盈利低于预期并下调全年指引", summary:"初步数据显示三季度收入 4.734 亿欧元，但经营 EBIT 降至 1,140 万欧元；前三季度经营 EBIT 为 5,320 万欧元。受美洲新项目投产成本、特殊关税及外部冲突影响，公司将全年经营 EBIT 指引由约 8,000 万欧元下调至约 7,000 万欧元，正式九个月报告定于 10 月 30 日发布。", source:"GRAMMER", url:"https://www.grammer.com/en/press-releases/article/grammer-ag-abweichung-der-ergebnisentwicklung-im-dritten-quartal-2026-zum-vorjahr-und-aktualisierung-der-ergebnisprognose-fuer-das-gesamtjahr-2026/" },
+  { id:47, company:"GRAMMER AG", track:"综合内饰", type:"业绩财报", date:"2026-10-30", title:"GRAMMER 正式发布2026年前九个月结果", summary:"前九个月收入14.356亿欧元，同比增长3.5%；经营EBIT为5,320万欧元，同比增长6.6%，经营EBIT率由3.6%升至3.7%。Q3收入增长9.5%，但经营EBIT降至1,150万欧元；美洲新项目爬坡、特殊关税与外部冲突成本使全年经营EBIT指引降至约7,000万欧元。", source:"GRAMMER 9M正式报告", url:"https://www.eqs-news.com/news/corporate/grammer-ag-publishes-results-for-the-first-nine-months-of-2026/1f162619-ab59-415e-a3bd-3b29e700d7c7_en" },
   { id:48, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-10-20", title:"AI 座舱竞争开始转向品牌一致性与长期可升级体验", summary:"Stellantis 与 Applied Intuition 将 Cabin Intelligence 用于 14 个品牌的个性化座舱体验，强调不同品牌仍需保持独特交互性格。对内饰供应商的影响是硬件界面、灯光和功能表面需要支持软件持续升级，同时避免所有车型体验趋同。", source:"Applied Intuition", url:"https://www.appliedintuition.com/blog/stellantis-ai-in-cabin-experience" },
   { id:49, company:"消费者趋势", track:"跨行业趋势", type:"产品与技术", date:"2026-10-23", title:"航空内饰把隐藏式 OLED 直接融合进木饰面", summary:"Lufthansa Technik、Pilatus 与 F/LIST 展示将 14.5 英寸 OLED 触控屏隐藏在深色木饰面和触觉材料中的舱内隔断，触摸时才显现。该跨行业方案对汽车门板、中控和座椅后扶手的隐形显示、真材质表面与交互融合具有直接参考价值。", source:"Aviation Week", url:"https://aviationweek.com/business-aviation/interiors-connectivity/intelligent-cabin-divider-demonstrator-unveiled-nbaa" },
   { id:50, company:"继峰股份", track:"座椅系统", type:"客户与车型", date:"2026-10-22", title:"继峰再获新能源车企整车座椅总成定点", summary:"继峰座椅（合肥）获得原有新能源汽车客户新车型整车座椅总成定点，预计2027年8月量产、生命周期2.3年、预计总金额11.8亿元。定点继续扩大在手项目，但实际收入仍取决于车型产量。", source:"上市公司披露转述", url:"https://www.minichart.com.sg/2026/10/22/%E7%BB%A7%E5%B3%B0%E8%82%A1%E4%BB%BD%E8%8E%B7%E6%96%B0%E8%83%BD%E6%BA%90%E8%BD%A6%E4%BC%81%E5%BA%A7%E6%A4%85%E6%80%BB%E6%88%90%E5%AE%9A%E7%82%B9-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%87%91%E9%A2%9D/" },
@@ -114,7 +114,7 @@ const financialResults = [
   {company:"Antolin", period:"2026 H1", revenue:"€1.73bn", growth:"-11.0%", profit:"EBITDA €136m", profitMargin:"EBITDA率 7.8%", profitGrowth:"-18.6%", cashFlow:"现金生成 €11m", overview:"净利润由亏损转为5,640万欧元，但包含印度业务出售收益；座舱与门板业务在欧洲、亚洲承压，净债务仍为10.34亿欧元。", strategy:"维持全年34亿至35亿欧元收入指引，推进债务重组、工业布局调整，并扩大Technology Solutions高利润业务。", url:"https://www.antolin.com/en/antolin-first-half-net-profit-reaches-eu564-million-order-intake-doubles"},
   {company:"Lear", period:"2026 Q2", revenue:"$6.21bn", growth:"+3.0%", profit:"核心经营利润 $313m", profitMargin:"核心利润率 5.0%", profitGrowth:"+7.0%", cashFlow:"经营现金流 $461m / FCF $288m", overview:"重点平台增产、重组节省与运营效率改善推动利润增长，自由现金流同比增长69%。", strategy:"上调全年展望，以自动化和数字工具提效，并扩大座椅及电子系统定点。", url:"https://www.lear.com/newsroom/lear-reports-second-quarter-2026-results"},
   {company:"Magna", period:"2026 Q2", revenue:"$10.98bn", growth:"+3.0%", profit:"调整后 EBIT $677m", profitMargin:"调整后 EBIT率 6.2%", profitGrowth:"+16.0%", cashFlow:"自由现金流 $617m", overview:"新项目投产、生产率改善、重组收益及汇率正向影响推动盈利增长，抵消区域产量走弱和部分项目停产影响。", strategy:"上调全年利润率、EPS与自由现金流展望，继续优化业务组合并提高资本回报。", url:"https://www.magna.com/stories/news-press-release/2026/magna-announces-strong-second-quarter-results--raises-outlook-for-2026"},
-  {company:"GRAMMER AG", period:"2026 H1", revenue:"€0.96bn", growth:"+0.8%", profit:"经营 EBIT €41.7m", profitMargin:"经营 EBIT率 4.3%", profitGrowth:"+17.1%", cashFlow:"自由现金流 €1.5m", overview:"二季度收入回升，区域整合和成本措施推动经营利润改善，自由现金流由上年同期负值转正。", strategy:"确认全年约19亿欧元收入与约8,000万欧元经营EBIT目标，继续全球协同与成本优化。", url:"https://www.grammer.com/en/press-releases/article/grammer-ag-veroeffentlicht-ergebnisse-fuer-das-erste-halbjahr-2026/"}
+  {company:"GRAMMER AG", period:"2026 9M", revenue:"€1.44bn", growth:"+3.5%", profit:"经营 EBIT €53.2m", profitMargin:"经营 EBIT率 3.7%", profitGrowth:"+6.6%", cashFlow:"自由现金流 -€7.1m", overview:"汽车与商用车业务均增长，APAC贡献突出，Top 10与重组措施改善累计盈利；但美洲收入下降、经营亏损扩大，项目爬坡和关税令Q3利润承压，现金流转负。", strategy:"全年收入目标维持约19亿欧元，经营EBIT指引由约8,000万欧元下调至约7,000万欧元，重点稳定美洲项目并继续效率改善。", url:"https://www.eqs-news.com/media/document/cb6238e2-be43-4cec-ae66-7c56b6a4c258/assets/DE0005895403-Q3-2026-EQ-E-00.pdf"}
 ];
 
 const financialDisclosureGaps = ["延锋","诺博","成航模塑","富诚","重庆平伟","广西双英","伊思灵豪森","卓骏控股","弗迪座椅体系","富卓汽车内饰","芜湖瑞泰","广州华智","郑州精益达","盈富圳边","福建九龙座椅","厦门金龙座椅","重庆赛帕斯","宣城托新","奥克伍德","吉安专精","佛山叶诚"];
@@ -139,7 +139,7 @@ const audiencePriorities = {
   "管理层": [
     {level:"高", company:"座椅行业", title:"国产替代、体系内供应与全球整合同时加速", why:"独立本土整椅厂与主机厂关联企业均在扩产，而国际厂商仍凭借平台、垂直整合和全球交付保持壁垒。", action:"将独立整椅、主机厂关联座椅和商用车座椅分别建组，跟踪订单、SOP、利润兑现与客户集中度。", newsId:59},
     {level:"高", company:"Stellantis / 行业", title:"座舱价值正在从硬件交付转向持续体验运营", why:"AI软件平台跨14个品牌部署，可能压缩单纯硬件差异并提高接口、数据和持续升级能力的重要性。", action:"明确未来两年软件合作伙伴、电子接口所有权和可持续收费/服务模式。", newsId:48},
-    {level:"中", company:"财务披露", title:"A股三季报集中在10月底披露", why:"截至10月26日，核心A股公司的最新正式可比口径仍为半年报，不宜用市场传闻或预约数据替代。", action:"在正式报告发布后批量更新收入、利润率、现金流及产能爬坡解释。", newsId:47}
+    {level:"中", company:"GRAMMER", title:"累计增长掩盖Q3美洲项目压力", why:"前九个月收入和经营EBIT仍增长，但Q3盈利同比下降、自由现金流转负，美洲项目爬坡成本和关税已触发全年指引下调。", action:"把新项目SOP盈利、区域现金占用和关税暴露列为座椅业务管理层月度监控指标。", newsId:47}
   ]
 };
 
@@ -303,7 +303,7 @@ function App() {
       </div>
       <div className="freshness">
         <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-10-29 · 内部使用</div>
+        <div className="source-note">检索截至：2026-10-30 · 内部使用</div>
       </div>
     </header>
 
@@ -371,7 +371,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告、政府项目公示及汽车内饰/座椅专业信息；检索窗口更新至 2026-10-29，公众号和行业转载仅作为发现线索，关键客户、产能与财务关系尽量交叉核验。正式财报按最新披露追溯，初步业绩与正式财报分开标注。股市行情在打开页面时自动请求最近数据，并保留最近完整交易日缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。</footer>
+      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告、政府项目公示及汽车内饰/座椅专业信息；检索窗口更新至 2026-10-30，公众号和行业转载仅作为发现线索，关键客户、产能与财务关系尽量交叉核验。正式财报按最新披露追溯，初步业绩与正式财报分开标注。股市行情在打开页面时自动请求最近数据，并保留最近完整交易日缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。</footer>
     </main>
 
     <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
