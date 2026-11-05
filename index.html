@@ -146,6 +146,9 @@
     #bi-title::before {
       background: #2f7db5;
     }
+    #ii-title::before {
+      background: #0f2433;
+    }
     .group-title span {
       margin-left: 10px;
       color: var(--blue);
@@ -161,6 +164,25 @@
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
+    }
+    .insight-groups {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+      margin-top: 24px;
+    }
+    .insight-groups .group {
+      min-width: 0;
+      margin-top: 0;
+    }
+    .insight-groups .business-group { grid-column: span 3; }
+    .insight-groups .internal-group { grid-column: span 1; }
+    .insight-groups .business-group .modules {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .insight-groups .internal-group .modules {
+      grid-template-columns: 1fr;
     }
     .module {
       min-height: 248px;
@@ -234,6 +256,12 @@
       border-color: #0069b8;
       background: #0069b8;
       box-shadow: 0 5px 14px rgba(0, 105, 184, .24);
+      white-space: nowrap;
+    }
+    .badge.internal {
+      border-color: #0f2433;
+      background: #0f2433;
+      box-shadow: 0 5px 14px rgba(15, 36, 51, .22);
       white-space: nowrap;
     }
     .module.disabled {
@@ -337,6 +365,9 @@
     }
     @media (max-width: 1360px) {
       .modules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .insight-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .insight-groups .business-group { grid-column: span 3; }
+      .insight-groups .internal-group { grid-column: span 1; }
     }
     @media (max-width: 900px) {
       header { padding-left: 22px; padding-right: 22px; }
@@ -351,6 +382,9 @@
       .mission-line { white-space: normal; font-size: 24px; }
       main { padding-left: 22px; padding-right: 22px; }
       .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insight-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insight-groups .business-group { grid-column: span 2; }
+      .insight-groups .business-group .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .group-head { display: block; }
       .group-count { margin-top: 6px; }
       h1 { font-size: 30px; }
@@ -358,6 +392,10 @@
     }
     @media (max-width: 620px) {
       .modules { grid-template-columns: 1fr; }
+      .insight-groups { grid-template-columns: 1fr; }
+      .insight-groups .business-group,
+      .insight-groups .internal-group { grid-column: span 1; }
+      .insight-groups .business-group .modules { grid-template-columns: 1fr; }
     }
     /* Concept E: GRAMMER Blue Spectrum */
     :root {
@@ -418,6 +456,21 @@
     .module::before { display: none; }
     .module:hover { transform: translateY(-9px) scale(1.018); box-shadow: var(--shadow-hover); }
     .module:hover::before { display: none; }
+    .module.internal-card {
+      color: #0f2433;
+      background: linear-gradient(135deg, #c7d8e5 0%, #dce7ef 52%, #edf3f7 100%);
+      border: 1px solid rgba(15, 36, 51, .12);
+    }
+    .module.internal-card .icon {
+      background: #0f2433;
+      color: #ffffff;
+      border-color: #0f2433;
+    }
+    .module.internal-card:hover .icon {
+      background: #005195;
+      color: #ffffff;
+      border-color: #005195;
+    }
     .icon {
       width: 38px;
       height: 38px;
@@ -535,7 +588,8 @@
         </div>
       </section>
 
-      <section class="group" aria-labelledby="bi-title">
+      <div class="insight-groups">
+      <section class="group business-group" aria-labelledby="bi-title">
         <div class="group-head">
           <h2 class="group-title" id="bi-title">Business Insight <span>商业洞察</span></h2>
         </div>
@@ -570,13 +624,30 @@
         </div>
       </section>
 
+      <section class="group internal-group" aria-labelledby="ii-title">
+        <div class="group-head">
+          <h2 class="group-title" id="ii-title">Internal Intelligence <span>内部情报</span></h2>
+        </div>
+        <div class="modules">
+          <a class="module internal-card" href="https://ucnmea5w1dn4.feishu.cn/page/LOulmFBGYdi9IsadUZuczqdinac" target="_blank" rel="noopener noreferrer" aria-label="Jifeng GRAMMER Global Footprint, internal access">
+            <div class="badge internal">Internal / 内部</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg>
+            </div>
+            <h2>Jifeng GRAMMER Global Footprint</h2>
+            <div class="cn">继峰格拉默全球布局</div>
+            <div class="open"><span>Open Internal Page</span><span class="arrow">→</span></div>
+          </a>
+        </div>
+      </section>
+      </div>
+
       <section class="group" aria-labelledby="cv-title">
           <div class="group-head">
             <h2 class="group-title" id="cv-title">Commercial Vehicle <span>商用车</span></h2>
           </div>
           <div class="modules">
             <a class="module" href="./commercial-vehicle/china-mhdt-model/" target="_blank" rel="noopener">
-              <div class="badge update-date">Updated Q3 2026</div>
               <div class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M2 7h13v9H2V7Z"/><path d="M15 10h3l3 3v3h-6v-6Z"/><path d="M18 10v3h3"/><circle cx="6" cy="18" r="2"/><circle cx="13" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M2 16h19"/></svg>
               </div>
@@ -586,7 +657,6 @@
             </a>
 
             <a class="module" href="./commercial-vehicle/china-mhdt-industry/" target="_blank" rel="noopener">
-              <div class="badge update-date">Updated Q3 2026</div>
               <div class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M2 7h13v9H2V7Z"/><path d="M15 10h3l3 3v3h-6v-6Z"/><path d="M18 10v3h3"/><circle cx="6" cy="18" r="2"/><circle cx="13" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M2 16h19"/></svg>
               </div>
