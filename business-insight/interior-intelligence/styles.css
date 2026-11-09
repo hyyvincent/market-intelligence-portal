@@ -212,14 +212,14 @@ a { color: inherit; }
 .financial-table-wrap { width: 100%; overflow-x: hidden; }
 .financial-table { width: 100%; min-width: 0; border-collapse: collapse; font-size: 10.5px; table-layout: fixed; }
 .financial-table th { padding: 9px 8px; text-align: left; color: var(--muted); background: #f8fafb; border-bottom: 1px solid var(--line); font-weight: 600; }
-.financial-table th:nth-child(1) { width: 11%; }
-.financial-table th:nth-child(2) { width: 8%; }
-.financial-table th:nth-child(3) { width: 7%; }
+.financial-table th:nth-child(1) { width: 12.5%; }
+.financial-table th:nth-child(2) { width: 8.5%; }
+.financial-table th:nth-child(3) { width: 8%; }
 .financial-table th:nth-child(4) { width: 10%; }
 .financial-table th:nth-child(5) { width: 8%; }
-.financial-table th:nth-child(6) { width: 7%; }
-.financial-table th:nth-child(7) { width: 11%; }
-.financial-table th:nth-child(8) { width: 38%; }
+.financial-table th:nth-child(6) { width: 8%; }
+.financial-table th:nth-child(7) { width: 12%; }
+.financial-table th:nth-child(8) { width: 33%; }
 .financial-table td { padding: 11px 8px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
 .financial-table tbody tr:hover { background: #f8fbfd; }
 .financial-table a { display: grid; gap: 3px; color: var(--ink); text-decoration: none; }
