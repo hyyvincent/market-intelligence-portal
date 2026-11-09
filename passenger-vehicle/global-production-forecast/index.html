@@ -187,6 +187,7 @@
     const clean = v => (v == null || v === "") ? "(Blank)" : String(v);
     const get = id => document.getElementById(id);
     const selected = id => get(id).value;
+    const DEFAULT_FILTERS = {country:"Mainland China", productionType:"PC", year:"2026"};
     const versionRows = () => raw.filter(r=>clean(r["Forecast Version"])===selected("forecastVersion"));
     function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
     function makeOptions(id, values, current="All"){
@@ -198,14 +199,14 @@
     function populateFilters(){
       const base=versionRows();
       makeOptions("region", base.map(r=>r["Region"]), get("region").value||"All");
-      makeOptions("country", base.map(r=>r["Country/Territory"]), get("country").value||"All");
+      makeOptions("country", base.map(r=>r["Country/Territory"]), get("country").value||DEFAULT_FILTERS.country);
       makeOptions("salesGroup", base.map(r=>r["Sales Group"]), get("salesGroup").value||"All");
       makeOptions("brand", base.map(r=>r["Brand"]), get("brand").value||"All");
       makeOptions("manufacturer", base.map(r=>r["Manufacturer"]), get("manufacturer").value||"All");
-      makeOptions("productionType", base.map(r=>r["Production Type"]), get("productionType").value||"All");
+      makeOptions("productionType", base.map(r=>r["Production Type"]), get("productionType").value||DEFAULT_FILTERS.productionType);
       makeOptions("bodyType", base.map(r=>r["Global Sales Sub-Segment"]), get("bodyType").value||"All");
       makeOptions("priceClass", base.map(r=>r["Regional Sales Price Class"]), get("priceClass").value||"All");
-      if(!get("yearFilter").options.length) get("yearFilter").innerHTML=YEARS.map(y=>`<option value="${y}" ${y===2026?"selected":""}>${y}</option>`).join("");
+      if(!get("yearFilter").options.length) get("yearFilter").innerHTML=YEARS.map(y=>`<option value="${y}" ${String(y)===DEFAULT_FILTERS.year?"selected":""}>${y}</option>`).join("");
     }
     function filtered(){
       const region=selected("region"), country=selected("country"), sg=selected("salesGroup"), br=selected("brand"), mf=selected("manufacturer"), pt=selected("productionType"), bt=selected("bodyType"), pc=selected("priceClass");
@@ -400,7 +401,7 @@
       populateFilters();
       ["region","country","salesGroup","brand","manufacturer","productionType","bodyType","priceClass","yearFilter","search"].forEach(id=>get(id).addEventListener(id==="search"?"input":"change",render));
       get("forecastVersion").addEventListener("change",()=>{populateFilters();render()});
-      get("reset").addEventListener("click",()=>{["region","country","salesGroup","brand","manufacturer","productionType","bodyType","priceClass"].forEach(id=>get(id).value="All");get("yearFilter").value="2026";get("search").value="";render()});
+      get("reset").addEventListener("click",()=>{["region","salesGroup","brand","manufacturer","bodyType","priceClass"].forEach(id=>get(id).value="All");get("country").value=DEFAULT_FILTERS.country;get("productionType").value=DEFAULT_FILTERS.productionType;get("yearFilter").value=DEFAULT_FILTERS.year;get("search").value="";render()});
       render();
     }
     init().catch(err=>{document.querySelector("main").innerHTML=`<div class="panel empty">Failed to load dashboard data: ${escapeHtml(err.message)}</div>`;console.error(err)});
