@@ -177,12 +177,12 @@
       margin-top: 0;
     }
     .insight-groups .business-group { grid-column: span 3; }
-    .insight-groups .internal-group { grid-column: span 1; }
+    .insight-groups .internal-group { grid-column: span 2; }
     .insight-groups .business-group .modules {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .insight-groups .internal-group .modules {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .module {
       min-height: 248px;
@@ -367,7 +367,7 @@
       .modules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .insight-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .insight-groups .business-group { grid-column: span 3; }
-      .insight-groups .internal-group { grid-column: span 1; }
+      .insight-groups .internal-group { grid-column: span 2; }
     }
     @media (max-width: 900px) {
       header { padding-left: 22px; padding-right: 22px; }
@@ -385,6 +385,7 @@
       .insight-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .insight-groups .business-group { grid-column: span 2; }
       .insight-groups .business-group .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insight-groups .internal-group { grid-column: span 2; }
       .group-head { display: block; }
       .group-count { margin-top: 6px; }
       h1 { font-size: 30px; }
@@ -395,7 +396,8 @@
       .insight-groups { grid-template-columns: 1fr; }
       .insight-groups .business-group,
       .insight-groups .internal-group { grid-column: span 1; }
-      .insight-groups .business-group .modules { grid-template-columns: 1fr; }
+      .insight-groups .business-group .modules,
+      .insight-groups .internal-group .modules { grid-template-columns: 1fr; }
     }
     /* Concept E: GRAMMER Blue Spectrum */
     :root {
@@ -638,6 +640,16 @@
             <div class="cn">继峰格拉默内部信息</div>
             <div class="open"><span>Open Internal Page</span><span class="arrow">→</span></div>
           </a>
+
+          <div class="module disabled" aria-label="Customer-facing Information, to be determined">
+            <div class="badge coming">TBD / 待定</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v11H4V4Z"/><path d="M8 20h8M12 15v5"/><path d="m8 11 3-3 2 2 3-3"/></svg>
+            </div>
+            <h2>Customer-facing Information</h2>
+            <div class="cn">对客户展示信息</div>
+            <div class="open"><span>Module Reserved</span><span class="arrow">—</span></div>
+          </div>
         </div>
       </section>
       </div>
