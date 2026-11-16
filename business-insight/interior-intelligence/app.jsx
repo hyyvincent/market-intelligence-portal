@@ -103,7 +103,10 @@ const news = [
   { id:64, company:"李尔", track:"座椅系统", type:"客户与车型", date:"2026-10-30", title:"李尔Q3新增中国豪华电动车及BYD海外完整座椅定点", summary:"李尔披露中国豪华电动车完整座椅项目、BYD印度尼西亚和泰国项目、Mahindra印度最大完整座椅项目，以及Mercedes ComfortFlex和JLR ComfortMax/FlexAir定点。新业务显示完整座椅竞争同时向中国品牌出海、舒适系统模块化和印度市场扩张。", source:"Lear Q3正式结果", url:"https://www.lear.com/de/newsroom/lear-reports-third-quarter-2026-results" },
   { id:65, company:"麦格纳", track:"综合内饰 / 座椅", type:"业绩财报", date:"2026-10-30", title:"麦格纳Q3收入下降但利润率与现金流显著改善", summary:"Q3销售额100.59亿美元，同比下降4%；调整后EBIT增至6.83亿美元，调整后EBIT率升至6.8%，自由现金流5.84亿美元。生产率改善和执行纪律抵消了产量下降与业务出售影响，公司上调自由现金流展望。", source:"Magna Q3正式结果", url:"https://www.magna.com/es/historias/news-press-release/2026/magna-announces-strong-third-quarter-results" },
   { id:66, company:"行业", track:"跨行业趋势", type:"产品与技术", date:"2026-11-02", title:"中央计算平台开始同时承载自动驾驶与数字座舱", summary:"Infineon与Qualcomm围绕Snapdragon Ride参考平台联合开发MCU安全子系统，把AI算力、功能安全、车载网络、电源与存储整合到中央计算架构。内饰HMI、座椅感知和功能表面将更依赖统一接口、实时安全监控和跨域软件验证。", source:"Infineon", url:"https://www.infineon.com/press-release/2026/infpr202611-023" },
-  { id:67, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-11-03", title:"Porsche用统一数字交互覆盖四个高端车型系列", summary:"新一代PCM将最高五倍算力、AI语音、空间音频、3D导航和完整OTA扩展至911、Taycan、Panamera与Cayenne。消费者体验正从单车型功能堆叠转向跨车型一致、快速响应且持续升级的品牌化座舱。", source:"Porsche Newsroom", url:"https://pnr-prd2-pub2.newsroom.porsche.com/en/2026/products/porsche-new-infotainment-generation-mib4-43640.html" }
+  { id:67, company:"消费者趋势", track:"跨行业趋势", type:"消费者偏好", date:"2026-11-03", title:"Porsche用统一数字交互覆盖四个高端车型系列", summary:"新一代PCM将最高五倍算力、AI语音、空间音频、3D导航和完整OTA扩展至911、Taycan、Panamera与Cayenne。消费者体验正从单车型功能堆叠转向跨车型一致、快速响应且持续升级的品牌化座舱。", source:"Porsche Newsroom", url:"https://newsroom.porsche.com/en/2026/products/porsche-new-infotainment-generation-mib4-43640.html" },
+  { id:68, company:"麦格纳", track:"综合内饰 / 座椅", type:"经营与战略", date:"2026-11-11", title:"麦格纳提出2030增长与利润率扩张目标", summary:"麦格纳计划到2030年实现高于市场2—4个百分点的有机增长、调整后EBIT率至少提升200个基点、调整后EPS增长15%以上；同时计划在2029年前把数据连接、自动化和AI部署到覆盖约70%销售额的工厂。对内饰与座椅业务而言，竞争将进一步延伸到跨工厂数据标准、自动化复制速度和项目执行质量。", source:"Magna Investor Day", url:"https://www.magna.com/docs/default-source/2026-news---press-releases/magna-news-release_magna-outlines-path-to-turn-enterprise-strength-into-lasting-value-at-investor-day_final.pdf" },
+  { id:69, company:"FORVIA", track:"座椅系统", type:"经营与战略", date:"2026-10-19", title:"FORVIA与ANAND完成印度座椅合资公司设立", summary:"Faurecia Anand Seating India已完成设立，FORVIA持50%加1股并保持控制。合资范围覆盖座椅骨架、整椅装配、泡沫、面套及舒适系统，机构件由FORVIA印度全资业务供应；FORVIA目标在五年内取得印度座椅约10%市场份额。", source:"Gabriel India Q2 FY27", url:"https://www.anandgroupindia.com/wp-content/uploads/2026/11/Gabriel-India_Q2FY27-Earnings-Call-Transcript.pdf" },
+  { id:70, company:"消费者趋势", track:"座椅系统 / 跨行业趋势", type:"产品与技术", date:"2026-09-16", title:"Porsche把按摩、座椅振动与空间音频整合为4D体验", summary:"Cayenne Electric前排座椅用16个气囊和6个座椅声学执行器，将按摩、振动、音乐和Mood Modes联动。座椅舒适系统开始从单一功能升级为声学、触觉、气动和软件共同定义的体验模块。", source:"Porsche Newsroom", url:"https://newsroom.porsche.com/en/2026/products/more-individualisation-cayenne-electric-model-year-change-43252.html" }
 ];
 
 const financialResults = [
@@ -134,17 +137,17 @@ const audienceProfiles = {
 
 const audiencePriorities = {
   "销售": [
-    {level:"高", company:"李尔", title:"完整座椅定点向中国品牌出海与印度扩张", why:"李尔同时获得中国豪华电动车、BYD东南亚和Mahindra项目，全球Tier 1正跟随中国客户海外产能并强化区域交付。", action:"按中国品牌海外工厂建立客户—车型—SOP地图，评估本地化门槛、座椅零部件协同和报价窗口。", newsId:64},
+    {level:"高", company:"FORVIA / 印度", title:"整椅竞争进入本地合资与全链条交付", why:"FORVIA与ANAND合资范围覆盖骨架、整椅、泡沫、面套和舒适系统，并提出五年约10%市场份额目标，显示印度市场正在形成新的完整座椅竞争平台。", action:"把印度主机厂、现有大众项目、潜在新工厂和本地零部件供应商纳入海外客户地图，评估随中国品牌出海的进入窗口。", newsId:69},
     {level:"高", company:"隐藏式显示", title:"真材质表面开始承载隐形交互", why:"木饰面与OLED融合说明高端客户可能要求屏幕未启用时完全隐藏，并保留真实材料质感。", action:"联合显示、膜片和饰面伙伴准备隐藏显示样件，明确透过率、热管理和表面耐久边界。", newsId:49},
     {level:"中", company:"GRAMMER", title:"新项目投产成本正在侵蚀利润", why:"美洲项目7月投产后成本高于预期并触发全年盈利下调，反映新定点放量不等于即时盈利。", action:"在客户报价和项目评审中单列爬坡损失、关税与产能利用率敏感性。", newsId:47}
   ],
   "研发": [
-    {level:"高", company:"中央计算平台", title:"座舱HMI开始并入跨域安全计算架构", why:"数字座舱与自动驾驶共享中央计算平台后，内饰交互、座椅感知和功能表面必须满足统一接口与实时安全监控。", action:"提前定义HMI、座椅传感、灯光和音频的跨域接口、故障降级及OTA验证边界。", newsId:66},
+    {level:"高", company:"座椅声学与触觉", title:"座椅舒适系统正在变成多模态体验模块", why:"Porsche把气动按摩、座椅振动、声学执行器和软件场景联动，意味着座椅开发边界正在延伸到音频、触觉算法和整舱体验。", action:"建立气动、振动、音频和软件联调样件，补充NVH、热管理、耐久和不同体型主观评价方法。", newsId:70},
     {level:"高", company:"Porsche / 消费者趋势", title:"跨车型一致体验取代单车型功能堆叠", why:"高端品牌把统一交互语言、AI语音、空间音频和OTA覆盖到四个车型系列，对硬件响应和品牌一致性提出更高要求。", action:"建立可跨平台复用的中控、门板和音频交互组件，同时保留材料、触感和灯光的品牌差异。", newsId:67},
     {level:"中", company:"智能表面", title:"无运动部件中控适配多种装饰材料", why:"触觉与视觉反馈可跨玻璃、陶瓷、金属、塑料和膜片部署，接口及表面工艺协同成为核心。", action:"建立多材料 HMI 的透光、触觉、耐久、误触与装配验证矩阵。", newsId:46}
   ],
   "管理层": [
-    {level:"高", company:"FORVIA", title:"内饰业务出售将重塑全球竞争主体边界", why:"交易已获全部监管批准，完成后FORVIA将显著降债，原内饰业务的品牌、客户接口和供应链关系可能发生变化。", action:"建立出售前后主体映射，追踪中国法人、客户合同、关键工厂和供应商付款边界。", newsId:63},
+    {level:"高", company:"麦格纳", title:"头部供应商把AI竞争推进到制造运营层", why:"麦格纳不仅发布2030增长和利润率目标，还计划把数据、自动化和AI覆盖到约70%销售额对应工厂，规模化复制运营改善将成为新的成本门槛。", action:"把工厂数据连接率、自动化复制周期、SOP爬坡损失和AI改善收益纳入运营基准，避免只比较单项产品技术。", newsId:68},
     {level:"高", company:"座椅财务", title:"增长必须同时检验现金流与SOP质量", why:"继峰利润高增但经营现金流大幅下降，李尔现金流同比回落，安道拓和麦格纳则强调现金生成，行业分化正在扩大。", action:"统一用项目盈利、经营现金流、应收库存和SOP爬坡四项指标评估座椅扩张质量。", newsId:62},
     {level:"中", company:"GRAMMER", title:"累计增长掩盖Q3美洲项目压力", why:"前九个月收入和经营EBIT仍增长，但Q3盈利同比下降、自由现金流转负，美洲项目爬坡成本和关税已触发全年指引下调。", action:"把新项目SOP盈利、区域现金占用和关税暴露列为座椅业务管理层月度监控指标。", newsId:47}
   ]
@@ -310,7 +313,7 @@ function App() {
       </div>
       <div className="freshness">
         <div className="freshness-row"><span className="status-dot"></span><strong>近三个月竞争信号已更新</strong></div>
-        <div className="source-note">检索截至：2026-11-09 · 内部使用</div>
+        <div className="source-note">检索截至：2026-11-16 · 内部使用</div>
       </div>
     </header>
 
@@ -378,7 +381,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告、政府项目公示及汽车内饰/座椅专业信息；检索窗口更新至 2026-11-09，公众号和行业转载仅作为发现线索，关键客户、产能与财务关系尽量交叉核验。正式财报按最新披露追溯，初步业绩与正式财报分开标注。股市行情在打开页面时自动请求最近数据，并保留最近完整交易日缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。</footer>
+      <footer className="footer">当前竞争动态来自企业官网、监管披露、交易所/法定公告、政府项目公示及汽车内饰/座椅专业信息；检索窗口更新至 2026-11-16，公众号和行业转载仅作为发现线索，关键客户、产能与财务关系尽量交叉核验。正式财报按最新披露追溯，初步业绩与正式财报分开标注。股市行情在打开页面时自动请求最近数据，并保留最近完整交易日缓存。车型产量、客户配套量与市场份额模块按需求暂不显示。</footer>
     </main>
 
     <div className={`drawer-backdrop ${selected?"open":""}`} onClick={()=>setSelected(null)}></div>
